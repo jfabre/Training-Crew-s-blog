@@ -1,0 +1,18 @@
+<% if !@categories.blank? %>
+  <% for cat in @categories %>
+    <%= cat.title %>
+  <% end %>
+<% else %>
+
+<% end %>
+
+
+<% if !@posts.blank? %>
+  <% for post in @posts %>
+    <%= post.title %>
+    <%= post.published_at %> - <% post.excerpt %>
+  <% end %>
+<% else %>
+
+<% end %>
+More >>
