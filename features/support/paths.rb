@@ -20,6 +20,8 @@ module NavigationHelpers
       '/contact'
     when /the resume page/
       '/resume'
+    when /the ('|")(.+)('|") post page/
+      "/#{$2}"
     else
       begin
         page_name =~ /the (.*) page/

@@ -4,8 +4,10 @@ Feature: Post and comments display
   I want to be able to see posts or write comments
   
   Scenario: Comments should exist
-    Given I am on the post detail page
-    Then I should see "Comments"
+    Given a post exists with title: "something very groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009"
+    When I am on the "something_very_groovy" post page
+    Then I should see "something very groovy"
+    And I should see "Comments"
   
   Scenario: Comment page form
     Given the following posts exist
