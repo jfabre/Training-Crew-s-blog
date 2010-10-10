@@ -133,7 +133,7 @@ When /^I call editPost with slug "([^\"]*)" and set published_at to "([^\"]*)"$/
 end
 Then /^I should have 2 categories when calling getCategories with api$/ do
   cats=api.getCategories(1,"admin","secret")
-  cats.count.should==2
+  cats.size.should==2
 end
 
 When /^I upload a file using the api$/ do
@@ -158,8 +158,11 @@ Then /^the post with slug "([^\"]*)" should have ([0-9]+) comments$/ do |arg1,nu
 end
 Then /^I should have ([0-9]+) categories with getCategories$/ do |num|
   cats=api.getCategories("1","admin","secret")
-  raise cats.inspect
-  assert_equal num.to_i,cats.count
+  #raise cats.inspect
+  assert_equal num.to_i, cats.size
 end
 
 
+Given /^the database is empty$/ do
+  #has nothing to do?
+end

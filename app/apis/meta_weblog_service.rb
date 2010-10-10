@@ -139,10 +139,10 @@ class MetaWeblogService < XMLRPCService
        CategoryInfo.new(
           :categoryId=>c.id,
           :parentId=>'',
-          :description=>c.name,
-          :categoryName=>c.name,
-          :title=>c.name,
-          :htmlUrl=>"#{Blog.url}/category/#{c.name}",
+          :description=>c.title,
+          :categoryName=>c.title,
+          :title=>c.title,
+          :htmlUrl=>"#{Blog.url}/category/#{c.title}",
           :rssUrl=>''
        )
      end

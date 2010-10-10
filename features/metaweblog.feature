@@ -82,7 +82,7 @@ Scenario: Uploading new file
 Scenario: Categories
   Given the database is empty
   Given the following categories exist
-  | slug     | name     |
+  | slug     | title     |
   | subsonic | SubSonic |
   | opinion  | Opinion  |
   | mvc-storefront | MVC Storefront |
