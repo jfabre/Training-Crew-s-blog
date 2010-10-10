@@ -129,7 +129,7 @@ When /^I call editPost with slug "([^\"]*)" and set published_at to "([^\"]*)"$/
   article=api.getPost(id, "admin","secret")
   article.pubDate=pub
   
-  api.editPost(slug,"admin","secret",article,1)
+  api.editPost(slug,"admin","secret",article, 0)
 end
 Then /^I should have 2 categories when calling getCategories with api$/ do
   cats=api.getCategories(1,"admin","secret")

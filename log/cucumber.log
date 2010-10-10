@@ -23380,3 +23380,771 @@ Completed in 1ms (View: 0, DB: 1) | 200 OK [http://www.example.com/]
   [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 14:31:30', 'admin', 'secret', '2010-10-10 14:31:30')[0m
   [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
   [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 14:31:30', 'admin', 'secret', '2010-10-10 14:31:30')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+Rendering home/contact
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+Rendering home/contact
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET contact with {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+  Parameters: {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"}
+Rendering home/contact
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /resume with {} and HTTP headers {}
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+Rendering home/resume
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/resume]
+  [4;36;1mCategory Create (1.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:07:42', 'category1', '2010-10-10 16:07:42')[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:07:42', 'category2', '2010-10-10 16:07:42')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:07:42', 'Post 1', 'Lorem Ipsum 1', NULL, 'test post 1', NULL, '0009-12-25', '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:07:42', 'Post 2', 'Lorem Ipsum 2', NULL, 'test post 2', NULL, '0010-01-01', '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:07:42', 'Post 3', 'Lorem Ipsum 3', NULL, 'test post 3', NULL, '0010-01-02', '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:07:42', 'Post 4', 'Lorem Ipsum 4', NULL, 'test post 4', NULL, '0010-01-03', '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:07:42', 'Post 5', 'Lorem Ipsum 5', NULL, 'test post 5', NULL, '0010-01-04', '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:07:42', 'Post 6', 'Lorem Ipsum 6', NULL, 'test post 6', NULL, '0010-01-05', '2010-10-10 16:07:42')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 2ms (View: 1, DB: 3) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:07:42) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:07:42', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:07:42', 'Post 1', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:07:42', 'Post 2', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:07:42', 'Post 3', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:07:42', 'Post 4', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:07:42', 'Post 5', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:07:42', 'Post 6', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:07:42')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:42', 'admin', 'secret', '2010-10-10 16:07:42')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'bob' AND "users"."password" = 'ninja') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:42', 'admin', 'secret', '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug1', '2010-10-10 16:07:42', 'title 1', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-12', '2010-10-10 16:07:42')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug2', '2010-10-10 16:07:42', 'title 2', 'Lorem Ipsum 2', NULL, NULL, NULL, '2009-12-13', '2010-10-10 16:07:42')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug3', '2010-10-10 16:07:43', 'title 3', 'Lorem Ipsum 3', NULL, NULL, NULL, '2009-12-14', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug4', '2010-10-10 16:07:43', 'title 4', 'Lorem Ipsum 4', NULL, NULL, NULL, '2009-12-15', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug5', '2010-10-10 16:07:43', 'title 5', 'Lorem Ipsum 5', NULL, NULL, NULL, '2009-12-16', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug6', '2010-10-10 16:07:43', 'title 6', 'Lorem Ipsum 6', NULL, NULL, NULL, '2009-12-17', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug7', '2010-10-10 16:07:43', 'title 7', 'Lorem Ipsum 7', NULL, NULL, NULL, '2009-12-18', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug8', '2010-10-10 16:07:43', 'title 8', 'Lorem Ipsum 8', NULL, NULL, NULL, '2009-12-19', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug9', '2010-10-10 16:07:43', 'title 9', 'Lorem Ipsum 9', NULL, NULL, NULL, '2009-12-20', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug10', '2010-10-10 16:07:43', 'title 10', 'Lorem Ipsum 10', NULL, NULL, NULL, '2009-12-21', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug11', '2010-10-10 16:07:43', 'title 11', 'Lorem Ipsum 11', NULL, NULL, NULL, '2009-12-22', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug12', '2010-10-10 16:07:43', 'title 12', 'Lorem Ipsum 12', NULL, NULL, NULL, '2009-12-23', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug13', '2010-10-10 16:07:43', 'title 13', 'Lorem Ipsum 13', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 10[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 13)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 12)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 11)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 10)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 9)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 8)) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 7)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 6)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 5)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 4)) [0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:07:43', 'create new post', 'body', 'f', 'body', NULL, '2010-10-10 12:07:43', '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:07:43', 'cat1', '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 1, '2010-10-10 16:07:43')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 1, '2010-10-10 16:07:43')[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:07:43', 'cat2', '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 2, '2010-10-10 16:07:43')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 2, '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:07:43', 'create new post', 'body', 't', NULL, NULL, NULL, '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'create-new-post') LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat1') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat2') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 2)) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('future-post', '2010-10-10 16:07:43', 'future post', 'body', 'f', 'body', NULL, '2010-10-10 12:07:43', '2010-10-10 16:07:43')[0m
+  [4;36;1mCategorization Load (0.0ms)[0m   [0;1mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:07:43', 'cat1', '2010-10-10 16:07:43')[0m
+  [4;36;1mCategorization Create (1.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 1, '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 1, '2010-10-10 16:07:43')[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:07:43', 'cat2', '2010-10-10 16:07:43')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 2, '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:07:43', 1, 2, '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('publish-false', '2010-10-10 16:07:43', 'publish false', 'body', 'f', 'body', NULL, '2010-10-10 12:07:43', '2010-10-10 16:07:43')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'publish-false') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:07:43', 'edit post', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 't', "excerpt" = 'Yippy Skippy', "title" = 'Title 99', "body" = 'Yippy Skippy', "updated_at" = '2010-10-10 16:07:43' WHERE "id" = 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:07:43', 'Title 99', 'Yippy Skippy', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:07:43')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('offline-post', '2010-10-10 16:07:43', NULL, NULL, 't', NULL, NULL, NULL, '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 'f', "excerpt" = 'nada', "published_at" = '2010-10-10 12:07:43', "body" = 'nada', "updated_at" = '2010-10-10 16:07:43' WHERE "id" = 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('pub-date', '2010-10-10 16:07:43', NULL, NULL, NULL, NULL, NULL, '2000-01-01', '2010-10-10 16:07:43')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" IS NULL) LIMIT 1[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:07:43', 'admin', 'secret', '2010-10-10 16:07:43')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+Rendering home/contact
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+Rendering home/contact
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET contact with {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+  Parameters: {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"}
+Rendering home/contact
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /resume with {} and HTTP headers {}
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+Rendering home/resume
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/resume]
+  [4;36;1mCategory Create (1.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:13:51', 'category1', '2010-10-10 16:13:51')[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:13:51', 'category2', '2010-10-10 16:13:51')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:13:51', 'Post 1', 'Lorem Ipsum 1', NULL, 'test post 1', NULL, '0009-12-25', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:13:51', 'Post 2', 'Lorem Ipsum 2', NULL, 'test post 2', NULL, '0010-01-01', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:13:51', 'Post 3', 'Lorem Ipsum 3', NULL, 'test post 3', NULL, '0010-01-02', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:13:51', 'Post 4', 'Lorem Ipsum 4', NULL, 'test post 4', NULL, '0010-01-03', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:13:51', 'Post 5', 'Lorem Ipsum 5', NULL, 'test post 5', NULL, '0010-01-04', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:13:51', 'Post 6', 'Lorem Ipsum 6', NULL, 'test post 6', NULL, '0010-01-05', '2010-10-10 16:13:51')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 2ms (View: 1, DB: 3) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:13:51) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:13:51', 'Post 1', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:13:51', 'Post 2', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:13:51', 'Post 3', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:13:51', 'Post 4', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:13:51', 'Post 5', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:13:51', 'Post 6', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'bob' AND "users"."password" = 'ninja') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug1', '2010-10-10 16:13:51', 'title 1', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-12', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug2', '2010-10-10 16:13:51', 'title 2', 'Lorem Ipsum 2', NULL, NULL, NULL, '2009-12-13', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug3', '2010-10-10 16:13:51', 'title 3', 'Lorem Ipsum 3', NULL, NULL, NULL, '2009-12-14', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug4', '2010-10-10 16:13:51', 'title 4', 'Lorem Ipsum 4', NULL, NULL, NULL, '2009-12-15', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug5', '2010-10-10 16:13:51', 'title 5', 'Lorem Ipsum 5', NULL, NULL, NULL, '2009-12-16', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug6', '2010-10-10 16:13:51', 'title 6', 'Lorem Ipsum 6', NULL, NULL, NULL, '2009-12-17', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug7', '2010-10-10 16:13:51', 'title 7', 'Lorem Ipsum 7', NULL, NULL, NULL, '2009-12-18', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug8', '2010-10-10 16:13:51', 'title 8', 'Lorem Ipsum 8', NULL, NULL, NULL, '2009-12-19', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug9', '2010-10-10 16:13:51', 'title 9', 'Lorem Ipsum 9', NULL, NULL, NULL, '2009-12-20', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug10', '2010-10-10 16:13:51', 'title 10', 'Lorem Ipsum 10', NULL, NULL, NULL, '2009-12-21', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug11', '2010-10-10 16:13:51', 'title 11', 'Lorem Ipsum 11', NULL, NULL, NULL, '2009-12-22', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug12', '2010-10-10 16:13:51', 'title 12', 'Lorem Ipsum 12', NULL, NULL, NULL, '2009-12-23', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug13', '2010-10-10 16:13:51', 'title 13', 'Lorem Ipsum 13', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 10[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 13)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 12)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 11)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 10)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 9)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 8)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 7)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 6)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 5)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 4)) [0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:13:51', 'create new post', 'body', 'f', 'body', NULL, '2010-10-10 12:13:51', '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:13:51', 'cat1', '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 1, '2010-10-10 16:13:51')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 1, '2010-10-10 16:13:51')[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:13:51', 'cat2', '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 2, '2010-10-10 16:13:51')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 2, '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:13:51', 'create new post', 'body', 't', NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'create-new-post') LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat1') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat2') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 2)) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('future-post', '2010-10-10 16:13:51', 'future post', 'body', 'f', 'body', NULL, '2010-10-10 12:13:51', '2010-10-10 16:13:51')[0m
+  [4;36;1mCategorization Load (0.0ms)[0m   [0;1mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:13:51', 'cat1', '2010-10-10 16:13:51')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 1, '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 1, '2010-10-10 16:13:51')[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:13:51', 'cat2', '2010-10-10 16:13:51')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 2, '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:13:51', 1, 2, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('publish-false', '2010-10-10 16:13:51', 'publish false', 'body', 'f', 'body', NULL, '2010-10-10 12:13:51', '2010-10-10 16:13:51')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'publish-false') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:13:51', 'edit post', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 't', "excerpt" = 'Yippy Skippy', "title" = 'Title 99', "body" = 'Yippy Skippy', "updated_at" = '2010-10-10 16:13:51' WHERE "id" = 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:13:51', 'Title 99', 'Yippy Skippy', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:13:51')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('offline-post', '2010-10-10 16:13:51', NULL, NULL, 't', NULL, NULL, NULL, '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mPost Update (1.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 'f', "excerpt" = 'nada', "published_at" = '2010-10-10 12:13:51', "body" = 'nada', "updated_at" = '2010-10-10 16:13:51' WHERE "id" = 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('pub-date', '2010-10-10 16:13:51', NULL, NULL, NULL, NULL, NULL, '2000-01-01', '2010-10-10 16:13:51')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" IS NULL) LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:13:51', 'admin', 'secret', '2010-10-10 16:13:51')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+Rendering home/contact
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+Rendering home/contact
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET contact with {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+  Parameters: {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"}
+Rendering home/contact
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /resume with {} and HTTP headers {}
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+Rendering home/resume
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/resume]
+  [4;36;1mCategory Create (1.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:17:39', 'category1', '2010-10-10 16:17:39')[0m
+  [4;35;1mCategory Create (1.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:17:39', 'category2', '2010-10-10 16:17:39')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 2ms (View: 1, DB: 2) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:17:39', 'Post 1', 'Lorem Ipsum 1', NULL, 'test post 1', NULL, '0009-12-25', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:17:39', 'Post 2', 'Lorem Ipsum 2', NULL, 'test post 2', NULL, '0010-01-01', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:17:39', 'Post 3', 'Lorem Ipsum 3', NULL, 'test post 3', NULL, '0010-01-02', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:17:39', 'Post 4', 'Lorem Ipsum 4', NULL, 'test post 4', NULL, '0010-01-03', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:17:39', 'Post 5', 'Lorem Ipsum 5', NULL, 'test post 5', NULL, '0010-01-04', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:17:39', 'Post 6', 'Lorem Ipsum 6', NULL, 'test post 6', NULL, '0010-01-05', '2010-10-10 16:17:39')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:17:39) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:17:39', 'Post 1', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:17:39', 'Post 2', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:17:39', 'Post 3', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:17:39', 'Post 4', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:17:39', 'Post 5', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:17:39', 'Post 6', NULL, NULL, NULL, 2, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'bob' AND "users"."password" = 'ninja') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug1', '2010-10-10 16:17:39', 'title 1', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-12', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug2', '2010-10-10 16:17:39', 'title 2', 'Lorem Ipsum 2', NULL, NULL, NULL, '2009-12-13', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug3', '2010-10-10 16:17:39', 'title 3', 'Lorem Ipsum 3', NULL, NULL, NULL, '2009-12-14', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug4', '2010-10-10 16:17:39', 'title 4', 'Lorem Ipsum 4', NULL, NULL, NULL, '2009-12-15', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug5', '2010-10-10 16:17:39', 'title 5', 'Lorem Ipsum 5', NULL, NULL, NULL, '2009-12-16', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug6', '2010-10-10 16:17:39', 'title 6', 'Lorem Ipsum 6', NULL, NULL, NULL, '2009-12-17', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug7', '2010-10-10 16:17:39', 'title 7', 'Lorem Ipsum 7', NULL, NULL, NULL, '2009-12-18', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug8', '2010-10-10 16:17:39', 'title 8', 'Lorem Ipsum 8', NULL, NULL, NULL, '2009-12-19', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug9', '2010-10-10 16:17:39', 'title 9', 'Lorem Ipsum 9', NULL, NULL, NULL, '2009-12-20', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug10', '2010-10-10 16:17:39', 'title 10', 'Lorem Ipsum 10', NULL, NULL, NULL, '2009-12-21', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug11', '2010-10-10 16:17:39', 'title 11', 'Lorem Ipsum 11', NULL, NULL, NULL, '2009-12-22', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug12', '2010-10-10 16:17:39', 'title 12', 'Lorem Ipsum 12', NULL, NULL, NULL, '2009-12-23', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug13', '2010-10-10 16:17:39', 'title 13', 'Lorem Ipsum 13', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 10[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 13)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 12)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 11)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 10)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 9)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 8)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 7)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 6)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 5)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 4)) [0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:17:39', 'create new post', 'body', 'f', 'body', NULL, '2010-10-10 12:17:39', '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:17:39', 'cat1', '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 1, '2010-10-10 16:17:39')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 1, '2010-10-10 16:17:39')[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:17:39', 'cat2', '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 2, '2010-10-10 16:17:39')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 2, '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:17:39', 'create new post', 'body', 't', NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'create-new-post') LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat1') LIMIT 1[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat2') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 2)) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('future-post', '2010-10-10 16:17:39', 'future post', 'body', 'f', 'body', NULL, '2010-10-10 12:17:39', '2010-10-10 16:17:39')[0m
+  [4;36;1mCategorization Load (0.0ms)[0m   [0;1mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:17:39', 'cat1', '2010-10-10 16:17:39')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 1, '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 1, '2010-10-10 16:17:39')[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:17:39', 'cat2', '2010-10-10 16:17:39')[0m
+  [4;36;1mCategorization Create (1.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 2, '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:17:39', 1, 2, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('publish-false', '2010-10-10 16:17:39', 'publish false', 'body', 'f', 'body', NULL, '2010-10-10 12:17:39', '2010-10-10 16:17:39')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'publish-false') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:17:39', 'edit post', 'Lorem Ipsum 1', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 't', "excerpt" = 'Yippy Skippy', "title" = 'Title 99', "body" = 'Yippy Skippy', "updated_at" = '2010-10-10 16:17:39' WHERE "id" = 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:17:39', 'Title 99', 'Yippy Skippy', NULL, NULL, NULL, '2009-12-24', '2010-10-10 16:17:39')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('offline-post', '2010-10-10 16:17:39', NULL, NULL, 't', NULL, NULL, NULL, '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 'f', "excerpt" = 'nada', "published_at" = '2010-10-10 12:17:39', "body" = 'nada', "updated_at" = '2010-10-10 16:17:39' WHERE "id" = 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('pub-date', '2010-10-10 16:17:39', NULL, NULL, NULL, NULL, NULL, '2000-01-01', '2010-10-10 16:17:39')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" IS NULL) LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:17:39', 'admin', 'secret', '2010-10-10 16:17:39')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+Rendering home/contact
+Completed in 9ms (View: 7, DB: 2) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+Rendering home/contact
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET contact with {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+  Parameters: {"message"=>"Hello", "name"=>"joe blow", "submit"=>"Continue"}
+Rendering home/contact
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://www.example.com/contact]
+REQUESTING PAGE: GET /resume with {} and HTTP headers {}
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+Rendering home/resume
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://www.example.com/resume]
+  [4;36;1mCategory Create (1.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:26:09', 'category1', '2010-10-10 16:26:09')[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:26:09', 'category2', '2010-10-10 16:26:09')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 3ms (View: 2, DB: 2) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:26:09', 'Post 1', 'Lorem Ipsum 1', 'f', 'test post 1', NULL, '0009-12-25', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:26:09', 'Post 2', 'Lorem Ipsum 2', 'f', 'test post 2', NULL, '0010-01-01', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:26:09', 'Post 3', 'Lorem Ipsum 3', 'f', 'test post 3', NULL, '0010-01-02', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:26:09', 'Post 4', 'Lorem Ipsum 4', 'f', 'test post 4', NULL, '0010-01-03', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:26:09', 'Post 5', 'Lorem Ipsum 5', 'f', 'test post 5', NULL, '0010-01-04', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:26:09', 'Post 6', 'Lorem Ipsum 6', 'f', 'test post 6', NULL, '0010-01-05', '2010-10-10 16:26:09')[0m
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 3ms (View: 2, DB: 2) | 200 OK [http://www.example.com/]
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-10 12:26:09) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5[0m
+Rendering home/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://www.example.com/]
+  [4;36;1mPost Create (1.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES(NULL, '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post1', '2010-10-10 16:26:09', 'Post 1', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post2', '2010-10-10 16:26:09', 'Post 2', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post3', '2010-10-10 16:26:09', 'Post 3', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post4', '2010-10-10 16:26:09', 'Post 4', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post5', '2010-10-10 16:26:09', 'Post 5', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('post6', '2010-10-10 16:26:09', 'Post 6', NULL, 'f', NULL, 2, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'bob' AND "users"."password" = 'ninja') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug1', '2010-10-10 16:26:09', 'title 1', 'Lorem Ipsum 1', 'f', NULL, NULL, '2009-12-12', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug2', '2010-10-10 16:26:09', 'title 2', 'Lorem Ipsum 2', 'f', NULL, NULL, '2009-12-13', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug3', '2010-10-10 16:26:09', 'title 3', 'Lorem Ipsum 3', 'f', NULL, NULL, '2009-12-14', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug4', '2010-10-10 16:26:09', 'title 4', 'Lorem Ipsum 4', 'f', NULL, NULL, '2009-12-15', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug5', '2010-10-10 16:26:09', 'title 5', 'Lorem Ipsum 5', 'f', NULL, NULL, '2009-12-16', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug6', '2010-10-10 16:26:09', 'title 6', 'Lorem Ipsum 6', 'f', NULL, NULL, '2009-12-17', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug7', '2010-10-10 16:26:09', 'title 7', 'Lorem Ipsum 7', 'f', NULL, NULL, '2009-12-18', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug8', '2010-10-10 16:26:09', 'title 8', 'Lorem Ipsum 8', 'f', NULL, NULL, '2009-12-19', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug9', '2010-10-10 16:26:09', 'title 9', 'Lorem Ipsum 9', 'f', NULL, NULL, '2009-12-20', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug10', '2010-10-10 16:26:09', 'title 10', 'Lorem Ipsum 10', 'f', NULL, NULL, '2009-12-21', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug11', '2010-10-10 16:26:09', 'title 11', 'Lorem Ipsum 11', 'f', NULL, NULL, '2009-12-22', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (1.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug12', '2010-10-10 16:26:09', 'title 12', 'Lorem Ipsum 12', 'f', NULL, NULL, '2009-12-23', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('slug13', '2010-10-10 16:26:09', 'title 13', 'Lorem Ipsum 13', 'f', NULL, NULL, '2009-12-24', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 10[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 13)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 12)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 11)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 10)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 9)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 8)) [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 7)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 6)) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 5)) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 4)) [0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:26:09', 'create new post', 'body', 'f', 'body', NULL, '2010-10-10 12:26:09', '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:26:09', 'cat1', '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 1, '2010-10-10 16:26:09')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 1, '2010-10-10 16:26:09')[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;36;1mCategory Create (0.0ms)[0m   [0;1mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:26:09', 'cat2', '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 2, '2010-10-10 16:26:09')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 2, '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('create-new-post', '2010-10-10 16:26:09', 'create new post', 'body', 't', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'create-new-post') LIMIT 1[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat1') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE (title = 'cat2') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT "posts".* FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 2)) LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('future-post', '2010-10-10 16:26:09', 'future post', 'body', 'f', 'body', NULL, '2010-10-10 12:26:09', '2010-10-10 16:26:09')[0m
+  [4;36;1mCategorization Load (0.0ms)[0m   [0;1mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat1' AND "categories"."slug" = 'cat1') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat1', '2010-10-10 16:26:09', 'cat1', '2010-10-10 16:26:09')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 1, '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 1, '2010-10-10 16:26:09')[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT "categories".id FROM "categories" WHERE ("categories"."title" = 'cat2' AND "categories"."slug" = 'cat2') LIMIT 1[0m
+  [4;35;1mCategory Create (0.0ms)[0m   [0mINSERT INTO "categories" ("slug", "updated_at", "title", "created_at") VALUES('cat2', '2010-10-10 16:26:09', 'cat2', '2010-10-10 16:26:09')[0m
+  [4;36;1mCategorization Create (0.0ms)[0m   [0;1mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 2, '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Create (0.0ms)[0m   [0mINSERT INTO "categorizations" ("updated_at", "post_id", "category_id", "created_at") VALUES('2010-10-10 16:26:09', 1, 2, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'future-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('publish-false', '2010-10-10 16:26:09', 'publish false', 'body', 'f', 'body', NULL, '2010-10-10 12:26:09', '2010-10-10 16:26:09')[0m
+  [4;35;1mCategorization Load (0.0ms)[0m   [0mSELECT * FROM "categorizations" WHERE ("categorizations".post_id = 1) [0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'publish-false') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:26:09', 'edit post', 'Lorem Ipsum 1', 'f', NULL, NULL, '2009-12-24', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'edit-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 't', "excerpt" = 'Yippy Skippy', "title" = 'Title 99', "body" = 'Yippy Skippy', "updated_at" = '2010-10-10 16:26:09' WHERE "id" = 1[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('edit-post', '2010-10-10 16:26:09', 'Title 99', 'Yippy Skippy', 'f', NULL, NULL, '2009-12-24', '2010-10-10 16:26:09')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('offline-post', '2010-10-10 16:26:09', NULL, NULL, 't', NULL, NULL, NULL, '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mPost Update (0.0ms)[0m   [0;1mUPDATE "posts" SET "is_published" = 'f', "excerpt" = 'nada', "published_at" = '2010-10-10 12:26:09', "body" = 'nada', "updated_at" = '2010-10-10 16:26:09' WHERE "id" = 1[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'offline-post') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "is_published", "excerpt", "category_id", "published_at", "created_at") VALUES('pub-date', '2010-10-10 16:26:09', NULL, NULL, 'f', NULL, NULL, '2000-01-01', '2010-10-10 16:26:09')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT "categories".* FROM "categories" INNER JOIN "categorizations" ON "categories".id = "categorizations".category_id WHERE (("categorizations".post_id = 1)) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" IS NULL) LIMIT 1[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'pub-date') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin' AND "users"."password" = 'secret') LIMIT 1[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("site_url", "updated_at", "username", "password", "created_at") VALUES(NULL, '2010-10-10 16:26:09', 'admin', 'secret', '2010-10-10 16:26:09')[0m
