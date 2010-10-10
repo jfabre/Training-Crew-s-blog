@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, :through => :categorizations
+  has_many :comments
   
   def pretty_date
     published_at.strftime("%A, %B %d, %Y")
@@ -9,9 +10,6 @@ class Post < ActiveRecord::Base
   def self.by_category(slug, limit)
     Category.find_by_slug(slug).posts(limit)
   end
-#  def categories
-#    Category.all(:conditions => { :id => categorizations.collect{|x| x.category_id }})
-#  end
   def clear_categories
     categorizations.clear
   end
