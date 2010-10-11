@@ -25,8 +25,8 @@ class Post < ActiveRecord::Base
     
     str
   end
+  
   def year
-    
     published_at.year.to_s if(published_at)
   end
   def month
@@ -37,5 +37,5 @@ class Post < ActiveRecord::Base
   end
   def url
     "/#{year}/#{month}/#{day}/#{slug}"
-  end 
+  end
 end

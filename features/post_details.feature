@@ -1,24 +1,27 @@
 Feature: Post and comments display
-  In order to interact with the posts
+  In order to interact with the author
   As a reader
-  I want to be able to see posts or write comments
+  I want to be able to see posts and write comments
   
   Scenario: Comments should exist
-    Given a post exists with title: "something very groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009"
-    When I am on the "something_very_groovy" post page
+    Given a post exists with title: "something very groovy", slug: "something_very_groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009"
+    When I am on the "2009/01/12/something_very_groovy" post page
     Then I should see "something very groovy"
+    And I should see "Lorem Ipsum 1"
     And I should see "Comments"
   
   Scenario: Comment page form
     Given the following posts exist
-    |slug|title|published_at|excerpt|body|
-    |post1|Post 1|12/25/09| test post 1|Lorem Ipsum 1|
-    When I am on the post detail page
-    And I fill in "name" with "joe blow"
-    And I fill in "comment" with "Super commentaire"
-    And I press "Add"
-    Then a comment with name:"Joe Blow", text: "Super commentaire" should exist  
-   
+      |slug   |title  |published_at |  body        |
+      |post1  |Post 1 |12/25/2009   | Lorem Ipsum 1|
+    When I am on the "2009/12/25/post1" post page
+      And I fill in "name" with "Joe Blow"
+      And I fill in "comment" with "Super commentaire"
+      And I press "Add"
+    Then I should see "Joe Blow"
+      And I should see "Super commentaire" 
+      And a comment with name:"Joe Blow", text: "Super commentaire" should exist
+      
    Scenario: View Comments
     Given a post exists with title: "something very groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009"
     And the following comments exist for a post with title "something very groovy"

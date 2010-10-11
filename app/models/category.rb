@@ -10,12 +10,6 @@ class Category < ActiveRecord::Base
       Category.all().each {|c| c.articles.delete(post.slug)}
     end
     
-    #def posts(limit=5)
-    #  Post.all(:conditions => {:id => categorizations.collect{|x| x.post_id}, :is_published => true}, 
-    #    :order =>"published_at DESC", 
-    #    :limit => limit)
-    #end
-    
     def clear_posts
       :articles.clear
     end

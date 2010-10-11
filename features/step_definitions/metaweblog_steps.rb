@@ -4,14 +4,6 @@ require 'meta_weblog_client'
 api=MetaWeblogService.new
 client=MetaWebLogClient.new "http://localhost:3000/xmlrpc/api","1","admin","password"
 
-#Then /^a post should exist with slug: "([^\"]*)", title: "([^\"]*)", body: "([^\"]*)", is_published: true$/ do |arg1, arg2, arg3|
-#  post=Post.find_by_slug(arg1)
-#  assert post.is_published
-#  assert_equal arg2, post.title
-#  assert_equal arg3,post.body
-#end
-
-
 Then /^I should not be able to login as "([^\"]*)" with password "([^\"]*)"$/ do |arg1, arg2|
     begin
       !api.authenticate(arg1,arg2)

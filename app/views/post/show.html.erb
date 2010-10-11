@@ -1,0 +1,16 @@
+
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<span>Comments</span>
+<% @post.comments.each do |c|%>
+  <span><%=c.user%></span>
+  <p><%= c.text %></p>
+<%end%>
+
+<% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
+  Name: <input type="text" name="name"/><br />
+  Comment : <input type="text" name="comment"/><br />
+  <input type="submit" name="Add" id="Add">
+<% end %>
+
+
