@@ -22,6 +22,13 @@ module NavigationHelpers
       '/resume'
     when /the ('|")(.+)('|") post page/
       "/#{$2}"
+    when /.*bad-url.*/
+       '/post/show/0'
+    when /('|")\/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\/.+('|")/
+      "#{$2}/#{$3}/#{$4}/#{$5}"
+    when /('|")(\/[^\/]+)(\/[^\/]+)('|")/
+      puts "went there for #{page_name}"
+      "#{$2}#{$3}"
     else
       begin
         page_name =~ /the (.*) page/

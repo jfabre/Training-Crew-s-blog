@@ -29,6 +29,5 @@ class Category < ActiveRecord::Base
        
       post.save
       existing_category.save
-       
     end
 end

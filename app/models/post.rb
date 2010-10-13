@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   end
   
   def self.by_category(slug, limit)
-    Category.find_by_slug(slug).posts(limit)
+    Category.find_by_slug(slug).posts
   end
   def clear_categories
     categorizations.clear
