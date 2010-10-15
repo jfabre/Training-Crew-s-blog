@@ -1,4 +1,6 @@
 class PostController < ApplicationController
+  layout "master"
+  
   def index
     @categories=Category.all
     slug=params[:category_slug]

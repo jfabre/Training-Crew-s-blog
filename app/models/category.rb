@@ -18,7 +18,7 @@ class Category < ActiveRecord::Base
       by_title_or_slug = { :title  => name, :slug => name }
       
       if(!Category.exists?(by_title_or_slug))
-        existing_category = Category.create!(:title=> name, :slug=> post.create_slug(name))
+        existing_category = Category.create!(:title=> name, :slug=> Post.create_slug(name))
       else
         existing_category = Category.find(:conditions => by_title_or_slug)
       end

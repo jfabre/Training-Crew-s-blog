@@ -125,12 +125,10 @@ class MetaWeblogService < XMLRPCService
    end
 
    def getRecentPosts(blogid, username, password, limit)
-     
      authenticate(username,password)
      posts=Post.find(:all, :limit=>limit, :order=>"published_at DESC")
      articles=posts.collect { |c| struct_from(c) }
      articles
-     
    end
    
    def getCategories(blogid,username,password)
@@ -151,13 +149,13 @@ class MetaWeblogService < XMLRPCService
    
    def editPost(slug, username, password, hash, publish)
      authenticate(username,password)
+     
      article=Article.new(hash)
-     
-     post=Post.find_by_slug(article.wp_slug)
-     
+     slug = Post.create_slug(article.title)
+     post = Post.find_by_slug(slug)
+     post = Post.find(article.postId) unless post
      if(post)  
        bind_post(post,article)
-       
        if(publish==0)
          post.is_published=false
        end
@@ -252,7 +250,7 @@ class MetaWeblogService < XMLRPCService
      if(article.wp_slug!='')
        post.slug=article.wp_slug.downcase
      else
-       post.slug=post.create_slug(post.title)
+       post.slug = Post.create_slug(post.title)
      end
 
      post

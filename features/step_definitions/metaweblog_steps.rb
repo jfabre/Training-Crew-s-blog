@@ -28,7 +28,7 @@ Then /^1 post should be returned by getPost with "([^\"]*)"$/ do |slug|
 end
 
 Then /^the post with slug "([^\"]*)" should not be published$/ do |arg1|
-  post=Post.find_by_slug(arg1)
+  post= Post.find_by_slug(arg1)
   assert post
 
   assert_equal false, post.is_published

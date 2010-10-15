@@ -5,3 +5,8 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+User.create( :username => 'admin', :password => 'pk' ) unless User.find_by_username('admin')
+      
+Post.create( :title => 'Title test', :slug => 'title_test', 
+                :body => 'First post!', :published_at => DateTime.now ) unless Post.find(1)

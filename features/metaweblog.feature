@@ -44,12 +44,12 @@ Scenario: Create new post
 
 Scenario: Create new post with future publish date
   Given I call newPost with "future post", body "body", categories "cat1" and "cat2", published 2 days from now
-  Then a post with slug "future-post" should exist  
-  And the post with slug "future-post" should not be published
+  Then a post with slug "future_post" should exist  
+  And the post with slug "future_post" should not be published
   
 Scenario: Create new post with published off
   Given I call newPost with "publish false", body "body", published set to false
-  Then the post with slug "publish-false" should not be published
+  Then the post with slug "publish_false" should not be published
 
 Scenario: Edit Post
   Given the following posts exist
@@ -61,9 +61,9 @@ Scenario: Edit Post
     | Title 99 | Yippy Skippy   | 12/24/2009   | edit-post   |
 
 Scenario: Take post offline
-  Given a post exists with slug: "offline-post", is_published: true
-  When I call editPost with slug "offline-post" and set published to false
-  Then the post with slug "offline-post" should not be published
+  Given a post exists with slug: "offline_post", title: "offline post", is_published: true
+  When I call editPost with slug "offline_post" and set published to false
+  Then the post with slug "offline_post" should not be published
 
 Scenario: Change publish date
   Given a post exists with slug: "pub-date", published_at: "1/1/2000"

@@ -1,20 +1,20 @@
-Super blog parkour tu va voir ca va etre cool
-<% if !@categories.blank? %>
-  <% for cat in @categories %>
-    <%= cat.title %>
+<% content_for :title do %>Super blog parkour tu va voir ca va etre cool<% end %> 
+<% content_for :menu do %>
+  <% if !@categories.blank? %>
+    <ul>
+      <% for cat in @categories %>
+        <li><%= cat.title %></li>
+      <% end %>
+    </ul>
   <% end %>
-<% else %>
-
-<% end %>
-
-
+<% end %> 
 <% if !@posts.blank? %>
   <% for post in @posts %>
-    <%= post.title %>
-    <%= post.published_at %> - <% post.excerpt %>
+    <h3><%= post.title %></h3>
+    <span><%= post.published_at %> - <% post.excerpt %></span>
     <a href="<%= post.url %>" rel="bookmark" title="Permanent Link to <%= post.title %>!" class="title"><%=post.title %></a>
   <% end %>
-<% else %>
-
+<%else %>
+  <p>There is no post right now... come back later!</p>
 <% end %>
-More >>
+<div><p>More >></p></div>

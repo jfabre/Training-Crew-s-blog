@@ -16,13 +16,14 @@ class Post < ActiveRecord::Base
   def self.recent_sorted(limit)
      Post.all(:order=>"published_at DESC", :limit=>limit, :is_published=>true)
   end
-  def create_slug(str)
+  def self.create_slug(str)
     #a slug is a URL-safe string that echoes the title
     #in this method we want to remove any weird punctuation and spaces
-    str = str.gsub(/[^a-zA-Z0-9 ]/,"").downcase
-    str = str.gsub(/[ ]+/," ")
-    str = str.gsub(/ /,"-")
-    
+    if (str)
+      str = str.gsub(/[^a-zA-Z0-9 ]/,"").downcase
+      str = str.gsub(/[ ]+/," ")
+      str = str.gsub(/ /,"_")
+    end
     str
   end
   

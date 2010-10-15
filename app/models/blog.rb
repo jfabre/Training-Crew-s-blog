@@ -12,6 +12,6 @@ class Blog
   end
   
   def self.url
-    "http://blog.trainingcrew.com"
+    "http://127.0.0.1:3000"
   end 
 end
