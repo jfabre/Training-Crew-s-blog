@@ -1,20 +1,26 @@
-<% content_for :title do %>Super blog parkour tu va voir ca va etre cool<% end %> 
-<% content_for :menu do %>
-  <% if !@categories.blank? %>
-    <ul>
-      <% for cat in @categories %>
-        <li><%= cat.title %></li>
-      <% end %>
-    </ul>
+<% content_for :title do %>Mange ton pied garde l'autre pour tracer<% end %> 
+<div class="leftmenu">
+  <div class="last-video">
+    Dernier vidéo
+  </div>
+  <div class="last-picture">
+    Derniere photo 
+  </div>
+</div>
+<div class="middle">
+  <% if !@posts.blank? %>
+    <% for post in @posts %>
+      <div class="post">
+        <h3><%= post.title %><span><%= post.published_at %></span></h3>
+        <div class="body"><%= post.body %></div>
+        <p><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+      </div>
+    <% end %>
   <% end %>
-<% end %> 
-<% if !@posts.blank? %>
-  <% for post in @posts %>
-    <h3><%= post.title %></h3>
-    <span><%= post.published_at %> - <% post.excerpt %></span>
-    <a href="<%= post.url %>" rel="bookmark" title="Permanent Link to <%= post.title %>!" class="title"><%=post.title %></a>
-  <% end %>
-<%else %>
-  <p>There is no post right now... come back later!</p>
-<% end %>
-<div><p>More >></p></div>
+</div>
+<div class="rightmenu">
+  <div class="calendrier">Calendrier des activites</div>
+  <div class="archive">archives</div>
+</div>
+<div class="clear"></div>
+

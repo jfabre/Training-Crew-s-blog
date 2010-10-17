@@ -28,11 +28,6 @@ Feature: Home page
     And I should see "Post 4"
     And I should see "Post 5"
     And I should see "Post 6"
-
-
-  Scenario: See a link to all posts
-    Given I am on the home page
-    Then I should see "More >>"
     
   Scenario: Specialized Category Posts
     Given 10 posts exist

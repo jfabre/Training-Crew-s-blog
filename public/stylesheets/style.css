@@ -1,0 +1,121 @@
+@import url(reset.css);
+
+html {
+  background-color: gray;
+  height  : 100%;
+  color   : #E0E0E0;
+}
+body {
+  font-family: Arial, Verdana, Helvetica, Sans-serif;s
+  color   : white;
+  font-size : 14px;
+  height  :100%;
+}
+p{
+  margin: 0 0 12px 0;
+}
+hr{
+  margin: 0 0 1em 0;
+}
+
+a, a:hover {
+  color:#68aa40;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  font-size: 80%;
+  line-height: 100%;
+  vertical-align: text-top;
+  padding-bottom: 5px;
+}
+h1 {
+  font-weight:bold;
+  font-size:2.4em;
+  margin-bottom: 1.5em;
+}
+.post{
+  margin-bottom : 4em; 
+}
+.post h1, .post h3{
+  font-weight:bold;
+  margin-bottom: 2em;
+  font-style:italic;
+}
+.post h1{
+  font-size: 2em;
+}
+.post h3{
+  font-size: 1.2em;
+}
+.post h1 span, .post h3 span {
+  padding-left: 10px;
+  font-size: 0.7em;
+  color:#68AA40;
+}
+
+.content .leftmenu, .content .rightmenu{
+  width: 20%;
+  height: 100%;
+}
+.leftmenu, .middle{
+  float:left;
+}
+.middle{
+  width:60%;
+}
+.rightmenu{
+  float:left;
+}
+
+.clear{
+  clear:both;
+}
+
+.wrapper { 
+  width   : 943px; 
+  margin  : 0 auto;
+  background-color: black;
+}
+.wrapper .logo{
+  height  : 150px;
+}
+.wrapper .mainmenu{
+  width: 100%;
+}
+.wrapper .mainmenu ul {
+  width:100%;
+}
+
+.mainmenu ul li {
+  display: block;
+  text-align : center;
+  float: left;
+  height:40px;
+  padding : 0 10px 0 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 16.5%;
+}
+.mainmenu ul li span{
+  font-size : 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.wrapper .content{
+  padding : 4em 0 4em 0;
+}
+
+div.last-video, div.last-picture, div.calendrier{
+  height : 200px;
+}
+div.details{
+  padding-left : 2em;
+}
+
+
+
+

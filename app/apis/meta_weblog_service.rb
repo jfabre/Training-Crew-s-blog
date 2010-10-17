@@ -1,5 +1,4 @@
 class CategoryInfo < ActionWebService::Struct
-
     member :categoryId,       :string
     member :parentId,       :string
     member :description,       :string
@@ -153,7 +152,7 @@ class MetaWeblogService < XMLRPCService
      article=Article.new(hash)
      slug = Post.create_slug(article.title)
      post = Post.find_by_slug(slug)
-     post = Post.find(article.postId) unless post
+     #post = Post.all.select(article.postid.to_s).first unless post or article.postid
      if(post)  
        bind_post(post,article)
        if(publish==0)

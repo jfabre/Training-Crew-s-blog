@@ -27,7 +27,6 @@ module NavigationHelpers
     when /('|")\/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\/.+('|")/
       "#{$2}/#{$3}/#{$4}/#{$5}"
     when /('|")(\/[^\/]+)(\/[^\/]+)('|")/
-      puts "went there for #{page_name}"
       "#{$2}#{$3}"
     else
       begin

@@ -1,18 +1,19 @@
 <% content_for :title do %><%= @post.title %><% end %> 
-<p><%= @post.body %></p>
+<div class="post details">
+  <h1><%= @post.title %><span><%= @post.published_at %></span></h1>
+  <p><%= @post.body %></p>
+</div>
 <hr>
-<span>Comments</span>
+<span>Commentaires</span>
 <% @post.comments.each do |c|%>
-  <div>
-    <div><span></span></div>
-    <p><b><%=c.user%>:</b>&nbsp;<%= c.text %></p>
+  <div class="comment">
+    <p><b><%=c.user%>:</b><%= c.text %></p>
   </div>
 <%end%>
-
 <p>Insert your comment here:</p>
 <% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
   Name: <input type="text" name="name"/><br />
-  Comment : <input type="text" name="comment"/><br />
+  Comment : <textarea name="comment" ></textarea><br /><br />
   <input type="submit" name="Add" id="Add">
 <% end %>
 
