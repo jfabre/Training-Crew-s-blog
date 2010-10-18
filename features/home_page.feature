@@ -1,7 +1,7 @@
 Feature: Home page
   In order to view all the awesome stuff on the home page
   As a reader
-  I want posts and categories
+  I want posts, categories and videos
   
   Scenario: View Category on Home
     Given the following categories exist
@@ -27,15 +27,10 @@ Feature: Home page
     And I should see "Post 3"
     And I should see "Post 4"
     And I should see "Post 5"
-    And I should see "Post 6"
+    And I should see "Post 6" 
     
-  Scenario: Specialized Category Posts
-    Given 10 posts exist
-    And the following posts exist
-    |slug|title|category_id|
-    |post1|Post 1|2| 
-    |post2|Post 2|2| 
-    |post3|Post 3|2| 
-    |post4|Post 4|2| 
-    |post5|Post 5|2| 
-    |post6|Post 6|2| 
+  Scenario: View latest video on Home
+    Given a video exists with name: "video1", description: "desc1", url: "urlblabla", created_at: "12/12/2000"
+    When I am on the home page
+    Then I should see "desc1"
+    And I should see "urlblabla"

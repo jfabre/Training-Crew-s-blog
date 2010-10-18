@@ -1,7 +1,8 @@
 <% content_for :title do %>Mange ton pied garde l'autre pour tracer<% end %> 
 <div class="leftmenu">
   <div class="last-video">
-    Dernier vidéo
+    <%= @latest_video.youtube %>
+    <span><%= @latest_video.description %></span>
   </div>
   <div class="last-picture">
     Derniere photo 
@@ -13,14 +14,20 @@
       <div class="post">
         <h3><%= post.title %><span><%= post.published_at %></span></h3>
         <div class="body"><%= post.body %></div>
-        <p><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+        <% comment_count = post.comments.size %>
+        <p><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= comment_count  %> commentaire<%= comment_count > 1 ? 's' : '' %></a></p>
       </div>
     <% end %>
   <% end %>
 </div>
 <div class="rightmenu">
   <div class="calendrier">Calendrier des activites</div>
-  <div class="archive">archives</div>
+  <div class="archive">
+    archives
+  <% for category in @categories %>
+    <%= category.title %> 
+  <% end %>
+  </div>
 </div>
 <div class="clear"></div>
 

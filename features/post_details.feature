@@ -8,7 +8,7 @@ Feature: Post and comments display
     When I am on the "2009/01/12/something_very_groovy" post page
     Then I should see "something very groovy"
     And I should see "Lorem Ipsum 1"
-    And I should see "Comments"
+    And I should see "Commentaires"
   
   Scenario: Comment page form
     Given the following posts exist
@@ -32,7 +32,7 @@ Feature: Post and comments display
      | author4 | url    |  Lorem Ipsum Comment 4  |
     Then the post with title "something very groovy" should have 4 comments
     When I am on the home page
-    And I follow "4 commentaire(s)"
+    And I follow "4 commentaires"
     Then I should see "author1"
     And I should see "author2"
     And I should see "author3"
@@ -45,7 +45,7 @@ Feature: Post and comments display
   Scenario: Link off of home
     Given a post exists with title: "something very groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009", slug: "super-slug"
     And I am on the home page
-    When I follow "0 commentaire(s)"
+    When I follow "0 commentaire"
     Then I should see "something very groovy"
     And I should see "Lorem Ipsum 1"
   
