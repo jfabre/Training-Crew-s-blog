@@ -6,7 +6,7 @@ html {
   color   : #E0E0E0;
 }
 body {
-  font-family: Arial, Verdana, Helvetica, Sans-serif;s
+  font-family: "Comic Sans MS", cursive, sans-serif;
   color   : white;
   font-size : 14px;
   height  :100%;
@@ -57,17 +57,15 @@ h1 {
 }
 
 .content .leftmenu, .content .rightmenu{
-  width: 20%;
+  width: 25%;
   height: 100%;
 }
-.leftmenu, .middle{
+.leftmenu, .middle, .rightmenu{
   float:left;
 }
 .middle{
-  width:60%;
-}
-.rightmenu{
-  float:left;
+  width:70%;
+  padding-left: 2em;
 }
 
 .clear{
@@ -78,9 +76,13 @@ h1 {
   width   : 943px; 
   margin  : 0 auto;
   background-color: black;
+  margin-top: 1em;
 }
 .wrapper .logo{
+  padding-top: 1em;
   height  : 150px;
+  text-align:center; 
+  
 }
 .wrapper .mainmenu{
   width: 100%;
@@ -106,7 +108,7 @@ h1 {
   text-transform: uppercase;
 }
 .wrapper .content{
-  padding : 4em 0 4em 0;
+  padding : 5em 0 5em 0;
 }
 
 div.last-video, div.last-picture, div.calendrier{

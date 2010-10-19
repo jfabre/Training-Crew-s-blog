@@ -5,10 +5,17 @@
 </div>
 <hr>
 <span>Commentaires</span>
-<% @post.comments.each do |c|%>
-  <div class="comment">
-    <p><b><%=c.user%>:</b><%= c.text %></p>
-  </div>
+<% for c in @post.comments.select{|c| c.is_root?} %>
+  <ul class="comment">
+    <li><span><b><%=c.user%>:</b> <%= c.text %></span></li>
+    <% unless c.replies.empty? %>
+      <ul class="reply">
+      <% c.replies.each do |r| %>
+        <li><li><span><b><%=r.user%>:</b> <%= r.text %></span></li></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </ul>
 <%end%>
 <p>Insert your comment here:</p>
 <% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
