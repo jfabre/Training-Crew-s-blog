@@ -4,24 +4,25 @@
   <p><%= @post.body %></p>
 </div>
 <hr>
-<span>Commentaires</span>
-<% for c in @post.comments.select{|c| c.is_root?} %>
-  <ul class="comment">
-    <li><span><b><%=c.user%>:</b> <%= c.text %></span></li>
-    <% unless c.replies.empty? %>
-      <ul class="reply">
-      <% c.replies.each do |r| %>
-        <li><li><span><b><%=r.user%>:</b> <%= r.text %></span></li></li>
+<div class="comments">
+  <p>Commentaires</p>
+  <% for c in @post.comments.select{|c| c.is_root?} %>
+    <ul>
+      <li><span><b><%=c.user%>:</b> <%= c.text %></span></li>
+      <% unless c.replies.empty? %>
+        <ul class="replies">
+        <% c.replies.each do |r| %>
+          <li><li><span><b><%=r.user%>:</b> <%= r.text %></span></li></li>
+        <% end %>
+        </ul>
       <% end %>
-      </ul>
-    <% end %>
-  </ul>
-<%end%>
-<p>Insert your comment here:</p>
-<% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
-  Name: <input type="text" name="name"/><br />
-  Comment : <textarea name="comment" ></textarea><br /><br />
-  <input type="submit" name="Add" id="Add">
-<% end %>
+    </ul>
+  <%end%>
+  <% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
+    Nom: <input type="text" name="name" /><br /><br/>
+    Commentaire: <textarea name="comment" cols="50" rows="5"></textarea><br /><br />
+    <input type="submit" name="Add" id="Add">
+  <% end %>
+</div>
 
 

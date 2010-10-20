@@ -1,13 +1,13 @@
 @import url(reset.css);
 
 html {
-  background-color: gray;
+  background : url('../images/bg1.png') repeat-x scroll left top black;
   height  : 100%;
   color   : #E0E0E0;
 }
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color   : white;
+  color   :     #C8C8C8;
   font-size : 14px;
   height  :100%;
 }
@@ -32,14 +32,16 @@ sup {
   padding-bottom: 5px;
 }
 h1 {
+  color : white;
   font-weight:bold;
   font-size:2.4em;
   margin-bottom: 1.5em;
 }
 .post{
-  margin-bottom : 4em; 
+  margin-bottom : 4em;
 }
 .post h1, .post h3{
+  color : white;
   font-weight:bold;
   margin-bottom: 2em;
   font-style:italic;
@@ -53,41 +55,48 @@ h1 {
 .post h1 span, .post h3 span {
   padding-left: 10px;
   font-size: 0.7em;
-  color:#68AA40;
+  
 }
-
+.post p.comment{
+  margin-top : 2em;
+  font-size: 16px;
+  font-weight: bold;
+}
+.details{
+  padding : 0 3em 0 3em;
+}
 .content .leftmenu, .content .rightmenu{
-  width: 25%;
+  width: 30%;
   height: 100%;
 }
 .leftmenu, .middle, .rightmenu{
   float:left;
 }
 .middle{
-  width:70%;
-  padding-left: 2em;
+  width:64%;
+  padding: 0 0 0 3em;
 }
 
 .clear{
   clear:both;
 }
-
-.wrapper { 
+.wrapper {
   width   : 943px; 
   margin  : 0 auto;
-  background-color: black;
   margin-top: 1em;
+  border: 2px solid white;
+  background-color : black;
 }
-.wrapper .logo{
-  padding-top: 1em;
-  height  : 150px;
+.logo{
+  padding-top: 2em;
   text-align:center; 
-  
+  margin-bottom : 2em;
 }
-.wrapper .mainmenu{
+.header .mainmenu{
   width: 100%;
+  padding-top: 3em;
 }
-.wrapper .mainmenu ul {
+.header .mainmenu ul {
   width:100%;
 }
 
@@ -103,21 +112,24 @@ h1 {
   width: 16.5%;
 }
 .mainmenu ul li span{
-  font-size : 16px;
+  font-size : 19px;
   font-weight: bold;
   text-transform: uppercase;
 }
 .wrapper .content{
-  padding : 5em 0 5em 0;
+  margin-top : 6em;
 }
 
 div.last-video, div.last-picture, div.calendrier{
   height : 250px;
-}
-div.details{
-  padding-left : 2em;
+  padding: 0 2px 0 2px;
 }
 
+.comments{
+  margin-left: 3em;
+}
 
-
+input, textarea{
+  background: none repeat scroll 0 0 transparent; border: 1px solid white; color:white;
+}
 

@@ -5,14 +5,14 @@
       <div class="post">
         <h3><%= post.title %><span><%= post.published_at %></span></h3>
         <div class="body"><%= post.body %></div>
-        <p><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+        <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
       </div>
     <% end %>
   <% end %>
 </div>
 <div class="rightmenu">
   <div class="last-video">
-    <%= @latest_video.small_embed %>
+    <div class="container"><%= @latest_video.small_embed %></div>
     <span><%= @latest_video.description %></span>
   </div>
   <div class="last-picture">

@@ -1,0 +1,10 @@
+<% content_for :title do %>Tous les videos<% end %>
+<div>
+  <% @videos.each do |video| %>
+    <div>
+      <h3><%= video.name %></h3>
+      <p><%= video.description %></p>
+      <div><%= video.embed %></div>
+    </div>
+  <% end %>
+</div>

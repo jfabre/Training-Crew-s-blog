@@ -10,9 +10,11 @@ class PostController < ApplicationController
       @posts=Post.recent_sorted(10)
     end
   end
+ 
   def rss  
     @posts=Post.recent_sorted(10)
   end
+  
   def show
     @post= Post.find_by_slug(params[:slug])
     render '404' unless @post
@@ -27,6 +29,7 @@ class PostController < ApplicationController
     
     redirect_to :action => 'show', :slug => post.slug, :year =>  post.year, :month => post.month , :day => post.day
   end
+  
   def add_reply
     post = Post.find(params[:id]);
     root_comment = post.comments.find(params[:reply_to])

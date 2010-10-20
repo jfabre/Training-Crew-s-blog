@@ -30,7 +30,10 @@ Feature: Home page
     And I should see "Post 6" 
     
   Scenario: View latest video on Home
-    Given a video exists with name: "video1", description: "desc1", url: "urlblabla", created_at: "12/12/2000"
+    Given the following videos exists
+    |name   | description | created_at|
+    |video1 | desc1       | 12/12/2000|
+    |video2 | desc2       | 12/12/2005|
     When I am on the home page
-    Then I should see "desc1"
-    And I should see "urlblabla"
+    Then I should see "desc2"
+    And I should not see "desc1"

@@ -9,24 +9,24 @@
 	  <%= yield :head %>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="header">
-        <div class="logo"><image src="/images/TRAING-CREW blanc.png" alt="logo" width="520px" height="137px"/></div>
-        <div class="mainmenu">
-          <ul>
-            <li></li>
-            <li><a href="#"><span>Vidéos</span></a></li>
-            <li><a href="#"><span>Photos</span></a></li>
-            <li><a href="#"><span>Articles</span></a></li>
-            <li><a href="#"><span>Qui sommes-nous</span></a></li>
-            <li></li>
-          </ul>
-          <div class="clear"></div>
+      <div class="logo"><% link_to :controller => 'home', :action => 'index' do %><image src="/images/TRAING-CREW blanc.png" alt="logo" width="520px" height="137px"/><% end %></div>
+      <div class="wrapper">
+        <div class="main">
+          <div class="header">
+            <div class="mainmenu">
+              <ul>
+                <li></li>
+                <li><% link_to :controller => 'videos', :action => 'list' do %><span>Vidéos</span></a><% end %></li>
+                <li><a href="#"><span>Photos</span></a></li>
+                <li><a href="#"><span>Articles</span></a></li>
+                <li><a href="#"><span>Qui sommes-nous</span></a></li>
+                <li></li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="content"><%= yield %></div>
         </div>
       </div>
-      <div class="content">
-        <%= yield %>
-      </div>
-    </div>
   </body>
 </html>

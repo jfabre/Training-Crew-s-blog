@@ -1,9 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :videos
-
-  map.resources :videos
-
   
+  map.list_videos '/videos/list', :controller => 'videos', :action => 'list'
+  map.resources :videos
   map.connect '/contact', :controller => 'home', :action => 'contact'
   map.connect '/resume', :controller => 'home', :action => 'resume'
 

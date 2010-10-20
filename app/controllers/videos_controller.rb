@@ -10,7 +10,16 @@ class VideosController < ApplicationController
       format.xml  { render :xml => @videos }
     end
   end
+  # GET /videos/list
+  # GET /videos.xml
+  def list
+    @videos = Video.all(:order => 'created_at DESC')
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @videos }
+    end
+  end
   # GET /videos/1
   # GET /videos/1.xml
   def show
