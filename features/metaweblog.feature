@@ -87,3 +87,9 @@ Scenario: Categories
   | opinion  | Opinion  |
   | mvc-storefront | MVC Storefront |
   Then I should have 3 categories with getCategories
+  
+Scenario: Deleting a post
+  Given a post exists with slug: "pub-date", title: "title", published_at: "1/1/2000"
+  When I call deletePost with slug: "pub-date"
+  Then a post should not exist
+  

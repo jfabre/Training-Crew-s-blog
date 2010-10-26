@@ -1,11 +1,11 @@
 class CategoryInfo < ActionWebService::Struct
-    member :categoryId,       :string
+    member :categoryId,     :string
     member :parentId,       :string
-    member :description,       :string
-    member :categoryName,       :string
-    member :title,       :string
-    member :htmlUrl,       :string
-    member :rssUrl,       :string
+    member :description,    :string
+    member :categoryName,   :string
+    member :title,          :string
+    member :htmlUrl,        :string
+    member :rssUrl,         :string
 end
 
 class ArticleComment< ActionWebService::Struct
@@ -84,7 +84,10 @@ class MetaWeblogApi < ActionWebService::API::Base
   api_method :newMediaObject,
      :expects => [ {:blogid => :string}, {:username => :string}, {:password => :string}, {:data => MediaObject} ],
      :returns => [Url]
-
+     
+  api_method :deletePost,
+    :expects =>  [{:postid => :string}, {:username=>:string}, {:password=>:string}, {:publish => :int}],
+    :returns => [:bool]
 end
 
 class MetaWeblogService < XMLRPCService
@@ -146,7 +149,7 @@ class MetaWeblogService < XMLRPCService
 
    end
    
-   def editPost(slug, username, password, hash, publish)
+   def editPost(postid, username, password, hash, publish)
      authenticate(username,password)
      
      article=Article.new(hash)
@@ -166,10 +169,16 @@ class MetaWeblogService < XMLRPCService
      end
      true
    end
-   
+   def deletePost(postId, username, password, publish)
+      authenticate(username, password)
+      
+      Post.delete(postId)
+      true
+   end
    def newPost(blogid, username,password,hash,publish)
  
       authenticate(username,password)
+      
       article=Article.new(hash)
       post=Post.new
       bind_post(post,article)
@@ -198,12 +207,8 @@ class MetaWeblogService < XMLRPCService
    
    def getPost(id, username,password)
      authenticate(username,password)
-     post=Post.find(id)
-
-     if(!post)
-      raise "Can't find post with slug #{slug}"
-     end
-     struct_from(post)
+     
+     struct_from(Post.find(id))
    end
 
    def bind_post(post,article)
@@ -256,7 +261,6 @@ class MetaWeblogService < XMLRPCService
    end
  
    def struct_from(post)
-     
        Article.new(
        :description       => post.excerpt,
        :title             => post.title,

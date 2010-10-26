@@ -4,7 +4,9 @@ class HomeController < ApplicationController
     @latest_video = Video.all(:order => "created_at DESC").first
     @latest_video = Video.new(:description => 'No video available') unless @latest_video
     @categories = Category.all
-    @posts = Post.all(:order => "published_at DESC", :limit => 5)
+    #@posts = Post.all(:order => "published_at DESC", :limit => 5)
+    @posts = Post.paginate(:page => params[:page], :order => 'published_at DESC', :per_page => 5)
+
   end
 
   def contact

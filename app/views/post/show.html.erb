@@ -5,22 +5,32 @@
 </div>
 <hr>
 <div class="comments">
-  <p>Commentaires</p>
+  <ul>
   <% for c in @post.comments.select{|c| c.is_root?} %>
-    <ul>
-      <li><span><b><%=c.user%>:</b> <%= c.text %></span></li>
+      <li>
+        <div class="header">
+          <div class="username"><%= c.user %>:</div>
+          <div class="date"><%= c.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
+          <div class="reply"><a href="#">Répondre</a></div>
+          <br class="clear" />
+        </div>
+        <div class="comment"><%= c.text %></div>
+      </li>
       <% unless c.replies.empty? %>
         <ul class="replies">
         <% c.replies.each do |r| %>
-          <li><li><span><b><%=r.user%>:</b> <%= r.text %></span></li></li>
+          <li><span><b><%=r.user%>:</b> <%= r.text %></span></li>
         <% end %>
         </ul>
       <% end %>
-    </ul>
   <%end%>
+  </ul>
+  <hr />
   <% form_tag :controller => 'post', :action => 'add_comment', :id => @post.id do %>
-    Nom: <input type="text" name="name" /><br /><br/>
-    Commentaire: <textarea name="comment" cols="50" rows="5"></textarea><br /><br />
+    <p>Nom:</p> 
+    <input type="text" name="name" /><br /><br/>
+    <p>Commentaire:</p>
+    <textarea name="comment" cols="50" rows="5"></textarea><br /><br />
     <input type="submit" name="Add" id="Add">
   <% end %>
 </div>

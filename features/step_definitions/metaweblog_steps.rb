@@ -112,7 +112,7 @@ When /^I call editPost with slug "([^\"]*)" and set published to false$/ do |slu
     :wp_slug=>article.wp_slug,
     :pubDate=>Time.gm(Time.now.year+1,"01","01"),
   }
-  
+
   
   api.editPost(slug,"admin","secret",hash,0)
 end
@@ -138,7 +138,11 @@ When /^I upload a file using the api$/ do
   
   assert_equal "#{Blog.url}/system/uploads/development.log", uploaded.url
 end
-
+When /^I call deletePost with slug: "([^\"]*)"/ do |slug|
+  id=Post.find_by_slug(slug).id
+  api.deletePost(id, "admin", "secret", true)
+end
+  
 Then /^that file should exist in public uploads$/ do
   expected_path="#{RAILS_ROOT}/public/system/uploads/development.log"
   assert File.file?(expected_path)

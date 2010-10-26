@@ -8,7 +8,7 @@ Feature: Post and comments display
     When I am on the "2009/01/12/something_very_groovy" post page
     Then I should see "something very groovy"
     And I should see "Lorem Ipsum 1"
-    And I should see "Commentaires"
+    And I should see "Commentaire:"
   
   Scenario: Comment page form
     Given the following posts exist
@@ -38,7 +38,7 @@ Feature: Post and comments display
     And I should see "author3"
     And I should see "author4"
 
-  Scenario: The post should have a wordpress-style title
+  Scenario: The post should have a underscore style title
     Given a post exists with title: "something very groovy", body: "Lorem Ipsum 1", published_at: "12/01/2009", slug: "something_very_groovy"
     Then the post with title "something very groovy" should have url "/2009/12/01/something_very_groovy"
 
