@@ -31224,3 +31224,737 @@ ActionController::RoutingError (No route matches "/2010/10/17/images/loadingAnim
   haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:02:13) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_4368f58ae99248b888a25f792f1b0f12_3bfe001a32de4114a6b44005b770f6d7", "day"=>"17", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_4368f58ae99248b888a25f792f1b0f12_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 7) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 16) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 15) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 14) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 13) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 10) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 9) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 36ms (View: 23, DB: 2) | 200 OK [http://24.202.26.207/2010/10/17/temporary_post_used_for_theme_detection_4368f58ae99248b888a25f792f1b0f12_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:02:13) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/17/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 24.202.26.207 at 2010-10-26 23:02:18) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 132ms (View: 29, DB: 2) | 200 OK [http://24.202.26.207/]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:02:19) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 43ms (View: 29, DB: 6) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:02:20) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:02:36) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 48ms (View: 35, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:02:37) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 24.202.26.207 at 2010-10-26 23:02:53) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 98ms (View: 17, DB: 5) | 200 OK [http://24.202.26.207/]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:02:55) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 49ms (View: 35, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:02:55) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:03:03) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 47ms (View: 35, DB: 3) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:03:03) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:03:07) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#reply (for 24.202.26.207 at 2010-10-26 23:03:07) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"32"}
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 117ms (View: 5, DB: 0) | 200 OK [http://24.202.26.207/comment/reply/32?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 24.202.26.207 at 2010-10-26 23:03:15) [POST]
+  Parameters: {"name"=>"Jim", "Add"=>"Soumettre", "authenticity_token"=>"vNEVQ6t2J6pXSfo1tu71lZ2YmlC4BN7qyxJCdipjm6M=", "id"=>"32", "comment"=>"www.test.com"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('Jim', '2010-10-27 03:03:15', 'www.test.com', NULL, NULL, 32, '2010-10-27 03:03:15')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 10) [0m
+  [4;36;1mComment Update (1.0ms)[0m   [0;1mUPDATE "comments" SET "updated_at" = '2010-10-27 03:03:15', "post_id" = 10 WHERE "id" = 35[0m
+Redirected to http://24.202.26.207:3000/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7/comment/new
+Completed in 265ms (DB: 2) | 302 Found [http://24.202.26.207/comment/add_reply/32]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:03:18) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 47ms (View: 35, DB: 4) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:03:18) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:05:24) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#reply (for 24.202.26.207 at 2010-10-26 23:05:24) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"32"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://24.202.26.207/comment/reply/32?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 24.202.26.207 at 2010-10-26 23:05:36) [POST]
+  Parameters: {"name"=>"test 2", "Add"=>"Soumettre", "authenticity_token"=>"vNEVQ6t2J6pXSfo1tu71lZ2YmlC4BN7qyxJCdipjm6M=", "id"=>"32", "comment"=>"haaabbaa\r\ndfsdfdjfn\r\nhey ho"}
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('test 2', '2010-10-27 03:05:36', 'haaabbaa
+dfsdfdjfn
+hey ho', NULL, NULL, 32, '2010-10-27 03:05:36')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 10) [0m
+  [4;35;1mComment Update (1.0ms)[0m   [0mUPDATE "comments" SET "updated_at" = '2010-10-27 03:05:36', "post_id" = 10 WHERE "id" = 36[0m
+Redirected to http://24.202.26.207:3000/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7/comment/new
+Completed in 334ms (DB: 3) | 302 Found [http://24.202.26.207/comment/add_reply/32]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:05:38) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 111ms (View: 38, DB: 2) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:05:38) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:07:27) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 47ms (View: 33, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:07:27) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:07:40) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#reply (for 24.202.26.207 at 2010-10-26 23:07:40) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"32"}
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://24.202.26.207/comment/reply/32?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 24.202.26.207 at 2010-10-26 23:07:51) [POST]
+  Parameters: {"name"=>"Test 3", "Add"=>"Soumettre", "authenticity_token"=>"vNEVQ6t2J6pXSfo1tu71lZ2YmlC4BN7qyxJCdipjm6M=", "id"=>"32", "comment"=>"wassup\r\nwww.test.com"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+  [4;36;1mComment Create (15.0ms)[0m   [0;1mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('Test 3', '2010-10-27 03:07:51', 'wassup
+www.test.com', NULL, NULL, 32, '2010-10-27 03:07:51')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 10) [0m
+  [4;36;1mComment Update (1.0ms)[0m   [0;1mUPDATE "comments" SET "updated_at" = '2010-10-27 03:07:51', "post_id" = 10 WHERE "id" = 37[0m
+Redirected to http://24.202.26.207:3000/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7/comment/new
+Completed in 256ms (DB: 16) | 302 Found [http://24.202.26.207/comment/add_reply/32]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:08:04) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 44ms (View: 31, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:08:04) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:09:00) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 47ms (View: 33, DB: 4) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:09:01) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:09:10) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#reply (for 24.202.26.207 at 2010-10-26 23:09:10) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"32"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 77ms (View: 5, DB: 0) | 200 OK [http://24.202.26.207/comment/reply/32?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 24.202.26.207 at 2010-10-26 23:09:16) [POST]
+  Parameters: {"name"=>"Nom", "Add"=>"Soumettre", "authenticity_token"=>"vNEVQ6t2J6pXSfo1tu71lZ2YmlC4BN7qyxJCdipjm6M=", "id"=>"32", "comment"=>"www.microsoft.com"}
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+  [4;35;1mComment Create (0.0ms)[0m   [0mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('Nom', '2010-10-27 03:09:16', 'www.microsoft.com', NULL, NULL, 32, '2010-10-27 03:09:16')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 10) [0m
+  [4;35;1mComment Update (1.0ms)[0m   [0mUPDATE "comments" SET "updated_at" = '2010-10-27 03:09:16', "post_id" = 10 WHERE "id" = 38[0m
+Redirected to http://24.202.26.207:3000/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7/comment/new
+Completed in 183ms (DB: 3) | 302 Found [http://24.202.26.207/comment/add_reply/32]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:09:19) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 50ms (View: 37, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:09:19) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:09:43) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 44ms (View: 32, DB: 4) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:09:44) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:11:13) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 50ms (View: 34, DB: 5) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:11:13) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:11:38) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#reply (for 24.202.26.207 at 2010-10-26 23:11:38) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"32"}
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://24.202.26.207/comment/reply/32?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 24.202.26.207 at 2010-10-26 23:11:49) [POST]
+  Parameters: {"name"=>"Jimbo", "Add"=>"Soumettre", "authenticity_token"=>"vNEVQ6t2J6pXSfo1tu71lZ2YmlC4BN7qyxJCdipjm6M=", "id"=>"32", "comment"=>"http://www.google.ca"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 32) ORDER BY created_at DESC[0m
+  [4;36;1mComment Create (12.0ms)[0m   [0;1mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('Jimbo', '2010-10-27 03:11:49', 'http://www.google.ca', NULL, NULL, 32, '2010-10-27 03:11:49')[0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 10) [0m
+  [4;36;1mComment Update (1.0ms)[0m   [0;1mUPDATE "comments" SET "updated_at" = '2010-10-27 03:11:49', "post_id" = 10 WHERE "id" = 39[0m
+Redirected to http://24.202.26.207:3000/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7/comment/new
+Completed in 180ms (DB: 13) | 302 Found [http://24.202.26.207/comment/add_reply/32]
+
+
+Processing PostController#show (for 24.202.26.207 at 2010-10-26 23:11:55) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 48ms (View: 35, DB: 3) | 200 OK [http://24.202.26.207/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 24.202.26.207 at 2010-10-26 23:11:55) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-10-26 23:16:50) [GET]
+  Parameters: {"month"=>"10", "slug"=>"temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7", "day"=>"25", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 10) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 32) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 29) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 28) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 27) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 26) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 25) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 24) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 23) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 22) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 21) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 20) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 19) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 18) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 17) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 56ms (View: 41, DB: 6) | 200 OK [http://127.0.0.1/2010/10/25/temporary_post_used_for_theme_detection_1b366a493bc44dc29da306dbebf4efac_3bfe001a32de4114a6b44005b770f6d7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-26 23:16:51) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/25/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-10-26 23:18:21) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 40ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-10-26 23:18:26) [GET]
+  Parameters: {"month"=>"10", "slug"=>"la_moustache_cest_mieux_que_les_dents", "day"=>"17", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 6) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 11) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/2010/10/17/la_moustache_cest_mieux_que_les_dents]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-26 23:18:27) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/17/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-26 23:18:38) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/17/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentController#new (for 127.0.0.1 at 2010-10-26 23:18:38) [GET]
+  Parameters: {"slug"=>"la_moustache_cest_mieux_que_les_dents", "KeepThis"=>"true"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/comment
+Rendering comment/new
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/la_moustache_cest_mieux_que_les_dents/comment/new?KeepThis=true&]
+
+
+Processing CommentController#add_comment (for 127.0.0.1 at 2010-10-26 23:18:46) [POST]
+  Parameters: {"name"=>"wassup", "Add"=>"Soumettre", "authenticity_token"=>"l6w53QAMRrPPlNv/wjNptzjGsg9uait8Ho0hE9tD+MI=", "id"=>"6", "comment"=>"wassup 2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+  [4;36;1mComment Create (1.0ms)[0m   [0;1mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('wassup', '2010-10-27 03:18:46', 'wassup 2', NULL, NULL, NULL, '2010-10-27 03:18:46')[0m
+  [4;35;1mComment Update (0.0ms)[0m   [0mUPDATE "comments" SET "updated_at" = '2010-10-27 03:18:46', "post_id" = 6 WHERE "id" = 40[0m
+Redirected to http://127.0.0.1:3000/la_moustache_cest_mieux_que_les_dents/comment/new
+Completed in 178ms (DB: 1) | 302 Found [http://127.0.0.1/comment/add_comment/6]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-10-26 23:18:48) [GET]
+  Parameters: {"month"=>"10", "slug"=>"la_moustache_cest_mieux_que_les_dents", "day"=>"17", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 40) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 11) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://127.0.0.1/2010/10/17/la_moustache_cest_mieux_que_les_dents]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-26 23:18:48) [GET]
+
+ActionController::RoutingError (No route matches "/2010/10/17/images/loadingAnimation.gif" with {:method=>:get}):
+  haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendering rescues/layout (not_found)
