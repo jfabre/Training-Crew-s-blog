@@ -8,7 +8,6 @@ Feature: Post and comments display
     When I am on the "2009/01/12/something_very_groovy" post page
     Then I should see "something very groovy"
     And I should see "Lorem Ipsum 1"
-    And I should see "Commentaire:"
   
   Scenario: Comment page form
     Given the following posts exist

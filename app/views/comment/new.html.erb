@@ -1,0 +1,34 @@
+<% content_for :title do %>Nouveau commentaire<% end %> 
+<% content_for :head do %>
+<%= javascript_include_tag 'jquery-1.4.3.min' %>
+<script type="text/javascript" language="JavaScript">
+  $(document).ready(function(){
+    $("#txtName, #txtComment").focus(function(){
+        if(this && this.value){
+          this.value = '';
+        }
+        else{
+          $(this).text('');
+        }
+    });
+    $("#txtName").blur(function(){
+      if(this && this.value == ''){
+        this.value = 'Nom';
+      }
+    });
+    $("#txtComment").blur(function(){
+      var obj = $(this);
+      if(obj.val() == ''){
+        obj.val('Commentaire');
+      }
+    });
+  });
+</script>
+<% end %>
+<div class="enter_comment">
+    <% form_tag :controller => 'comment', :action => 'add_comment', :id => @post.id do %>
+    <input type="text" id="txtName" name="name" value="Nom" /><br /><br/>
+    <textarea name="comment" id="txtComment" cols="70" rows="8">Commentaire</textarea><br /><br />
+    <input type="submit" name="Add" id="Add" value="Soumettre" onclick="self.parent.tb_remove();" />
+    <% end %>
+</div>

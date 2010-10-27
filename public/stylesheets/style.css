@@ -7,7 +7,7 @@ html {
 }
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  color   :     #C8C8C8;
+  color : #C8C8C8;
   font-size : 14px;
   height  :100%;
 }
@@ -38,11 +38,12 @@ h1 {
   margin-bottom: 1.5em;
 }
 .post, .pagination{
-  margin-bottom : 4em;
+  margin-bottom : 3em;
 }
 .pagination{
   width:100%;
   text-align:center;
+  font-size : 16px;
 }
 .post h1, .post h3{
   color : white;
@@ -62,7 +63,7 @@ h1 {
   
 }
 .post p.comment{
-  margin-top : 2em;
+  margin-top : 1.5em;
   font-size: 16px;
   font-weight: bold;
 }
@@ -92,7 +93,6 @@ h1 {
   background-color : black;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px;
 }
 .logo{
   padding-top: 2em;
@@ -100,7 +100,6 @@ h1 {
 }
 .logo img{
   height : 150px;
-  width: 200 px;
 }
 .header .mainmenu{
   margin-left: auto ;
@@ -125,7 +124,7 @@ text-align : center;
   text-transform: uppercase;
 }
 .wrapper .content{
-  margin-top : 3em;
+  margin-top : 2em;
 }
 
 div.last-video, div.last-picture, div.calendrier{
@@ -136,6 +135,13 @@ div.last-video, div.last-picture, div.calendrier{
 .comments{
   margin-left: 3em;
   margin-top: 2em;
+}
+.replymain{
+  width:100%;
+  text-align:right;
+}
+.replymain a{
+  margin-right : 25px;
 }
 .comments ul li{
   border: 1px solid gray;
@@ -155,6 +161,17 @@ div.last-video, div.last-picture, div.calendrier{
   font-size : 17px;
   margin-right:30px;
 }
+.comments div.replies{
+  background : url('../images/bg_content_top.png') repeat scroll left top transparent;
+  border-bottom: 1px solid gray;
+  padding: 1em 0 0 2em;
+  height: 40px;
+  vertical-align:bottom;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+}
 .comments div.header{
   background : url('../images/bg_content_top.png') repeat scroll left top transparent;
   border-bottom: 1px solid gray;
@@ -167,7 +184,7 @@ div.last-video, div.last-picture, div.calendrier{
   -webkit-border-top-right-radius: 8px;
 }
 .comments ul li div.comment{
-  padding: 1em 4em 2em 5em;
+  padding: 3em 4em 2em 5em;
 }
 
 input, textarea{
@@ -180,5 +197,38 @@ input, textarea{
   height: 200px;
   background : url('../images/footer2.png') repeat-x scroll center top transparent;
 }
+.enter_comment{
+  width:680px;
+  height:300px;
+  padding : 60px 0 0 2em;
+  background-color:black;
+  margin: 0 auto;
+}
+.enter_comment input[type=text] {
+  width: 200px;
+  height:2em;
+  border: 1px solid white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding-left : 1em;
+}
+.enter_comment textarea{
+  border: 1px solid white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding : 0.5em 0 0 1em;
+}
+.enter_comment input[type=submit] {
+  border: 1px solid white;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding : 0.2em 0.5em 0.2em 0.5em;
+}
+.enter_comment input[type=submit]:hover{
+  cursor:pointer;
+  border: 1px solid green;
+}
 
-
+.replies{
+  
+}

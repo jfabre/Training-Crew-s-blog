@@ -4,10 +4,11 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :videos
   map.connect '/contact', :controller => 'home', :action => 'contact'
   map.connect '/resume', :controller => 'home', :action => 'resume'
-
+  
   map.connect 'xmlrpc/api', :controller => "xmlrpc", :action=> "api"
   map.wp_post ':year/:month/:day/:slug', :controller => 'post', :action=> 'show'
-  
+  map.new_comment '/:slug/comment/new', :controller => 'comment', :action => 'new'
+
   map.category 'category/:slug', :controller => 'post', :action=> 'index'
   map.post_by_category  ':category_slug/:slug', :controller => 'post', :action=> 'show'
   map.search 'search', :controller=> 'post', :action=>'search'
