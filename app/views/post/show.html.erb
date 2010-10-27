@@ -19,7 +19,7 @@
   <% for c in @post.comments.select{|c| c.is_root?} %>
       <li>
         <div class="header">
-          <div class="username"><%= c.user %>:</div>
+          <div class="username"><%= c.user %></div>
           <div class="reply">
             <%= link_to "Répondre", { :controller => 'comment', :action => 'reply', :id => c.id, 
               :KeepThis => 'true', :TB_iframe => 'true', :height => 350, :width => 680 }, 
@@ -28,12 +28,19 @@
           <div class="date"><%= c.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
           <br class="clear" />
         </div>
-        <div class="comment"><p><%= c.text %></p></div>
+        <div class="comment"><%= c.text %></div>
         <% unless c.replies.empty? %>
         <div class="replies">
           <ul>
             <% c.replies.each do |r| %>
-              <li><span><b><%=r.user%>:</b> <%= r.text %></span></li>
+              <li>
+                <div class="header">
+                  <div class="username"><%= r.user %></div>
+                  <div class="date"><%= r.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
+                  <br class="clear" />
+                </div>
+                <div class="comment"><%= r.text %></div>
+              </li>
             <% end %>
           </ul> 
         </div>

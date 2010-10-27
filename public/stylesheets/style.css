@@ -148,35 +148,24 @@ div.last-video, div.last-picture, div.calendrier{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   margin-right : 3em;
-  margin-bottom : 3em;
+  margin-bottom : 2em;
 }
 .comments div.header div{
   float:right;
   margin-right:20px;
+  font-size : 16px;
 }
 .comments div.header div.username{
   float:left;
-  text-decoration:underline;
   text-transform:capitalize;
-  font-size : 17px;
+  font-size : 16px;
   margin-right:30px;
-}
-.comments div.replies{
-  background : url('../images/bg_content_top.png') repeat scroll left top transparent;
-  border-bottom: 1px solid gray;
-  padding: 1em 0 0 2em;
-  height: 40px;
-  vertical-align:bottom;
-  -moz-border-radius-topleft: 8px;
-  -webkit-border-top-left-radius: 8px;
-  -moz-border-radius-topright: 8px;
-  -webkit-border-top-right-radius: 8px;
 }
 .comments div.header{
   background : url('../images/bg_content_top.png') repeat scroll left top transparent;
   border-bottom: 1px solid gray;
-  padding: 1em 0 0 2em;
-  height: 40px;
+  padding: 0.5em 0 0 2em;
+  height: 30px;
   vertical-align:bottom;
   -moz-border-radius-topleft: 8px;
   -webkit-border-top-left-radius: 8px;
@@ -184,7 +173,7 @@ div.last-video, div.last-picture, div.calendrier{
   -webkit-border-top-right-radius: 8px;
 }
 .comments ul li div.comment{
-  padding: 3em 4em 2em 5em;
+  padding: 1.2em 4em 1.2em 5em;
 }
 
 input, textarea{
@@ -230,5 +219,5 @@ input, textarea{
 }
 
 .replies{
-  
+  margin-left : 6em;
 }
