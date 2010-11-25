@@ -5,10 +5,8 @@
   $(document).ready(function(){
     $("#txtName, #txtComment").focus(function(){
         if(this && this.value){
-          this.value = '';
-        }
-        else{
-          $(this).text('');
+          if(this.value == 'Nom' || this.value == 'Commentaire')
+            this.value = '';
         }
     });
     $("#txtName").blur(function(){
@@ -22,14 +20,26 @@
         obj.val('Commentaire');
       }
     });
+    $("#txtName, #txtComment").keypress(function(e) {
+      var code = e.keyCode ? e.keyCode : e.which;
+      if (code == 13){
+        var txtName = $('#txtName');
+        var txtComment = $('#txtComment');
+        if(txtName.val() != '' && txtName != 'Nom' && txtComment.text() != '' && txtComment.text() != 'Commentaire'){
+          return true;
+        }
+        return false;
+      }
+      return true;
+    });
   });
 </script>
 <% end %>
 <div class="enter_comment">
-    <p><%= @comment.text %></p>
+    <p><b><%= @comment.user %> a dit:</b>&nbsp;<%= @comment.text %></p>
     <% form_tag :controller => 'comment', :action => 'add_reply', :id => @comment.id do %>
     <input type="text" id="txtName" name="name" value="Nom" /><br /><br/>
     <textarea name="comment" id="txtComment" cols="70" rows="8">Commentaire</textarea><br /><br />
-    <input type="submit" name="Add" id="Add" value="Soumettre" onclick="self.parent.tb_remove();" />
+    <input type="submit" name="Add" id="Add" value="Soumettre" onclick="self.parent.close_comment_form();" />
     <% end %>
 </div>

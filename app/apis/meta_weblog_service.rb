@@ -198,7 +198,7 @@ class MetaWeblogService < XMLRPCService
      post.clear_categories
      Category.clear_posts(post)
      
-     if(!article.categories.blank?)
+     unless article.categories.blank?
        article.categories.each do |cat|
          Category.categorize(cat,post)
        end

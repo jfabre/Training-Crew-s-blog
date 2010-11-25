@@ -3,6 +3,13 @@
   <%= stylesheet_link_tag 'thickbox' %>
   <%= javascript_include_tag 'jquery-1.4.3.min' %>
   <%= javascript_include_tag 'thickbox-compressed' %>
+  <script type="text/javascript">
+    function close_comment_form(){
+      tb_remove();
+      var t=setTimeout("window.location.reload(true);",1500);
+    }
+    
+  </script>
 <% end %>
 <div class="post details">
   <h1><%= @post.title %><span><%= @post.published_at %></span></h1>

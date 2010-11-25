@@ -1,0 +1,9 @@
+
+<div style="text-align:center; margin-bottom:40px;">
+  <p><%=h @image.name %></p>
+  <%= link_to 'Edit', edit_image_path(@image) %> |
+  <%= link_to 'Back', images_path %>
+  <br /><br />
+  <img src="<%= @image.amazon_url %>" alt="image" />
+  
+</div>

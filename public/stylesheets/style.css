@@ -37,6 +37,9 @@ h1 {
   font-size:2.4em;
   margin-bottom: 1.5em;
 }
+h2{
+  font-size: 1.5em;
+}
 .post, .pagination{
   margin-bottom : 3em;
 }
@@ -99,7 +102,7 @@ h1 {
   text-align:center; 
 }
 .logo img{
-  height : 150px;
+  height : 170px;
 }
 .header .mainmenu{
   margin-left: auto ;
@@ -125,13 +128,26 @@ text-align : center;
 }
 .wrapper .content{
   margin-top : 2em;
+  min-height: 220px;
 }
 
 div.last-video, div.last-picture, div.calendrier{
   height : 250px;
   padding: 0 2px 0 2px;
 }
-
+div.last-picture {
+  background : url('../images/polaroid.jpg') center top transparent;
+  height: 300px;
+  width: 280px;
+}
+div.last-picture img{
+  margin-top: 38px;
+  margin-left:21px;
+  height: 190px;
+  width: 235px;
+   
+  -moz-transform:rotate(-1.8deg); 
+}
 .comments{
   margin-left: 3em;
   margin-top: 2em;
@@ -148,7 +164,7 @@ div.last-video, div.last-picture, div.calendrier{
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   margin-right : 3em;
-  margin-bottom : 2em;
+  margin-bottom : 1.2em;
 }
 .comments div.header div{
   float:right;
@@ -162,7 +178,7 @@ div.last-video, div.last-picture, div.calendrier{
   margin-right:30px;
 }
 .comments div.header{
-  background : url('../images/bg_content_top.png') repeat scroll left top transparent;
+  
   border-bottom: 1px solid gray;
   padding: 0.5em 0 0 2em;
   height: 30px;
@@ -181,17 +197,21 @@ input, textarea{
 }
 
 .footer{
+  margin-top: 4em;
   text-align: center;
   width : 100%;
-  height: 200px;
-  background : url('../images/footer2.png') repeat-x scroll center top transparent;
+  height: 160px;
+  background : url('../images/footer3.jpg') repeat-x scroll center top transparent;
 }
 .enter_comment{
   width:680px;
   height:300px;
-  padding : 60px 0 0 2em;
+  padding : 40px 0 0 2em;
   background-color:black;
   margin: 0 auto;
+}
+.enter_comment p {
+  margin-bottom : 2em;
 }
 .enter_comment input[type=text] {
   width: 200px;
@@ -220,4 +240,34 @@ input, textarea{
 
 .replies{
   margin-left : 6em;
+}
+.archive li{
+  margin-left : 10px;
+}
+.resume {
+  padding: 2em 2em 2em 2em; 
+}
+.resume p {
+  font-size : 16px;
+}
+.resume h1 {
+  margin-bottom: 1em;
+}
+.videobox{
+  padding-top:2em;
+  text-align:center;
+}
+.videobox > div.box {
+  border: 0px solid #68AA40;
+  padding-top: 2em;
+  margin-bottom : 4px;
+  margin: auto;
+  width:800px;
+  padding-bottom: 3em;
+}
+.videobox p{
+  text-align:left;
+  font-size: 18px;
+  padding-left : 5em;
+  margin-top: 1em;
 }

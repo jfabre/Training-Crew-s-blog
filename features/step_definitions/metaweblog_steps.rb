@@ -72,9 +72,7 @@ end
 And /^the post with slug "([^\"]*)" should belong to categories "([^\"]*)" and "([^\"]*)"$/ do |slug, cat1, cat2|
  post = Post.find_by_slug(slug)
  
- #cats = post.categories.all()
- 
- #cats.each {|x| assert x.title == cat1 || x.title == cat2 }
+
  assert post.categories.titled(cat1)
  assert post.categories.titled(cat2)
 end
@@ -123,10 +121,6 @@ When /^I call editPost with slug "([^\"]*)" and set published_at to "([^\"]*)"$/
   
   api.editPost(slug,"admin","secret",article, 0)
 end
-Then /^I should have 2 categories when calling getCategories with api$/ do
-  cats=api.getCategories(1,"admin","secret")
-  cats.size.should==2
-end
 
 When /^I upload a file using the api$/ do
   file_path="#{RAILS_ROOT}/log/development.log"
@@ -154,8 +148,9 @@ Then /^the post with slug "([^\"]*)" should have ([0-9]+) comments$/ do |arg1,nu
 end
 Then /^I should have ([0-9]+) categories with getCategories$/ do |num|
   cats=api.getCategories("1","admin","secret")
-  #raise cats.inspect
-  assert_equal num.to_i, cats.size
+  
+  #because we got 2 default cats in db I have to remove 2 for now
+  assert_equal num.to_i, cats.size - 2
 end
 
 

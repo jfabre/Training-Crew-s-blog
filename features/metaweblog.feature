@@ -73,7 +73,7 @@ Scenario: Change publish date
 Scenario: Get all categories
   Given the database is empty
   And 2 categories exist
-  Then I should have 2 categories when calling getCategories with api
+  Then I should have 2 categories with getCategories
 
 Scenario: Uploading new file
   When I upload a file using the api
@@ -81,7 +81,7 @@ Scenario: Uploading new file
 
 Scenario: Categories
   Given the database is empty
-  Given the following categories exist
+  And the following categories exist
   | slug     | title     |
   | subsonic | SubSonic |
   | opinion  | Opinion  |

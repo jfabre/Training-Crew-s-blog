@@ -1,0 +1,31 @@
+<% content_for :title do %>Album de photos<% end %>
+<% content_for :head do %>
+  <%= javascript_include_tag 'cloud-carousel.1.0.4.min' %>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){    
+      // This initialises carousels on the container elements specified, in this case, carousel1.
+      $(".carousel").CloudCarousel({     
+          xPos: 328,
+          yPos: 132,
+          buttonLeft: $("#left-but"),
+          buttonRight: $("#right-but"),
+          altBox: $("#alt-text"),
+          titleBox: $("#title-text")
+      });
+    });
+  </script>
+<% end %>
+<% @albums.each do |album| %>
+<div class="carousel" style="width:800px;height:500px;margin:0 auto;">
+  <% album.images.each do |img| %>
+  <img class="cloudcarousel" width="200" height="200" alt="Flag 1 Description" title="Flag 1 Title" src="<%= img.amazon_url %>" />
+  <% end%>
+</div>
+<% end %>
+<input id="left-but"  type="button" value="Left" />
+<input id="right-but" type="button" value="Right" />
+
+<!-- Define elements to accept the alt and title text from the images. -->
+<p id="title-text"></p>
+<p id="alt-text"></p>

@@ -1,12 +1,12 @@
 <% content_for :title do %>Mange ton pied garde l'autre pour tracer<% end %> 
-<% paginated_section (@posts, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
+<% paginated_section(@posts, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
   <div class="middle">
     <% if !@posts.blank? %>
       <% for post in @posts %>
         <div class="post">
           <h3><%= post.title %><span><%= post.published_at %></span></h3>
           <div class="body"><%= post.body %></div>
-          <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+          <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="<%= post.title %>" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
         </div>
       <% end %>
     <% end %>
@@ -16,14 +16,18 @@
       <div class="container"><%= @latest_video.small_embed %></div>
     </div>
     <div class="last-picture">
-      Derniere photo 
+        <img src="<%= @latest_pic.amazon_url %>" />
     </div>
-    <div class="calendrier">Calendrier des activites</div>
     <div class="archive">
-      archives
-    <% for category in @categories %>
-      <%= category.title %> 
-    <% end %>
+      <span>Archives</span>
+      <ul>
+        <% @categories.each do |cat| %>
+          <li><%= link_to cat.title, category_path(:slug => cat.slug) %></li> 
+        <% end %>
+      </ul>
+    </div>
+    <div class="calendrier">
+      <h3>Calendrier des activites</h3>
     </div>
   </div>
   <div class="clear"></div>

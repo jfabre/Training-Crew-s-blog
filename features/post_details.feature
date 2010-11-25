@@ -13,10 +13,11 @@ Feature: Post and comments display
     Given the following posts exist
       |slug   |title  |published_at |  body        |
       |post1  |Post 1 |12/25/2009   | Lorem Ipsum 1|
-    When I am on the "2009/12/25/post1" post page
+    And I am on the new comment entry page for slug "post1" 
       And I fill in "name" with "Joe Blow"
       And I fill in "comment" with "Super commentaire"
       And I press "Add"
+    When I am on the "2009/12/25/post1" post page
     Then I should see "Joe Blow"
       And I should see "Super commentaire" 
       And a comment should exist with user: "Joe Blow", text: "Super commentaire" 

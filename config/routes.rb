@@ -1,18 +1,23 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :images
+  
+  map.albums 'albums/:action/:id', :controller => :albums
+  map.display_album 'albums/display/:id', :controller => :albums, :action => :display
   
   map.list_videos '/videos/list', :controller => 'videos', :action => 'list'
   map.resources :videos
   map.connect '/contact', :controller => 'home', :action => 'contact'
-  map.connect '/resume', :controller => 'home', :action => 'resume'
+  map.resume '/resume', :controller => 'home', :action => 'resume'
   
   map.connect 'xmlrpc/api', :controller => "xmlrpc", :action=> "api"
   map.wp_post ':year/:month/:day/:slug', :controller => 'post', :action=> 'show'
   map.new_comment '/:slug/comment/new', :controller => 'comment', :action => 'new'
-
+  
   map.category 'category/:slug', :controller => 'post', :action=> 'index'
   map.post_by_category  ':category_slug/:slug', :controller => 'post', :action=> 'show'
   map.search 'search', :controller=> 'post', :action=>'search'
-
+  map.category ':slug', :controller => 'post', :action=> 'index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

@@ -1,0 +1,19 @@
+<% content_for :title do %>Tous les <%= @category.title %> <% end %> 
+<div class="middle">
+  <% unless @posts.empty? %>
+    <% @posts.each do |post| %>
+      <div class="post">
+        <h3><%= post.title %><span><%= post.published_at %></span></h3>
+        <div class="body"><%= post.body %></div>
+        <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="Allez-y" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+      </div>
+    <% end %>
+  <% else %>
+    <div>
+      <p>Aucun entrainement disponible présentement...<p/>
+    </div>
+  <% end %>
+</div>
+<div class="clear"></div>
+
+

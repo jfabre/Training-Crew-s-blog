@@ -1,4 +1,11 @@
 class CommentController < ApplicationController
+  def new
+    @post = Post.find_by_slug(params[:slug])
+    render '404' unless @post
+  end
+  def reply
+    @comment = Comment.find(params[:id])
+  end
   def add_comment
     post = Post.find(params[:id]);
     comment = Comment.create!(:user => params[:name], :text => params[:comment])
@@ -7,13 +14,6 @@ class CommentController < ApplicationController
     post.save
     
     redirect_to :action => 'new', :slug => post.slug
-  end
-  def new
-    @post = Post.find_by_slug(params[:slug])
-    render '404' unless @post
-  end
-  def reply
-    @comment = Comment.find(params[:id])
   end
   def add_reply
     root_comment = Comment.find(params[:id]);

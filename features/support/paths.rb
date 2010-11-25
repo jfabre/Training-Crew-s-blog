@@ -24,6 +24,8 @@ module NavigationHelpers
       '/resume'
     when /the ('|")(.+)('|") post page/
       "/#{$2}"
+    when /the new comment entry page for slug "([^"]*)"/
+      "/#{$1}/comment/new"
     when /.*bad-url.*/
        '/post/show/0'
     when /('|")\/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\/.+('|")/
