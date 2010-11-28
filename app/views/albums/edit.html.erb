@@ -1,13 +1,13 @@
 <h1>Editing album</h1>
 
-<% form_for(@album) do |f| %>
+<% form_for(@album, :url => {:action => :update}) do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
-  <select type="multiline">
+  <select name="images" type="multiline">
     <% @images.each do |x| %>
       <option value="<%= x.id %>"><%= x.name %></option>
     <% end %>
@@ -17,5 +17,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @album %> |
+<%= link_to 'Show', :action => :show, :id => @album.id %> |
 <%= link_to 'Back', albums_path %>

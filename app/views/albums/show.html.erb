@@ -4,5 +4,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<%= link_to 'Edit', :action => :edit, :id => @album.id %> | <%= link_to 'Back', albums_path %>

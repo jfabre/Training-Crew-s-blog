@@ -1,20 +1,48 @@
 <h1>New album</h1>
-
-<% form_for(@album) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <select name="images" type="multiline">
-    <% @images.each do |x| %>
-      <option value="<%= x.id %>"><%= x.name %></option>
-    <% end %>
-  </select>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+<% content_for :head do %>
+<%= stylesheet_link_tag "jquery-ui-1.8.6.custom" %>
+<%= javascript_include_tag 'jquery-ui-1.8.6.custom.min' %>
+<script type="text/javascript" language="JavaScript">
+  $(document).ready(function(){
+      $( "#non-assigned").sortable({
+         receive: function(event, ui) { 
+          $("#non-assigned #pic").removeAttr('name');
+        },
+        connectWith: ".connectedSortable",
+        placeholder: "ui-state-highlight",
+        revert: true
+      }).disableSelection();
+      
+      $( "#assigned" ).sortable({
+        receive: function(event, ui) { 
+          $("#assigned #pic").attr('name', 'images');
+        },
+        placeholder: "ui-state-highlight",
+        revert: true,
+        connectWith: ".connectedSortable"
+      }).disableSelection();
+  });
+</script>
 <% end %>
 
-<%= link_to 'Back', albums_path %>
+<% form_for(@album, :url => {:action => :create}) do |f| %>
+  <div class="album-container">
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :name, 'Nom' %><br />
+      <%= f.text_field :name %>
+    </p>
+    <h3>Images non assignées</h3>
+    <ul id="non-assigned" class="connectedSortable">
+      <% @images.each do |x| %>
+        <li class="ui-state-default"><%= x.name %><input id="pic" type="hidden" value="<%= x.id %>" /></li>
+      <% end %>
+    </ul>
+    <h3>Images assignées à cet album</h3>
+    <ul id="assigned" class="connectedSortable"></ul>
+    <p>
+      <%= link_to 'Back', albums_path %>
+      <%= f.submit 'Create' %>
+    </p>
+  </div>
+<% end %>

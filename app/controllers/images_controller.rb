@@ -48,7 +48,7 @@ class ImagesController < ApplicationController
       if(@image.name.empty?)
         @image.name = File.basename(params[:upload]['datafile'].original_filename)
       end
-      
+      logger.info params[:upload]['datafile'].inspect
       @image.save_img(@image.name, params[:upload]['datafile'].read)
       if @image.save
         format.html { redirect_to(@image, :notice => 'Image was successfully created.') }
@@ -70,11 +70,9 @@ class ImagesController < ApplicationController
       unless params[:upload].blank?
         datafile = params[:upload]['datafile']
         unless datafile.respond_to?('read')
-          stream = datafile.read
+          @image.update_img(@image.name, params[:image][:name], datafile.read)
         end
       end
-      
-      @image.update_img(@image.name, params[:image][:name], stream)
       if @image.update_attributes(params[:image])
         format.html { redirect_to(@image, :notice => 'Image was successfully updated.') }
         format.xml  { head :ok }

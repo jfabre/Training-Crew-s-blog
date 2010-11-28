@@ -8,9 +8,9 @@
 <% @albums.each do |album| %>
   <tr>
     <td><%=h album.name %></td>
-    <td><%= link_to 'Show', album %></td>
-    <td><%= link_to 'Edit', edit_album_path(album) %></td>
-    <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', :action => :show, :id => album.id %></td>
+    <td><%= link_to 'Edit', :action => :edit, :id => album.id %></td>
+    <td><%= link_to 'Destroy', :action => :destroy, :id => album.id %></td>
   </tr>
 <% end %>
 </table>

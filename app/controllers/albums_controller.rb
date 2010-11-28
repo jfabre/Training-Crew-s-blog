@@ -43,11 +43,13 @@ class AlbumsController < ApplicationController
   # POST /albums.xml
   def create
     @album = Album.new(params[:album])
-
+    
     respond_to do |format|
+      @album.images << Image.all([params[:images]].flatten)
+      
       if @album.save
-        format.html { redirect_to(@album, :notice => 'Album was successfully created.') }
-        format.xml  { render :xml => @album, :status => :created, :location => @album }
+        format.html { redirect_to(albums_path, :notice => 'Album was successfully created.') }
+        format.xml  { render :xml => albums_path, :status => :created, :location => @album }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @album.errors, :status => :unprocessable_entity }
@@ -76,7 +78,10 @@ class AlbumsController < ApplicationController
   def destroy
     @album = Album.find(params[:id])
     @album.destroy
-
+    Image.all(:conditions => {:album_id => params[:id]}).each do |x| 
+      x.album_id = nil
+      x.save
+    end
     respond_to do |format|
       format.html { redirect_to(albums_url) }
       format.xml  { head :ok }
