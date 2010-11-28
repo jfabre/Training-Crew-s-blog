@@ -4683,3 +4683,17 @@ Processing HomeController#resume (for 127.0.0.1 at 2010-11-28 12:14:48) [GET]
 Rendering template within layouts/master
 Rendering home/resume
 Completed in 7ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-28 12:26:10) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-28 12:26:57) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
