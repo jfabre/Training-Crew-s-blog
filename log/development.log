@@ -4697,3 +4697,1426 @@ Rendering template within layouts/master
 Rendering albums/display
   [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
 Completed in 25ms (View: 18, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:47:29) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 139ms (View: 87, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:48:05) [GET]
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 50ms (View: 20, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:50:33) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 61ms (View: 29, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:56:01) [GET]
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 51ms (View: 21, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:56:38) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 112ms (View: 26, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:58:30) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 51ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:58:32) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 51ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/?page=1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:58:33) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 129ms (View: 92, DB: 2) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 16:59:14) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 58ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:02:33) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 124ms (View: 27, DB: 1) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:03:54) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 93ms (View: 39, DB: 3) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:04:33) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 72ms (View: 30, DB: 2) | 200 OK [http://127.0.0.1/?page=1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:04:39) [GET]
+  [4;36;1mVideo Load (2.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 67ms (View: 28, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:06:33) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 62ms (View: 25, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:06:58) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 63ms (View: 25, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:07:13) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 60ms (View: 26, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:07:28) [GET]
+  [4;36;1mVideo Load (2.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 61ms (View: 25, DB: 6) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:09:21) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 117ms (View: 84, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:10:52) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:12:36) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:13:09) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:13:18) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:13:43) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:13:52) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:14:02) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:14:32) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 99ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:14:34) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:14:38) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:14:42) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 55ms (View: 23, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:22:23) [GET]
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 130ms (View: 93, DB: 7) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:22:45) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 54ms (View: 23, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:22:52) [GET]
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 53ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:23:08) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 55ms (View: 23, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:23:21) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:23:33) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 35ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:23:35) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:23:36) [GET]
+  [4;35;1mAlbum Load (2.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 48ms (View: 40, DB: 2) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:24:58) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 34ms (View: 26, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:25:19) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:25:32) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:27:14) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (75.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 103ms (View: 21, DB: 75) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:27:34) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:28:26) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:28:42) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:28:51) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 80ms (View: 72, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:28:58) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 27ms (View: 20, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:29:04) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:29:23) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:29:29) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:29:40) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:29:55) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:30:19) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:30:29) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:31:01) [GET]
+  [4;35;1mAlbum Load (2.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 28ms (View: 20, DB: 2) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:31:15) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:31:31) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 80ms (View: 66, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:31:32) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:31:34) [GET]
+  [4;36;1mAlbum Load (1.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 29ms (View: 21, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:31:35) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:31:36) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:31:37) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:31:38) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:32:11) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:32:28) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:32:29) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:32:33) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:33:55) [GET]
+  [4;36;1mAlbum Load (1.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+
+ActionView::TemplateError (undefined method `img_tag' for #<ActionView::Base:0x8d34278>) on line #32 of app/views/layouts/master.html.erb:
+29:           <%= yield %>
+30:         </div>
+31:       </div>
+32:       <div class="footer"><span><%= img_tag 'rails' %>Copyright Training Crew 2010</span></div>
+33:   </body>
+34: </html>
+
+    app/views/layouts/master.html.erb:32
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:34:17) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+
+ActionView::TemplateError (undefined method `img_tag' for #<ActionView::Base:0x8ea740c>) on line #32 of app/views/layouts/master.html.erb:
+29:           <%= yield %>
+30:         </div>
+31:       </div>
+32:       <div class="footer"><span><%= img_tag 'rails.png' %>Copyright Training Crew 2010</span></div>
+33:   </body>
+34: </html>
+
+    app/views/layouts/master.html.erb:32
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:34:26) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 35ms (View: 28, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:34:47) [GET]
+  [4;36;1mAlbum Load (1.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (0.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 36ms (View: 27, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:35:07) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 124ms (View: 97, DB: 2) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:35:08) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 58ms (View: 24, DB: 4) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:35:45) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 66ms (View: 29, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:39:39) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 40ms (View: 26, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:44:05) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 77ms (View: 35, DB: 5) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:54:27) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 17:54:30) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 91ms (View: 80, DB: 2) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:54:31) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:56:06) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 29ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:56:06) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 17:56:08) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 17:56:09) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 17:56:10) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 136ms (View: 14, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:56:11) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 59ms (View: 24, DB: 3) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 17:56:32) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 5[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 62ms (View: 26, DB: 4) | 200 OK [http://127.0.0.1/?page=2]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 17:57:19) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 72ms (View: 62, DB: 1) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing CommentController#new (for 127.0.0.1 at 2010-11-30 17:57:22) [GET]
+  Parameters: {"slug"=>"bob_srsquoest_mange_les_cheveux", "KeepThis"=>"true"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/comment
+Rendering comment/new
+Completed in 36ms (View: 27, DB: 0) | 200 OK [http://127.0.0.1/bob_srsquoest_mange_les_cheveux/comment/new?KeepThis=true&]
+
+
+Processing CommentController#reply (for 127.0.0.1 at 2010-11-30 17:57:25) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"12"}
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 12) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 39ms (View: 30, DB: 0) | 200 OK [http://127.0.0.1/comment/reply/12?KeepThis=true&]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:01:53) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 40ms (View: 28, DB: 1) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing CommentController#new (for 127.0.0.1 at 2010-11-30 18:01:58) [GET]
+  Parameters: {"slug"=>"bob_srsquoest_mange_les_cheveux", "KeepThis"=>"true"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/comment
+Rendering comment/new
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/bob_srsquoest_mange_les_cheveux/comment/new?KeepThis=true&]
+
+
+Processing CommentController#add_comment (for 127.0.0.1 at 2010-11-30 18:02:05) [POST]
+  Parameters: {"name"=>"test", "Add"=>"Soumettre", "authenticity_token"=>"ZScgo4WvZGvrjLR/ir3YZr2V0EbgB9HryTzKS9u27QI=", "id"=>"3", "comment"=>"test"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('test', '2010-11-30 23:02:05', 'test', NULL, NULL, NULL, '2010-11-30 23:02:05')[0m
+  [4;36;1mComment Update (0.0ms)[0m   [0;1mUPDATE "comments" SET "updated_at" = '2010-11-30 23:02:05', "post_id" = 3 WHERE "id" = 67[0m
+Redirected to http://127.0.0.1:3000/bob_srsquoest_mange_les_cheveux/comment/new
+Completed in 200ms (DB: 2) | 302 Found [http://127.0.0.1/comment/add_comment/3]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:02:06) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 30ms (View: 19, DB: 1) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:02:29) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;36;1mPost Load (3.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 34ms (View: 22, DB: 3) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:02:45) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 30ms (View: 17, DB: 2) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:03:20) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 90ms (View: 76, DB: 2) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:03:30) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 33ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:03:38) [GET]
+  Parameters: {"month"=>"10", "slug"=>"bob_srsquoest_mange_les_cheveux", "day"=>"16", "year"=>"2010"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'bob_srsquoest_mange_les_cheveux') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 67) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 12) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 7) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/2010/10/16/bob_srsquoest_mange_les_cheveux]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:03:46) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 56ms (View: 23, DB: 2) | 200 OK [http://127.0.0.1/]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:03:49) [GET]
+  Parameters: {"month"=>"10", "slug"=>"la_moustache_cest_mieux_que_les_dents", "day"=>"17", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 40) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 11) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 43ms (View: 21, DB: 1) | 200 OK [http://127.0.0.1/2010/10/17/la_moustache_cest_mieux_que_les_dents]
+
+
+Processing CommentController#new (for 127.0.0.1 at 2010-11-30 18:03:53) [GET]
+  Parameters: {"slug"=>"la_moustache_cest_mieux_que_les_dents", "KeepThis"=>"true"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/comment
+Rendering comment/new
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/la_moustache_cest_mieux_que_les_dents/comment/new?KeepThis=true&]
+
+
+Processing CommentController#reply (for 127.0.0.1 at 2010-11-30 18:03:56) [GET]
+  Parameters: {"KeepThis"=>"true", "id"=>"40"}
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 40) ORDER BY created_at DESC[0m
+Rendering template within layouts/comment
+Rendering comment/reply
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://127.0.0.1/comment/reply/40?KeepThis=true&]
+
+
+Processing CommentController#add_reply (for 127.0.0.1 at 2010-11-30 18:04:05) [POST]
+  Parameters: {"name"=>"Jeremy", "Add"=>"Soumettre", "authenticity_token"=>"ZScgo4WvZGvrjLR/ir3YZr2V0EbgB9HryTzKS9u27QI=", "id"=>"40", "comment"=>"ben oui.."}
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 40) ORDER BY created_at DESC[0m
+  [4;35;1mComment Create (1.0ms)[0m   [0mINSERT INTO "comments" ("user", "updated_at", "text", "post_id", "website", "reply_to", "created_at") VALUES('Jeremy', '2010-11-30 23:04:05', 'ben oui..', NULL, NULL, 40, '2010-11-30 23:04:05')[0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+  [4;35;1mComment Update (1.0ms)[0m   [0mUPDATE "comments" SET "updated_at" = '2010-11-30 23:04:05', "post_id" = 6 WHERE "id" = 68[0m
+Redirected to http://127.0.0.1:3000/la_moustache_cest_mieux_que_les_dents/comment/new
+Completed in 157ms (DB: 2) | 302 Found [http://127.0.0.1/comment/add_reply/40]
+
+
+Processing PostController#show (for 127.0.0.1 at 2010-11-30 18:04:06) [GET]
+  Parameters: {"month"=>"10", "slug"=>"la_moustache_cest_mieux_que_les_dents", "day"=>"17", "year"=>"2010"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/show
+  [4;35;1mComment Load (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 6) ORDER BY created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 40) ORDER BY created_at ASC, created_at DESC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 40) ORDER BY created_at ASC, created_at DESC[0m
+  [4;36;1mComment Load (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."reply_to" = 11) ORDER BY created_at ASC, created_at DESC[0m
+Completed in 33ms (View: 22, DB: 1) | 200 OK [http://127.0.0.1/2010/10/17/la_moustache_cest_mieux_que_les_dents]
+
+
+Processing CommentController#new (for 127.0.0.1 at 2010-11-30 18:05:13) [GET]
+  Parameters: {"slug"=>"la_moustache_cest_mieux_que_les_dents", "KeepThis"=>"true"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'la_moustache_cest_mieux_que_les_dents') LIMIT 1[0m
+Rendering template within layouts/comment
+Rendering comment/new
+Completed in 81ms (View: 6, DB: 0) | 200 OK [http://127.0.0.1/la_moustache_cest_mieux_que_les_dents/comment/new?KeepThis=true&]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 18:05:16) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 32ms (View: 15, DB: 1) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 18:05:17) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 18:05:18) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 33ms (View: 25, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 18:05:19) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 18:05:20) [GET]
+  [4;35;1mAlbum Load (1.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 31ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 18:05:36) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 29ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 18:05:36) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 18:05:37) [GET]
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 28ms (View: 20, DB: 1) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 18:05:38) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing PostController#index (for 127.0.0.1 at 2010-11-30 18:06:04) [GET]
+  Parameters: {"slug"=>"entrainements"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."slug" = 'entrainements') LIMIT 1[0m
+Rendering template within layouts/master
+Rendering post/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" INNER JOIN "categorizations" ON "posts".id = "categorizations".post_id WHERE (("categorizations".category_id = 1)) [0m
+Completed in 29ms (View: 13, DB: 1) | 200 OK [http://127.0.0.1/entrainements]
+
+
+Processing VideosController#list (for 127.0.0.1 at 2010-11-30 18:06:05) [GET]
+  [4;36;1mVideo Load (1.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+Rendering template within layouts/master
+Rendering videos/list
+Completed in 88ms (View: 78, DB: 1) | 200 OK [http://127.0.0.1/videos/list]
+
+
+Processing AlbumsController#display (for 127.0.0.1 at 2010-11-30 18:06:06) [GET]
+  [4;35;1mAlbum Load (0.0ms)[0m   [0mSELECT * FROM "albums" [0m
+Rendering template within layouts/master
+Rendering albums/display
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" WHERE ("images".album_id = 12) [0m
+Completed in 30ms (View: 23, DB: 0) | 200 OK [http://127.0.0.1/albums/display/]
+
+
+Processing HomeController#resume (for 127.0.0.1 at 2010-11-30 18:06:06) [GET]
+Rendering template within layouts/master
+Rendering home/resume
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://127.0.0.1/resume]
+
+
+Processing VideosController#index (for 127.0.0.1 at 2010-11-30 18:21:14) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" [0m
+Rendering template within layouts/master
+Rendering videos/index
+Completed in 31ms (View: 19, DB: 0) | 200 OK [http://127.0.0.1/videos]
+
+
+Processing VideosController#new (for 127.0.0.1 at 2010-11-30 18:21:16) [GET]
+Rendering template within layouts/master
+Rendering videos/new
+Completed in 29ms (View: 17, DB: 0) | 200 OK [http://127.0.0.1/videos/new]
+
+
+Processing VideosController#create (for 127.0.0.1 at 2010-11-30 18:22:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ZScgo4WvZGvrjLR/ir3YZr2V0EbgB9HryTzKS9u27QI=", "video"=>{"name"=>"Gatti vs Ward", "description"=>"combat de mongol", "embed"=>"<object width=\"480\" height=\"385\"><param name=\"movie\" value=\"http://www.youtube.com/v/sZvr0Bl_uPs?fs=1&amp;hl=en_US\"></param><param name=\"allowFullScreen\" value=\"true\"></param><param name=\"allowscriptaccess\" value=\"always\"></param><embed src=\"http://www.youtube.com/v/sZvr0Bl_uPs?fs=1&amp;hl=en_US\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"480\" height=\"385\"></embed></object>"}}
+  [4;36;1mVideo Create (0.0ms)[0m   [0;1mINSERT INTO "videos" ("name", "updated_at", "description", "embed", "created_at") VALUES('Gatti vs Ward', '2010-11-30 23:22:05', 'combat de mongol', '<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/sZvr0Bl_uPs?fs=1&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/sZvr0Bl_uPs?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>', '2010-11-30 23:22:05')[0m
+Redirected to http://127.0.0.1:3000/videos/3
+Completed in 78ms (DB: 0) | 302 Found [http://127.0.0.1/videos]
+
+
+Processing VideosController#show (for 127.0.0.1 at 2010-11-30 18:22:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" WHERE ("videos"."id" = 3) [0m
+Rendering template within layouts/master
+Rendering videos/show
+
+ActionView::TemplateError (undefined method `embed_520' for #<Video:0x8d9cc10>) on line #9 of app/views/videos/show.html.erb:
+6: 
+7: <p>
+8:   <b>embed:</b>
+9:   <textarea><%= @video.embed_520 %></textarea>
+10: </p>
+11: 
+12: <p>
+
+    app/views/videos/show.html.erb:9
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.21) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/videos_controller.rb:27:in `show'
+    haml (3.0.21) rails/./lib/sass/plugin/rack.rb:41:in `call'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VideosController#show (for 127.0.0.1 at 2010-11-30 18:23:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos"."id" = 3) [0m
+Rendering template within layouts/master
+Rendering videos/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://127.0.0.1/videos/3]
+
+
+Processing VideosController#show (for 127.0.0.1 at 2010-11-30 18:23:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" WHERE ("videos"."id" = 3) [0m
+Rendering template within layouts/master
+Rendering videos/show
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://127.0.0.1/videos/3]
+
+
+Processing VideosController#show (for 127.0.0.1 at 2010-11-30 18:24:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" WHERE ("videos"."id" = 3) [0m
+Rendering template within layouts/master
+Rendering videos/show
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://127.0.0.1/videos/3]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:24:15) [GET]
+  [4;35;1mVideo Load (2.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (1.0ms)[0m   [0;1mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 76ms (View: 28, DB: 8) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-11-30 18:55:13) [GET]
+  [4;36;1mVideo Load (0.0ms)[0m   [0;1mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM "images" ORDER BY created_at DESC[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mPost Load (2.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY published_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 10) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 9) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 8) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 7) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+Completed in 72ms (View: 32, DB: 5) | 200 OK [http://127.0.0.1/]

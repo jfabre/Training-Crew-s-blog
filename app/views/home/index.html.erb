@@ -19,7 +19,7 @@
         <img src="<%= @latest_pic.amazon_url %>" />
     </div>
     <div class="archive">
-      <span>Archives</span>
+      <h3>Archives</h3>
       <ul>
         <% @categories.each do |cat| %>
           <li><%= link_to cat.title, category_path(:slug => cat.slug) %></li> 
@@ -27,7 +27,7 @@
       </ul>
     </div>
     <div class="calendrier">
-      <h3>Calendrier des activites</h3>
+      <h3>Calendrier des activités</h3>
     </div>
   </div>
   <div class="clear"></div>

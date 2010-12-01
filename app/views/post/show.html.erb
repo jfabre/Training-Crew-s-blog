@@ -15,8 +15,7 @@
   <h1><%= @post.title %><span><%= @post.published_at %></span></h1>
   <p><%= @post.body %></p>
   <div class="replymain">
-    <%= link_to "Répondre", { :controller => 'comment', :action => 'new', :slug => @post.slug, 
-      :KeepThis => 'true', :TB_iframe => 'true', :height => 350, :width => 680 }, 
+    <%= link_to "Répondre", new_comment_path({:slug => @post.slug, :KeepThis => 'true', :TB_iframe => 'true', :height => 350, :width => 680 }), 
       :class => 'thickbox' %>
   </div>
 </div>
