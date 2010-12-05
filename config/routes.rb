@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :images
   
+  map.tchad '/tchad', :controller => :home, :action => :tchad
+  map.resources :images
   map.albums 'albums/:action/:id', :controller => :albums
   map.display_album 'albums/display/:id', :controller => :albums, :action => :display
   

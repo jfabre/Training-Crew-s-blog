@@ -57,7 +57,7 @@ h3{
   margin-bottom:5px;
   font-size: 1.5em;
 }
-.post, .pagination{
+.post{
   margin-bottom : 3em;
 }
 .pagination{
@@ -90,16 +90,16 @@ h3{
 .details{
   padding : 0 3em 0 3em;
 }
-.content .leftmenu, .content .rightmenu{
+
+.rightmenu{
   width: 30%;
   height: 100%;
 }
-.leftmenu, .middle, .rightmenu{
+.middle, .rightmenu{
   float:left;
 }
 .middle{
-  width:64%;
-  padding: 0 0 0 3em;
+  width:70%;
 }
 
 .clear{
@@ -144,7 +144,7 @@ text-align : center;
   text-transform: uppercase;
 }
 .wrapper .content{
-  margin-top : 2em;
+  margin: 2em 3em 3em 3em;
   min-height: 220px;
 }
 
@@ -308,7 +308,4 @@ div.album {
   margin:0 auto;
   text-align: center;
   padding : 20px 0 20px 0;
-}
-
-  
 }

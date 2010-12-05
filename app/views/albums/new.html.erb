@@ -15,7 +15,7 @@
       
       $( "#assigned" ).sortable({
         receive: function(event, ui) { 
-          $("#assigned #pic").attr('name', 'images');
+          $("#assigned #pic").attr('name', 'images[]');
         },
         placeholder: "ui-state-highlight",
         revert: true,

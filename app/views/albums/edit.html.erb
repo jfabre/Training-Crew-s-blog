@@ -1,21 +1,54 @@
-<h1>Editing album</h1>
-
-<% form_for(@album, :url => {:action => :update}) do |f| %>
+<% content_for :head do %>
+<%= stylesheet_link_tag "jquery-ui-1.8.6.custom" %>
+<%= javascript_include_tag 'jquery-ui-1.8.6.custom.min' %>
+<script type="text/javascript" language="JavaScript">
+  $(document).ready(function(){
+      $( "#non-assigned").sortable({
+         receive: function(event, ui) { 
+          $("#non-assigned #pic").removeAttr('name');
+        },
+        connectWith: ".connectedSortable",
+        placeholder: "ui-state-highlight",
+        revert: true
+      }).disableSelection();
+      
+      $( "#assigned" ).sortable({
+        receive: function(event, ui) { 
+          $("#assigned #pic").attr('name', 'images[]');
+        },
+        placeholder: "ui-state-highlight",
+        revert: true,
+        connectWith: ".connectedSortable"
+      }).disableSelection();
+  });
+</script>
+<% end %>
+<h1>Edit album</h1>
+<% form_for(@album, :url => {:action => :update, :id => params[:id]}) do |f| %>
+<div class="album-container">
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, 'Nom' %><br />
     <%= f.text_field :name %>
   </p>
-  <select name="images" type="multiline">
+  <h3>Images non assignées</h3>
+  <ul id="non-assigned" class="connectedSortable">
     <% @images.each do |x| %>
-      <option value="<%= x.id %>"><%= x.name %></option>
+      <li class="ui-state-default"><%= x.name %><input id="pic" type="hidden" value="<%= x.id %>" /></li>
     <% end %>
-  </select>
+  </ul>
+  <h3>Images assignées à cet album</h3>
+  <ul id="assigned" class="connectedSortable">
+    <% @album.images.each do |x| %>
+      <li class="ui-state-default"><%= x.name %><input id="pic" name="images[]" type="hidden" value="<%= x.id %>" /></li>
+    <% end %>
+  </ul>
   <p>
-    <%= f.submit 'Update' %>
+    <%= link_to 'Back', albums_path %>
+    <%= f.submit 'Save' %>
   </p>
+</div>
 <% end %>
-
+  
 <%= link_to 'Show', :action => :show, :id => @album.id %> |
 <%= link_to 'Back', albums_path %>

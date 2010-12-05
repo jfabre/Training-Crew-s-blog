@@ -19,7 +19,9 @@
       :class => 'thickbox' %>
   </div>
 </div>
-<hr>
+<% if @post.comments.size > 0 %>
+<hr /> 
+<% end %>
 <div class="comments">
   <ul>
   <% for c in @post.comments.select{|c| c.is_root?} %>

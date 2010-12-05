@@ -28,9 +28,8 @@ Then /^1 post should be returned by getPost with "([^\"]*)"$/ do |slug|
 end
 
 Then /^the post with slug "([^\"]*)" should not be published$/ do |arg1|
-  post= Post.find_by_slug(arg1)
-  assert post
-
+  post = Post.find_by_slug(arg1)
+  puts Post.all.inspect
   assert_equal false, post.is_published
 end
 Given /^a post exists with slug: "([^\"]*)"$/ do |arg1|
@@ -46,6 +45,9 @@ Given /^I call newPost with "([^\"]*)", body "([^\"]*)", categories "([^\"]*)" a
     :pubDate=>Time.now,
     :categories=>[cat1,cat2]
   }
+  
+  Category.create!({:title => cat1, :slug => Post.create_slug(cat1)})
+  Category.create!({:title => cat2, :slug => Post.create_slug(cat2)})
   api.newPost(1,"admin","secret",article,1)
 end
 Given /^I call newPost with "([^\"]*)", body "([^\"]*)", published set to false$/ do |title, body|
@@ -65,8 +67,10 @@ Given /^I call newPost with "([^\"]*)", body "([^\"]*)", categories "([^\"]*)" a
     :pubDate=> Time.now.advance(:day => 2),
     :categories=>[cat1,cat2]
   }
-  api.newPost(1,"admin","secret",article,0)
   
+  Category.create!({:title => cat1, :slug => Post.create_slug(cat1)})
+  Category.create!({:title => cat2, :slug => Post.create_slug(cat2)})
+  api.newPost(1,"admin","secret", article,0)
 end
 
 And /^the post with slug "([^\"]*)" should belong to categories "([^\"]*)" and "([^\"]*)"$/ do |slug, cat1, cat2|
@@ -86,8 +90,7 @@ And /^categories "([^\"]*)" and "([^\"]*)" should have post with slug "([^\"]*)"
 end
 When /^I call editPost with slug "([^\"]*)" and change the title to "([^\"]*)" and body to "([^\"]*)"$/ do |slug, title, body|
    
-   id=Post.find_by_slug(slug).id
-   
+   id = Post.find_by_slug(slug).id
    article=api.getPost(id, "admin","secret")
    
    hash={
@@ -97,7 +100,7 @@ When /^I call editPost with slug "([^\"]*)" and change the title to "([^\"]*)" a
      :wp_slug=>slug,
      :pubDate=>Time.gm(Time.now.year+1,"01","01"),
    }
-   api.editPost(slug,"admin","secret",hash,1)
+   api.editPost(id,"admin","secret",hash,1)
 end
 
 When /^I call editPost with slug "([^\"]*)" and set published to false$/ do |slug|
@@ -112,14 +115,14 @@ When /^I call editPost with slug "([^\"]*)" and set published to false$/ do |slu
   }
 
   
-  api.editPost(slug,"admin","secret",hash,0)
+  api.editPost(id,"admin","secret",hash,0)
 end
 When /^I call editPost with slug "([^\"]*)" and set published_at to "([^\"]*)"$/ do |slug, pub|
   id=Post.find_by_slug(slug).id
   article=api.getPost(id, "admin","secret")
   article.pubDate=pub
   
-  api.editPost(slug,"admin","secret",article, 0)
+  api.editPost(id,"admin","secret",article, 0)
 end
 
 When /^I upload a file using the api$/ do

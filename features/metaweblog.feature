@@ -33,7 +33,6 @@ Scenario: Retrieve 10 recent posts
   Then 13 posts should exist
     And 10 posts should be returned by metaweblogservice
    
-
 Scenario: Create new post
   Given I call newPost with "create new post", body "body", categories "cat1" and "cat2"
   Then the following posts exist:
@@ -53,12 +52,12 @@ Scenario: Create new post with published off
 
 Scenario: Edit Post
   Given the following posts exist
-    | title    | body           | published_at | slug   |
-    | edit post    | Lorem Ipsum 1  | 12/24/2009     | edit-post   |
-  When I call editPost with slug "edit-post" and change the title to "Title 99" and body to "Yippy Skippy"
+    | title       | body           | published_at | slug        |
+    | edit post   | Lorem Ipsum 1  | 12/24/2009   | edit_post   |
+  When I call editPost with slug "edit_post" and change the title to "Title 99" and body to "Yippy Skippy"
   Then the following posts exist:
     | title    | body           | published_at | slug        |
-    | Title 99 | Yippy Skippy   | 12/24/2009   | edit-post   |
+    | Title 99 | Yippy Skippy   | 12/24/2009   | edit_post   |
 
 Scenario: Take post offline
   Given a post exists with slug: "offline_post", title: "offline post", is_published: true
@@ -66,18 +65,14 @@ Scenario: Take post offline
   Then the post with slug "offline_post" should not be published
 
 Scenario: Change publish date
-  Given a post exists with slug: "pub-date", published_at: "1/1/2000"
-  When I call editPost with slug "pub-date" and set published_at to "1/1/2090"
-  Then the post with slug "pub-date" should not be published 
+  Given a post exists with slug: "pub_date", published_at: "1/1/2000"
+  When I call editPost with slug "pub_date" and set published_at to "1/1/2090"
+  Then the post with slug "pub_date" should not be published 
 
 Scenario: Get all categories
   Given the database is empty
   And 2 categories exist
   Then I should have 2 categories with getCategories
-
-Scenario: Uploading new file
-  When I upload a file using the api
-  Then that file should exist in public uploads
 
 Scenario: Categories
   Given the database is empty

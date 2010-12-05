@@ -1,129 +1,19 @@
-class CategoryInfo < ActionWebService::Struct
-    member :categoryId,     :string
-    member :parentId,       :string
-    member :description,    :string
-    member :categoryName,   :string
-    member :title,          :string
-    member :htmlUrl,        :string
-    member :rssUrl,         :string
-end
-
-class ArticleComment< ActionWebService::Struct
-    member :date_created_gmt, :date
-    member :user_id,          :string
-    member :comment_id,       :string
-    member :comment_parent,   :string
-    member :status,           :string
-    member :content,          :string
-    member :link,             :string
-    member :post_id,          :string
-    member :post_title,       :string
-    member :author,           :string
-    member :author_url,       :string
-    member :author_email,     :string
-    member :author_ip,        :string
-    member :type,             :string
-end
-
-class Article < ActionWebService::Struct
-  member :description,        :string
-  member :title,              :string
-  member :postid,             :string
-  member :url,                :string
-  member :link,               :string
-  member :permaLink,          :string
-  member :categories,         [:string]
-  member :mt_text_more,       :string
-  member :mt_basename,       :string
-  member :mt_excerpt,         :string
-  member :mt_keywords,        :string
-  member :mt_allow_comments,  :int
-  member :mt_allow_pings,     :int
-  member :mt_convert_breaks,  :string
-  member :dateCreated,        :time
-  member :wp_slug,            :string
-  member :pubDate,            :time
-  member :date_created_gmt,    :time
-end
-
-
-
-class MediaObject < ActionWebService::Struct
-    member :bits, :string
-    member :name, :string
-    member :type, :string
-end
-
-class Url < ActionWebService::Struct
-    member :url, :string
-end
-
-class MetaWeblogApi < ActionWebService::API::Base
-  inflect_names false
-
-  api_method :getRecentPosts,
-    :expects => [{:blogid=>:string}, {:username=>:string}, {:password=>:string}, {:numberOfPosts=>:string}],
-    :returns => [[Article]]
-  
-  api_method :getPost,
-    :expects => [ {:postid => :string}, {:username => :string}, {:password => :string} ],
-    :returns => [Article]
-  
-  api_method :newPost,
-    :expects => [ {:blogid => :string}, {:username => :string}, {:password => :string}, {:struct => Article}, {:publish => :int} ],
-    :returns => [:string]
-    
-  api_method :editPost,
-    :expects => [ {:postid => :string}, {:username => :string}, {:password => :string}, {:struct => Article}, {:publish => :int} ],
-    :returns => [:bool]
-  
-  api_method :getCategories,
-     :expects => [ {:blogid => :string}, {:username => :string}, {:password => :string} ],
-     :returns => [[CategoryInfo]]
-     
-  api_method :newMediaObject,
-     :expects => [ {:blogid => :string}, {:username => :string}, {:password => :string}, {:data => MediaObject} ],
-     :returns => [Url]
-     
-  api_method :deletePost,
-    :expects =>  [{:postid => :string}, {:username=>:string}, {:password=>:string}, {:publish => :int}],
-    :returns => [:bool]
-end
+require 'meta_weblog_structs'
 
 class MetaWeblogService < XMLRPCService
    web_service_api MetaWeblogApi
-     
-   def upload_path(file = nil)
-       "#{RAILS_ROOT}/public/uploads/#{file.nil? ? file.basename : file}"
-   end
    
+   def initialize(logger = nil)
+     @logger = logger
+   end  
    def newMediaObject(blogid,username,password,data)
-      
       authenticate(username,password)
        
-      root_url=Rails.env=="production" ? Blog.url : "http://localhost:3000"
-
-      upload_dir="#{RAILS_ROOT}/public/system/uploads/"
-      upload_path=upload_dir+File.basename(data.name)
-
-      # create the public/uploads dir if it doesn't exist
-      FileUtils.mkdir(upload_dir) unless File.directory?(upload_dir)
-
-    
-      #if the file is there, delete it
-      if(File.file?(upload_path))
-        File.delete(upload_path)
-      end
-    
-      #save it down
-      File.open(upload_path, "wb") { |f| f.write(data.bits) }
+      @image = Image.new({:name => File.basename(data.name)})
+      @image.save_img(@image.name, data.bits)
+      @image.save! 
       
-      #make sure it's readable
-      File.chmod(0777, upload_path)
-
-      #return an absolute URL to the item
-      url="#{Blog.url}/system/uploads/#{File.basename(data.name)}"
-      Url.new(:url=>url)
+      Url.new(:url=> @image.amazon_url)
    end
 
    def getRecentPosts(blogid, username, password, limit)
@@ -146,27 +36,21 @@ class MetaWeblogService < XMLRPCService
           :rssUrl=>''
        )
      end
-
    end
    
-   def editPost(postid, username, password, hash, publish)
+   def editPost(post_id, username, password, hash, publish)
      authenticate(username,password)
      
      article=Article.new(hash)
-     slug = Post.create_slug(article.title)
-     post = Post.find_by_slug(slug)
-     #post = Post.all.select(article.postid.to_s).first unless post or article.postid
-     if(post)  
-       bind_post(post,article)
-       if(publish==0)
-         post.is_published=false
-       end
-       
-       if(!post.save)
-         raise "Can't save edits to post...#{post.inspect}"
-       end
-       
-     end
+     post = Post.find(post_id)
+     raise "Could not find the post to edit for id: #{post_id}" if post.nil?
+     
+     bind_post(post, article)
+     post.is_published = publish == 1
+     post.save!
+     
+     assign_categories(article, post)
+     
      true
    end
    def deletePost(postId, username, password, publish)
@@ -176,21 +60,16 @@ class MetaWeblogService < XMLRPCService
       true
    end
    def newPost(blogid, username,password,hash,publish)
- 
       authenticate(username,password)
       
-      article=Article.new(hash)
-      post=Post.new
-      bind_post(post,article)
+      article = Article.new(hash)
+      post = Post.new
       
-      if(publish==0)
-        post.is_published=false
-      end
-    
-      if(!post.save)
-        raise "Can't save new post...#{post.inspect}"
-      end
+      bind_post(post,article)
+      post.is_published = publish == 1
+      post.save!
       assign_categories(article,post)
+
       Url.new(:url=>"#{Blog.url}#{post.url}") 
    end
    
@@ -205,24 +84,19 @@ class MetaWeblogService < XMLRPCService
      end
    end
    
-   def getPost(id, username,password)
+   def getPost(id, username, password)
      authenticate(username,password)
      
      struct_from(Post.find(id))
    end
 
    def bind_post(post,article)
-     post.is_published=true
-     #some left/right
+     post.is_published = true
+     
      post.title=article.title
+     post.published_at = Time.now if post.published_at.nil?
+     article.wp_slug = '' if article.wp_slug.nil?
      
-     if(!post.published_at)
-       post.published_at=Time.now
-     end 
-     
-     if(!article.wp_slug)
-      article.wp_slug=''
-     end
      if(article.mt_text_more)
        #the post has been split so pop the description as the excerpt,
        #and the body as the mt_text_more
@@ -241,17 +115,17 @@ class MetaWeblogService < XMLRPCService
     
      #reset the pub date if it was passed in
      if(article.date_created_gmt)
-       dc=article.date_created_gmt
-       pub_date=Time.gm(dc.year,dc.month,dc.day,0,0,0,0) #don't need time here
-       post.published_at=pub_date
+       dc = article.date_created_gmt
+       pub_date = Time.gm(dc.year,dc.month,dc.day,0,0,0,0) #don't need time here
+       post.published_at = pub_date
      end
      
-     if(post.published_at> Time.now.to_date)
-       post.is_published=false
+     if(post.published_at > Time.now.to_date)
+       post.is_published = false
      end
      
      #set the slug
-     if(article.wp_slug!='')
+     if(article.wp_slug != '')
        post.slug=article.wp_slug.downcase
      else
        post.slug = Post.create_slug(post.title)
@@ -283,3 +157,4 @@ class MetaWeblogService < XMLRPCService
    end
 
 end
+

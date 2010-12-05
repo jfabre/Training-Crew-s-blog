@@ -1,7 +1,6 @@
 <% content_for :title do %>Album de photos<% end %>
 <% content_for :head do %>
   <%= javascript_include_tag 'cloud-carousel.1.0.4.min' %>
-  
   <script type="text/javascript">
     $(document).ready(function(){    
       $(".carousel").CloudCarousel({     
@@ -15,7 +14,8 @@
     });
   </script>
 <% end %>
-<% @albums.each do |album| %>
+<% paginated_section(@albums, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
+  <% @albums.each do |album| %>
 <div class="carousel album">
   <div>
     <div style="float:left;"><input id="left-but" style="font-size:20px;font-weight:bold;" type="button" value="<<" /></div>
@@ -32,4 +32,5 @@
   <img class="cloudcarousel" width="200" height="200" alt="<%= img.description %>" title="<%= img.title %>" src="<%= img.amazon_url %>" />
   <% end%>
 </div>
+  <% end %>
 <% end %>

@@ -4,8 +4,6 @@ class PostController < ApplicationController
   def index
     @category = Category.find_by_slug(params[:slug])
     @posts = @category.posts unless @category.nil?
-    
-    puts params[:slug]
   end
   
   def rss  
@@ -15,5 +13,9 @@ class PostController < ApplicationController
   def show
     @post= Post.find_by_slug(params[:slug])
     render '404' if @post.nil?
+  end
+  
+  def publications
+    @posts = Post.all(:order => "published_at DESC")
   end
 end

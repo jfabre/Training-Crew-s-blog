@@ -45,7 +45,7 @@ class AlbumsController < ApplicationController
     @album = Album.new(params[:album])
     
     respond_to do |format|
-      @album.images << Image.all([params[:images]].flatten)
+      @album.images << Image.find([params[:images]].flatten)
       
       if @album.save
         format.html { redirect_to(albums_path, :notice => 'Album was successfully created.') }
@@ -61,10 +61,13 @@ class AlbumsController < ApplicationController
   # PUT /albums/1.xml
   def update
     @album = Album.find(params[:id])
-
+    
     respond_to do |format|
       if @album.update_attributes(params[:album])
-        format.html { redirect_to(@album, :notice => 'Album was successfully updated.') }
+        @album.images.clear
+        @album.images << Image.find([params[:images]].flatten)
+        @album.save!
+        format.html { redirect_to(albums_path, :notice => 'Album was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -77,6 +80,8 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1.xml
   def destroy
     @album = Album.find(params[:id])
+    @album.images.clear
+    @album.save
     @album.destroy
     Image.all(:conditions => {:album_id => params[:id]}).each do |x| 
       x.album_id = nil
@@ -92,7 +97,7 @@ class AlbumsController < ApplicationController
     unless params[:id].nil?
       @albums = [Album.find(params[:id])]
     else
-      @albums = Album.all    
+      @albums = Album.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 1)
     end
   end
 end

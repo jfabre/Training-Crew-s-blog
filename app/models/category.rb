@@ -11,13 +11,10 @@ class Category < ActiveRecord::Base
     end
     
     def self.categorize(name, post)
-      cat = Category.find_by_slug(name)
-      cat = Category.create!(:title=> name, :slug=> Post.create_slug(name)) if cat.nil?
-      
-      post.categories << cat 
-      cat.posts << post
+      cat = Category.find_by_slug(Post.create_slug(name))
+      raise "could not find the category #{Post.create_slug(name)}" if cat.nil?
        
-      post.save
+      cat.posts << post
       cat.save
     end
 end
