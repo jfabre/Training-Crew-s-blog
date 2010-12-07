@@ -1,3 +1,4 @@
+# encoding: utf-8
 to_create = ['Entrainements', 'Activités']
 if Category.all().size != to_create.size 
   Category.destroy_all

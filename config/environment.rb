@@ -1,5 +1,5 @@
 # Be sure to restart your server when you modify this file
-
+Encoding.default_external = Encoding::UTF_8
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
@@ -17,12 +17,9 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'sqlite3-ruby', :lib => 'sqlite3'
   config.gem 'activerecord'
-  config.gem 'panztel-actionwebservice', :version => '2.3.5', :lib => 'actionwebservice'
-  config.gem 'haml'
+  config.gem 'rubyjedi-actionwebservice', :lib => 'actionwebservice'
   config.gem 'will_paginate'
   config.gem 'aws-s3', :lib => 'aws/s3'
   

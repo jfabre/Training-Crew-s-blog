@@ -29,7 +29,7 @@ end
 
 Then /^the post with slug "([^\"]*)" should not be published$/ do |arg1|
   post = Post.find_by_slug(arg1)
-  puts Post.all.inspect
+  
   assert_equal false, post.is_published
 end
 Given /^a post exists with slug: "([^\"]*)"$/ do |arg1|
@@ -118,11 +118,18 @@ When /^I call editPost with slug "([^\"]*)" and set published to false$/ do |slu
   api.editPost(id,"admin","secret",hash,0)
 end
 When /^I call editPost with slug "([^\"]*)" and set published_at to "([^\"]*)"$/ do |slug, pub|
-  id=Post.find_by_slug(slug).id
-  article=api.getPost(id, "admin","secret")
-  article.pubDate=pub
+  id = Post.find_by_slug(slug).id
+  article = api.getPost(id, "admin","secret")
+
+  hash={
+    :title=>article.title,
+    :description=>"nada",
+    :mt_text_more=>"nada",
+    :wp_slug=>article.wp_slug,
+    :pubDate=> pub,
+  }
   
-  api.editPost(id,"admin","secret",article, 0)
+  api.editPost(id,"admin","secret", hash, 0)
 end
 
 When /^I upload a file using the api$/ do

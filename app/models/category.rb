@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
     has_many :categorizations
     has_many :posts, :through => :categorizations
-    named_scope :titled, (lambda do |title| {:conditions => ['title = ?', title]} end)
+    named_scope :titled, do |title| {:conditions => ['title = ?', title]} end
 
 
     def self.clear_posts(post)

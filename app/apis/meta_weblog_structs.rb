@@ -43,7 +43,7 @@ class Article < ActionWebService::Struct
   member :dateCreated,        :time
   member :wp_slug,            :string
   member :pubDate,            :time
-  member :date_created_gmt,    :time
+  member :date_created_gmt,   :time
 end
 
 

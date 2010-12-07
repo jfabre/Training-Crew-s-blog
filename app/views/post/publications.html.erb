@@ -1,0 +1,29 @@
+<% content_for :title do %><%= 'Publications' %><% end %> 
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#all").click(function(){
+        $(".pubs input[type=checkbox]").attr('checked', this.checked);
+      });
+    });
+  </script>
+<% end %> 
+<h1>Publications</h1>
+<div class="pubs">
+<% form_tag :action => :publish do  %>
+  <p><%= params[:notice] %></p>
+  <p><%= submit_tag 'Appliquer les changements' %></p>  
+  <br />
+  <input type="checkbox" id="all" /><label for="all">Tous</label>
+  <hr /><br />
+  <ul>
+    <% @posts.each_with_index do |post, i| %>
+      <li style="margin-top : 20px;">
+        <input type="checkbox" id="<%= "to_publish_#{i}" %>" name="to_publish[]" value="<%= post.id %>" <%= post.is_published ? 'checked' : '' %> />
+        <label for="<%= "to_publish_#{i}" %>"><%= post.title %></label>
+      </li>
+    <% end %>  
+  </ul>
+<% end %>
+</div>
+

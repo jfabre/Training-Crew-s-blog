@@ -8,7 +8,8 @@ class HomeController < ApplicationController
     @latest_pic = Image.in_albums(:order => "created_at DESC").first
     @latest_pic = Image.new if @latest_pic.nil?
     @categories = Category.all
-    @posts = Post.paginate(:page => params[:page], :order => 'published_at DESC', :per_page => 5)
+    @posts = Post.all(:conditions => {:is_published => true}, :order => 'published_at DESC')
+      .paginate(:page => params[:page], :per_page => 5)
   end
 
   def contact

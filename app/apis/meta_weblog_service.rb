@@ -38,12 +38,12 @@ class MetaWeblogService < XMLRPCService
      end
    end
    
-   def editPost(post_id, username, password, hash, publish)
+   def editPost(id, username, password, hash, publish)
      authenticate(username,password)
      
      article=Article.new(hash)
-     post = Post.find(post_id)
-     raise "Could not find the post to edit for id: #{post_id}" if post.nil?
+     post = Post.find(id)
+     raise "Could not find the post to edit for id: #{id}" if post.nil?
      
      bind_post(post, article)
      post.is_published = publish == 1

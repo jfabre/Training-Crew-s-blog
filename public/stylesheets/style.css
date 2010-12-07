@@ -1,7 +1,9 @@
 @import url(reset.css);
 
+
+
 html {
-  background : url('../images/fond.jpg') no-repeat center center fixed;
+  background : url('../images/fond2.jpg') no-repeat center center fixed;
   color   : #E0E0E0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -211,13 +213,18 @@ input, textarea{
 }
 
 .footer{
-  text-align: center;
-  color: white;
-  max-width   : 943px; 
   width: 943px;
-  margin  : 0 auto;
-  margin-top: 1em;
-  margin-bottom: 4em;
+  border : 3px solid white;
+  background-color : black;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 1em;
+  padding: 1em 0 1em 0;
+  
+  
+  text-align: center;
   font-size : 15px;
   font-weight: bold;
 }

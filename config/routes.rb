@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
   map.tchad '/tchad', :controller => :home, :action => :tchad
+  map.publications '/publications', :controller => :post, :action => :publications
   map.resources :images
   map.albums 'albums/:action/:id', :controller => :albums
   map.display_album 'albums/display/:id', :controller => :albums, :action => :display
@@ -15,8 +16,12 @@ ActionController::Routing::Routes.draw do |map|
   map.new_comment '/:slug/comment/new', :controller => 'comment', :action => 'new'
   
   map.category 'category/:slug', :controller => 'post', :action=> 'index'
-  map.post_by_category  ':category_slug/:slug', :controller => 'post', :action=> 'show'
   map.search 'search', :controller=> 'post', :action=>'search'
+  
+  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
+  
+  map.post_by_category  ':category_slug/:slug', :controller => 'post', :action=> 'show'
   map.category ':slug', :controller => 'post', :action=> 'index'
   
   # The priority is based upon order of creation: first created -> highest priority.
@@ -58,6 +63,5 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+ 
 end
