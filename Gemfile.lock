@@ -1,0 +1,56 @@
+GEM
+  remote: http://rubygems.org/
+  remote: http://gems.github.com/
+  specs:
+    actionmailer (2.3.8)
+      actionpack (= 2.3.8)
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activerecord (2.3.8)
+      activesupport (= 2.3.8)
+    activeresource (2.3.8)
+      activesupport (= 2.3.8)
+    activesupport (2.3.8)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
+    builder (2.1.2)
+    gem_plugin (0.2.3)
+    httpclient (2.1.5.2)
+    mime-types (1.16)
+    mongrel (1.2.0.pre2-x86-mingw32)
+      gem_plugin (~> 0.2.3)
+    pg (0.10.0)
+    rack (1.1.0)
+    rails (2.3.8)
+      actionmailer (= 2.3.8)
+      actionpack (= 2.3.8)
+      activerecord (= 2.3.8)
+      activeresource (= 2.3.8)
+      activesupport (= 2.3.8)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    rubyjedi-actionwebservice (2.3.5.20100714122544)
+      actionpack (~> 2.3.0)
+      activerecord (~> 2.3.0)
+      activesupport (~> 2.3.0)
+    rubyjedi-soap4r (1.5.8.20100619003610)
+      httpclient (~> 2.1.5.2)
+    sqlite3-ruby (1.3.2-x86-mingw32)
+    will_paginate (2.3.15)
+    xml-simple (1.0.12)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  aws-s3
+  mongrel (= 1.2.0.pre2)
+  pg
+  rails (= 2.3.8)
+  rubyjedi-actionwebservice
+  rubyjedi-soap4r
+  sqlite3-ruby
+  will_paginate
