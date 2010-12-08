@@ -7,3 +7,4 @@ else
   S3_CONFIG['access_key_id'] = ENV['S3_KEY']
   S3_CONFIG['secret_access_key'] = ENV['S3_SECRET']
 end
+

@@ -4,7 +4,7 @@ class Blog
   end
   
   def self.tagline
-    "Parjour shizzles"
+    "Parkour shizzles"
   end
 
   def self.author
@@ -12,6 +12,8 @@ class Blog
   end
   
   def self.url
-    "http://127.0.0.1:3000"
+    domain = "http://127.0.0.1:3000" 
+    domain = ENV['domain'] = unless ENV['domain'].nil? 
+    domain
   end 
 end
