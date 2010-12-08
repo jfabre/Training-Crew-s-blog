@@ -21925,3 +21925,55 @@ Rendering home/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
 Completed in 116ms (View: 28, DB: 1) | 200 OK [http://127.0.0.1/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-07 19:19:34) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."is_published" = 't') ORDER BY published_at DESC[0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 68ms (View: 25, DB: 2) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'UTF8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mRuntimeError: ERROR	C42P01	Mrelation "categories" does not exist	P15	F.\src\backend\parser\parse_relation.c	L857	RparserOpenTable: SELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-07 19:37:16) [GET]
+  [4;35;1mVideo Load (1.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."is_published" = 't') ORDER BY published_at DESC[0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 190ms (View: 124, DB: 1) | 200 OK [http://127.0.0.1/home]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-08 08:07:53) [GET]
+  [4;35;1mVideo Load (0.0ms)[0m   [0mSELECT * FROM "videos" ORDER BY created_at DESC[0m
+  [4;36;1mImage Load (0.0ms)[0m   [0;1mSELECT * FROM "images" LIMIT 1[0m
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."is_published" = 't') ORDER BY published_at DESC[0m
+Rendering template within layouts/master
+Rendering home/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 6) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 5) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 137ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/]
