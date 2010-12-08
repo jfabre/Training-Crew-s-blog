@@ -10,7 +10,7 @@ gem 'will_paginate'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'rubyjedi-soap4r'
 gem 'rubyjedi-actionwebservice', :require => 'actionwebservice'
-gem 'test-unit'
+gem 'test-unit', '1.2.3'
 
 group :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
