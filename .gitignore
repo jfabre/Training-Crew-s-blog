@@ -2,3 +2,4 @@ s3.yml
 development.sqlite3
 production.sqlite3
 test.sqlite3
+*.log
