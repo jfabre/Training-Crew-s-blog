@@ -1,5 +1,5 @@
 # Be sure to restart your server when you modify this file
-#Encoding.default_external = Encoding::UTF_8
+Encoding.default_external = Encoding::UTF_8
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
 
@@ -18,10 +18,11 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   #config.gem 'sqlite3-ruby', :lib => 'sqlite3'
-  config.gem 'activerecord'
-  config.gem 'rubyjedi-actionwebservice', :lib => 'actionwebservice'
-  config.gem 'will_paginate'
-  config.gem 'aws-s3', :lib => 'aws/s3'
+  #config.gem 'mongrel', :version => '>=1.2.0'
+  #config.gem 'activerecord'
+  #config.gem 'rubyjedi-actionwebservice', :lib => 'actionwebservice'
+  #config.gem 'will_paginate'
+  #config.gem 'aws-s3', :lib => 'aws/s3'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
