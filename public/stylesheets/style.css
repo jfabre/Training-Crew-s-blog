@@ -166,6 +166,7 @@ div.last-picture img{
   width: 235px;
    
   -moz-transform:rotate(-1.8deg); 
+  -webkit-transform: rotate(-1.8deg); 
 }
 .comments{
   margin-left: 3em;
