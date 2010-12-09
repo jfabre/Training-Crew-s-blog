@@ -5,8 +5,8 @@ class PostController < ApplicationController
     @category = Category.find_by_slug(params[:slug])
     unless @category.nil?
       @posts = @category.posts
-        .all(:conditions => {:is_published => true}, :order => 'published_at DESC')
-        .paginate(:page => params[:page], :per_page => 5) 
+      @posts = @posts.all(:conditions => {:is_published => true}, :order => 'published_at DESC')
+      @posts = @posts.paginate(:page => params[:page], :per_page => 5) 
     end
   end
   

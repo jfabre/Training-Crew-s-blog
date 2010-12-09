@@ -13,7 +13,7 @@ class Blog
   
   def self.url
     domain = "http://127.0.0.1:3000" 
-    domain = ENV['domain'] = unless ENV['domain'].nil? 
+    domain = ENV['domain'] unless ENV['domain'].nil? 
     domain
   end 
 end

@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file
 
-Encoding.default_external = Encoding::UTF_8
+Encoding.default_external = Encoding::UTF_8 if RUBY_VERSION =~ /1\.9/
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.8' unless defined? RAILS_GEM_VERSION
@@ -16,7 +16,6 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
    config.load_paths += %W( #{RAILS_ROOT}/app/apis )
-
   # Specify gems that this application depends on and have them installed with rake gems:install
 
   

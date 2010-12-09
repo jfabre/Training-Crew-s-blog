@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   has_many :categories, :through => :categorizations
   has_many :comments
   
-  named_scope :published, -> { {:conditions => {:is_published => true}} }
+  named_scope :published, (lambda do {:conditions => {:is_published => true}} end)
   
   def pretty_date
     published_at.strftime("%A, %B %d, %Y")
