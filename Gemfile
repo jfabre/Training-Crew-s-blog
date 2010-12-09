@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
-source 'http://gems.github.com'
 
-gem 'rails', '2.3.8'
+gem 'rails', '>= 2.3.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,18 +10,23 @@ gem 'aws-s3', :require => 'aws/s3'
 #gem 'rubyjedi-soap4r'
 #gem 'rubyjedi-actionwebservice', :require => 'actionwebservice'
 
-gem 'panztel-actionwebservice', '2.3.5', :require => 'actionwebservice'
-gem 'test-unit', '1.2.3'
+#gem 'panztel-actionwebservice', :require => 'actionwebservice'
+#gem 'test-unit', '1.2.3'
+
+gem 'jfabre-actionwebservice', :require => 'actionwebservice'
 
 group :development do
   gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
   gem 'mongrel', '1.2.0.pre2'
-  gem 'cucumber-rails', '0.3.2'
-  gem 'database_cleaner','0.5.0'
-  gem 'webrat',  '0.7.0'
-  gem 'rspec-rails', '1.3.2'
+  
 end
-
+group :test do
+  gem 'rspec'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'webrat'
+  gem 'rspec-rails'
+end
 group :production do
   gem 'pg' 
 end
