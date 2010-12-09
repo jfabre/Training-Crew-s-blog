@@ -45,7 +45,8 @@ class AlbumsController < ApplicationController
     @album = Album.new(params[:album])
     
     respond_to do |format|
-      @album.images << Image.find([params[:images]].flatten)
+      images = [params[:images]].flatten
+      @album.images << Image.find(images) unless images[0].nil?
       
       if @album.save
         format.html { redirect_to(albums_path, :notice => 'Album was successfully created.') }
