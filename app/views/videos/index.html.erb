@@ -3,7 +3,7 @@
 
 <table class="videos">
   <tr>
-    <th>Name</th>
+    <th>Nom</th>
     <th>Description</th>
   </tr>
 
@@ -11,13 +11,13 @@
   <tr>
     <td><%=h video.name %></td>
     <td><%=h video.description %></td>
-    <td><%= link_to 'Show', video %></td>
-    <td><%= link_to 'Edit', edit_video_path(video) %></td>
-    <td><%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Afficher', video %></td>
+    <td><%= link_to 'Modifier', edit_video_path(video) %></td>
+    <td><%= link_to 'Supprimer', video, :confirm => 'Êtes-vous sûr?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New video', new_video_path %>
+<%= link_to 'Nouveau video', new_video_path %>

@@ -1,6 +1,9 @@
 <% content_for :title do %>Album de photos<% end %>
 <% content_for :head do %>
+  <%= stylesheet_link_tag "jquery.lightbox-0.5" %>
   <%= javascript_include_tag 'cloud-carousel.1.0.4.min' %>
+  <%= javascript_include_tag 'jquery.lightbox-0.5.min' %>
+  
   <script type="text/javascript">
     $(document).ready(function(){    
       $(".carousel").CloudCarousel({     
@@ -10,6 +13,13 @@
           buttonRight: $("#right-but"),
           altBox: $("#alt-text"),
           titleBox: $("#title-text")
+      });
+      $('.album a').lightBox({
+        imageLoading: '/images/lightbox-ico-loading.gif',
+        imageBtnClose: '/images/lightbox-btn-close.gif',
+        imageBtnPrev: '/images/lightbox-btn-prev.gif',
+        imageBtnNext: '/images/lightbox-btn-next.gif',
+        imageBlank: '/images/lightbox-blank.gif' 
       });
     });
   </script>
@@ -27,10 +37,16 @@
     <h3 id="title-text"></h3>
     <p id="alt-text"></p>
   </div>
-  
-  <% album.images.each do |img| %>
-  <img class="cloudcarousel" width="200" height="200" alt="<%= img.description %>" title="<%= img.title %>" src="<%= img.amazon_url %>" />
+  <ul>
+    <% album.images.each do |img| %>
+    <li>
+      <a href="<%= img.amazon_url %>" title="<%= img.description %>">
+        <img class="cloudcarousel" width="200" height="200" alt="<%= img.description %>" title="<%= img.title %>" src="<%= img.amazon_url %>" />
+      </a>
+    </li>
   <% end%>
+  </ul>
+  
 </div>
   <% end %>
 <% end %>

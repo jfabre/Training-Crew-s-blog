@@ -1,6 +1,6 @@
 <% content_for :head do %><%= stylesheet_link_tag 'scaffold' %><% end %>
 <p>
-  <b>Name:</b>
+  <b>Nom:</b>
   <%=h @video.name %>
 </p>
 
@@ -15,5 +15,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<%= link_to 'Modifier', edit_video_path(@video) %> |
+<%= link_to 'Retour à la liste', videos_path %>

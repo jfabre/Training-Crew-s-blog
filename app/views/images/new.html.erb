@@ -1,26 +1,28 @@
-<h1>New image</h1>
+<h1>Nouvelle image</h1>
 
-<% form_for(@image, :html =>{:multipart => true}) do |f| %>
+<% form_for(@image,:html =>{:multipart => true}) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :nom %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :titre %><br />
     <%= f.text_field :title %>
   </p>
   <p>
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description, :cols => 50, :rows => 10 %>
   </p>
   <p>
+    <%= f.label :fichier %><br />
     <%= file_field 'upload', 'datafile' %>
   </p>
+  <br />
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Ajouter' %> 
   </p>
 <% end %>
-
-<%= link_to 'Back', images_path %>
+<br />
+<%= link_to 'Retour à la liste', images_path %>

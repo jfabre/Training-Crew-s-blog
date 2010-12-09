@@ -1,22 +1,15 @@
-<h1>Listing images</h1>
+<h1>Liste d'images</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Url</th>
-    <th>Thumb url</th>
+    <th>Nom</th>
   </tr>
-
 <% @images.each do |image| %>
   <tr>
     <td><%=h image.name %></td>
-    <td><%= link_to 'Show', image %></td>
-    <td><%= link_to 'Edit', edit_image_path(image) %></td>
-    <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Afficher', image %> &nbsp; <%= link_to 'Modifier', edit_image_path(image) %> &nbsp; <%= link_to 'Supprimer', image, :confirm => 'Êtes-vous sûr?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
 <br />
-
-<%= link_to 'New image', new_image_path %>
+<%= link_to 'Nouvelle image', new_image_path %>
