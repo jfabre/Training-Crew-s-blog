@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '>= 2.3.8'
+gem 'rails', '2.3.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,13 +20,14 @@ group :development do
   gem 'mongrel', '1.2.0.pre2'
   
 end
-group :test do
-  gem 'rspec'
-  gem 'cucumber-rails'
-  gem 'database_cleaner'
-  gem 'webrat'
-  gem 'rspec-rails'
-end
+
+#group :test do
+#  gem 'rspec'
+#  gem 'cucumber-rails'
+#  gem 'database_cleaner'
+#  gem 'webrat'
+#  gem 'rspec-rails'
+#end
 group :production do
   gem 'pg' 
 end
