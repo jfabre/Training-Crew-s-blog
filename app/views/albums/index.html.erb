@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nom</th>
   </tr>
 
 <% @albums.each do |album| %>
@@ -10,11 +10,11 @@
     <td><%=h album.name %></td>
     <td><%= link_to 'Show', :action => :show, :id => album.id %></td>
     <td><%= link_to 'Edit', :action => :edit, :id => album.id %></td>
-    <td><%= link_to 'Destroy', :action => :destroy, :id => album.id %></td>
+    <td><%= link_to 'Destroy', :action => :destroy, :id => album.id, :confirm => 'Êtes-vous sûr?' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New album', :action => :new %>
+<%= link_to 'Nouvel album', :action => :new %>

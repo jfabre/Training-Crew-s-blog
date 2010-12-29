@@ -3,12 +3,34 @@
 
 
 html {
-  background : url('../images/fond2.jpg') no-repeat center center fixed;
+  #background : url('../images/fond2.jpg') no-repeat center center fixed;
   color   : #E0E0E0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  #-webkit-background-size: cover;
+  #-moz-background-size: cover;
+  #-o-background-size: cover;
+  #background-size: cover;
+}
+img.bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index:-1;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+        img.bg {
+                left: 50%;
+                margin-left: -512px;   /* 50% */
+        }
 }
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -155,18 +177,18 @@ div.last-video, div.last-picture, div.calendrier{
   padding: 0 2px 0 2px;
 }
 div.last-picture {
-  background : url('../images/polaroid.jpg') center top transparent;
+  #background : url('../images/polaroid.jpg') center top transparent;
   height: 300px;
   width: 280px;
 }
 div.last-picture img{
-  margin-top: 38px;
-  margin-left:21px;
+  #margin-top: 38px;
+  
   height: 190px;
   width: 235px;
    
-  -moz-transform:rotate(-1.8deg); 
-  -webkit-transform: rotate(-1.8deg); 
+  #-moz-transform:rotate(-1.8deg); 
+  #-webkit-transform: rotate(-1.8deg); 
 }
 .comments{
   margin-left: 3em;

@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.tchad '/tchad', :controller => :home, :action => :tchad
+  map.tchad '/crevette', :controller => :home, :action => :tchad
   map.publications '/publications', :controller => :post, :action => :publications
   map.resources :images
   map.albums 'albums/:action/:id', :controller => :albums
