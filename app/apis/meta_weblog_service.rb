@@ -43,8 +43,7 @@ class MetaWeblogService < XMLRPCService
      
      article=Article.new(hash)
      post = Post.find(id)
-     raise "Could not find the post to edit for id: #{id}" if post.nil?
-     
+      
      bind_post(post, article)
      post.is_published = publish == 1
      post.save!
@@ -70,7 +69,7 @@ class MetaWeblogService < XMLRPCService
       post.save!
       assign_categories(article,post)
 
-      Url.new(:url=>"#{Blog.url}#{post.url}") 
+      post.id 
    end
    
    def assign_categories(article, post)
@@ -142,7 +141,7 @@ class MetaWeblogService < XMLRPCService
        :url               => "#{Blog.url}#{post.url}",
        :link              => "#{Blog.url}#{post.url}",
        :permaLink         => "#{Blog.url}#{post.url}",
-       :categories        => post.categories.collect{|c| c.name},
+       :categories        => post.categories.collect{|c| c.title},
        :mt_text_more      => post.body,
        :mt_excerpt        => "",
        :mt_keywords       => "",
