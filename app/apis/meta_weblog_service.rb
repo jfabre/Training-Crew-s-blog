@@ -65,7 +65,7 @@ class MetaWeblogService < XMLRPCService
       post = Post.new
       
       bind_post(post,article)
-      post.is_published = publish == 1
+      post.is_published = publish == 1 || publish == true
       post.save!
       assign_categories(article,post)
 
