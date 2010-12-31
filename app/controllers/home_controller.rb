@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     @latest_pic = Image.new if @latest_pic.nil?
     @categories = Category.all
     @posts = Post.all(:conditions => {:is_published => true}, :order => 'published_at DESC').paginate(:page => params[:page], :per_page => 5)
+    @title = @posts.first.title
   end
 
   def contact
