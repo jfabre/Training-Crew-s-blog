@@ -1,10 +1,10 @@
-<% content_for :title do %>Entrainements de parkour selon la méthode naturelle<% end %> 
+<% content_for :title do %>Entrainements de parkour à Montréal selon la méthode naturelle<% end %> 
 <% paginated_section(@posts, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
   <div class="middle">
     <% if !@posts.blank? %>
       <% for post in @posts %>
         <div class="post">
-          <h3><%= post.title %><span><%= post.published_at %></span></h3>
+          <h2><%= post.title %><span><%= post.published_at %></span></h2>
           <div class="body"><%= post.body %></div>
           <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="<%= post.title %>" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
         </div>
