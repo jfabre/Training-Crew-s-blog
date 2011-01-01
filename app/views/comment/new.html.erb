@@ -20,12 +20,13 @@
         obj.val('Commentaire');
       }
     });
-    $("#txtName, #txtComment").keypress(function(e) {
+    
+    $("#txtName").keypress(function(e) {
       var code = e.keyCode ? e.keyCode : e.which;
       if (code == 13){
         var txtName = $('#txtName');
         var txtComment = $('#txtComment');
-        if(txtName.val() != '' && txtName != 'Nom' && txtComment.text() != '' && txtComment.text() != 'Commentaire'){
+        if(txtName.val() != '' && txtName != 'Nom' && txtComment.val() != '' && txtComment.val() != 'Commentaire'){
           return true;
         }
         return false;
