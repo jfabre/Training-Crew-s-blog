@@ -13,7 +13,7 @@ class Comment < ActiveRecord::Base
     if(val)
       logger.info val
       val = val.gsub(/(\r\n|\n)+/, '<br />')
-      var = val.gsub(/(\<br\/\>)+/, '<br />')
+      var = val.gsub(/(\<br\/\>){3,20}/, '<br />')
       val = val.gsub(/http:\/\//, '')
       val = val.gsub(/[^ ][a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|ca|COM|ORG|NET|MIL|EDU|CA)/, '<a target="blank" href="http://\0">\0</a>')
     end  
