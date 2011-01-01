@@ -20,7 +20,7 @@
         obj.val('Commentaire');
       }
     });
-    $("#txtName, #txtComment").keypress(function(e) {
+    $("#txtName").keypress(function(e) {
       var code = e.keyCode ? e.keyCode : e.which;
       if (code == 13){
         var txtName = $('#txtName');
