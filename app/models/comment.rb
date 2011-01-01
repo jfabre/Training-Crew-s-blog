@@ -11,9 +11,10 @@ class Comment < ActiveRecord::Base
   def text
     val = read_attribute(:text)
     if(val)
+      val = val.gsub(/(\r\n|\n)/, '<br />')
       logger.info val
-      val = val.gsub(/(\r\n|\n)+/, '<br />')
-      var = val.gsub(/(\<br\/\>){3,20}/, '<br />')
+      val = val.gsub(/(<br \/>){3,20}/, '<br />')
+      logger.info val
       val = val.gsub(/http:\/\//, '')
       val = val.gsub(/[^ ][a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|ca|COM|ORG|NET|MIL|EDU|CA)/, '<a target="blank" href="http://\0">\0</a>')
     end  
