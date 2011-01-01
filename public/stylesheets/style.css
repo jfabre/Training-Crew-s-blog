@@ -54,12 +54,7 @@ a:hover, input[type=submit]:hover, input[type=button]:hover {
   color: white;
   cursor: pointer;
 }
-.header .mainmenu a{
-  color: white;
-}
-.header .mainmenu a:hover{
-  color: #68AA40;
-}
+
 sup {
   font-size: 80%;
   line-height: 100%;
