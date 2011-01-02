@@ -1,45 +1,12 @@
 <% content_for :title do %>Nouveau commentaire<% end %> 
 <% content_for :head do %>
 <%= javascript_include_tag 'jquery-1.4.3.min' %>
-<script type="text/javascript" language="JavaScript">
-  $(document).ready(function(){
-    $("#txtName, #txtComment").focus(function(){
-        if(this && this.value){
-          if(this.value == 'Nom' || this.value == 'Commentaire')
-            this.value = '';
-        }
-    });
-    $("#txtName").blur(function(){
-      if(this && this.value == ''){
-        this.value = 'Nom';
-      }
-    });
-    $("#txtComment").blur(function(){
-      var obj = $(this);
-      if(obj.val() == ''){
-        obj.val('Commentaire');
-      }
-    });
-    
-    $("#txtName").keypress(function(e) {
-      var code = e.keyCode ? e.keyCode : e.which;
-      if (code == 13){
-        var txtName = $('#txtName');
-        var txtComment = $('#txtComment');
-        if(txtName.val() != '' && txtName != 'Nom' && txtComment.val() != '' && txtComment.val() != 'Commentaire'){
-          return true;
-        }
-        return false;
-      }
-      return true;
-    });
-  });
-</script>
+<%= javascript_include_tag 'comment' %>
 <% end %>
 <div class="enter_comment">
     <% form_tag :controller => 'comment', :action => 'add_comment', :id => @post.id do %>
     <input type="text" id="txtName" name="name" value="<%= @name %>" /><br /><br/>
     <textarea name="comment" id="txtComment" cols="70" rows="8">Commentaire</textarea><br /><br />
-    <input type="submit" name="Add" id="Add" value="Soumettre" onclick="self.parent.close_comment_form();" />
+    <input type="submit" name="Add" id="Add" value="Soumettre" />
     <% end %>
 </div>
