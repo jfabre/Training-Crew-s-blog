@@ -1,7 +1,7 @@
 class Video < ActiveRecord::Base
   @@handlers = /^embed_[0-9]{2,4}$/
   def small_embed
-    embed_at_size(240)
+    embed_at_size(189, 279)
   end
   def self.method_missing(method_sym, *arguments, &block)
     if method_sym.to_s =~ @@handlers 

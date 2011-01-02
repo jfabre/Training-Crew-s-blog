@@ -110,11 +110,15 @@ span.date {
   width: 30%;
   height: 100%;
 }
-.middle, .rightmenu{
+.middle{
   float:left;
 }
+.rightmenu{
+  float:right;
+}
 .middle{
-  width:70%;
+  width:69%;
+  padding-right: 2px;
 }
 
 .clear{
@@ -166,6 +170,9 @@ text-align : center;
 div.last-video, div.last-picture, div.calendrier{
   height : 250px;
   padding: 0 2px 0 2px;
+}
+div.last-video{
+  height: 210px;
 }
 div.last-picture {
   #background : url('../images/polaroid.jpg') center top transparent;

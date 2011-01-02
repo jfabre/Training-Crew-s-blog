@@ -38,7 +38,7 @@
 <% end %>
 <div class="enter_comment">
     <% form_tag :controller => 'comment', :action => 'add_comment', :id => @post.id do %>
-    <input type="text" id="txtName" name="name" value="Nom" /><br /><br/>
+    <input type="text" id="txtName" name="name" value="<%= @name %>" /><br /><br/>
     <textarea name="comment" id="txtComment" cols="70" rows="8">Commentaire</textarea><br /><br />
     <input type="submit" name="Add" id="Add" value="Soumettre" onclick="self.parent.close_comment_form();" />
     <% end %>
