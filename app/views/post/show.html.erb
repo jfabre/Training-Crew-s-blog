@@ -8,12 +8,12 @@
       tb_remove();
       var t=setTimeout("window.location.reload(true);",1500);
     }
-    
   </script>
 <% end %>
 <div class="post details">
-  <h1><%= @post.title %><span><%= @post.published_at %></span></h1>
-  <p><%= @post.body %></p>
+  <h1><%= @post.title %></h1>
+  <div><%= @post.body %></div>
+  <span class="date"><%= @post.published_at %></span>
   <div class="replymain">
     <%= link_to "Répondre", new_comment_path({:slug => @post.slug, :KeepThis => 'true', :TB_iframe => 'true', :height => 350, :width => 680 }), 
       :class => 'thickbox' %>
@@ -33,7 +33,7 @@
               :KeepThis => 'true', :TB_iframe => 'true', :height => 350, :width => 680 }, 
               :class => 'thickbox' %>
           </div>
-          <div class="date"><%= c.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
+          <div class="date"><%= c.since %></div>
           <br class="clear" />
         </div>
         <div class="comment"><%= c.text %></div>
@@ -44,7 +44,7 @@
               <li>
                 <div class="header">
                   <div class="username"><%= r.user %></div>
-                  <div class="date"><%= r.created_at.strftime("%Y-%m-%d %H:%M:%S") %></div>
+                  <div class="date"><%= r.since  %></div>
                   <br class="clear" />
                 </div>
                 <div class="comment"><%= r.text %></div>
