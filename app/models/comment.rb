@@ -21,16 +21,27 @@ class Comment < ActiveRecord::Base
   def since
     created_at = read_attribute(:created_at).to_datetime
     hours,minutes,seconds = Date.day_fraction_to_time(DateTime.now - created_at)
-    
+    friendly_display(hours, minutes, seconds)
+  end
+  
+  def friendly_display hours, minutes, seconds
     if hours > 7 * 24
       return created_at.strftime("%Y-%m-%d")
     elsif (24..(24 * 7)).include?(hours)
-      return "Il y a #{hours / 24} jours"
-    elsif (1..23).include?(hours)
-      return "Il y a #{hours} heures"
-    elsif (1..59).include?(minutes)
-      return "Il y a #{minutes} minutes"
+      if (24..47).include?(hours)
+        return "Depuis une journée"
+      else  
+        return "Depuis #{hours / 24} jours"
+      end
+    elsif (2..23).include?(hours)
+      return "Depuis #{hours} heures"
+    elsif hours == 1
+      return "Depuis une heure"
+    elsif (2..59).include?(minutes)
+      return "Depuis #{minutes} minutes"
+    elsif minutes == 1
+      return "Depuis une minute"
     end 
-    return "Il y a #{seconds} secondes"
+    return "Depuis #{seconds} secondes"
   end
 end
