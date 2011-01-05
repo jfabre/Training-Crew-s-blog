@@ -10,11 +10,3 @@ begin
 rescue
 end
 
-begin 
-  if User.all.size == 0 
-    unless ENV['admin_user'].nil? or ENV['admin_pass'].nil? 
-      User.create({:username => ENV['admin_user'] , :password => ENV['admin_pass']}) 
-    end
-  end
-rescue
-end

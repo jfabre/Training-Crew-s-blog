@@ -9,14 +9,23 @@ class Comment < ActiveRecord::Base
     !reply_to || reply_to == 0
   end
   def text
-    val = read_attribute(:text)
-    if(val)
-      val = val.gsub(/(\r\n|\n)/, '<br />')
-      val = val.gsub(/(<br \/>){3,20}/, '<br />')
-      val = val.gsub(/http:\/\//, '')
-      val = val.gsub(/[^ ][a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|ca|COM|ORG|NET|MIL|EDU|CA)/, '<a target="blank" href="http://\0">\0</a>')
+    format read_attribute(:text)
+  end
+  def format comment
+    if comment
+      comment = format_carriage_return comment
+      comment = format_links comment
     end  
-    val
+    comment
+  end
+  def format_carriage_return comment
+      comment = comment.gsub(/(\r\n|\n)/, '<br />')
+      comment.gsub(/(<br \/>){3,20}/, '<br />')
+  end
+  def format_links comment
+    regex = /[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|ca|COM|ORG|NET|MIL|EDU|CA)[A-Za-z0-9\-\.\_\/\%\?\#\&]*/
+    comment = comment.gsub(/http:\/\//, '')
+    comment.gsub(regex, '<a target="blank" href="http://\0">\0</a>')
   end
   def since
     created_at = read_attribute(:created_at).to_datetime
