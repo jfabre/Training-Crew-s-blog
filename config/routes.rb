@@ -2,15 +2,15 @@ ActionController::Routing::Routes.draw do |map|
   
   map.tchad '/crevette', :controller => :home, :action => :tchad
   map.publications '/publications', :controller => :post, :action => :publications
+  
   map.resources :images
   map.albums 'albums/:action/:id', :controller => :albums
-  map.display_album 'albums/display/:id', :controller => :albums, :action => :display
+  map.photos 'photos/:id', :controller => :albums, :action => :display
   
   map.list_videos '/nos_videos', :controller => 'videos', :action => 'list'
   map.resources :videos
-  map.connect '/contact', :controller => 'home', :action => 'contact'
-  map.resume '/qui_somme_nous', :controller => 'home', :action => 'resume'
   
+  map.resume '/qui_somme_nous', :controller => 'home', :action => 'resume'
   map.resume_old '/resume', :controller => 'home', :action => 'resume'
   
   map.connect 'xmlrpc/api', :controller => "xmlrpc", :action=> "api"

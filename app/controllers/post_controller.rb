@@ -2,12 +2,12 @@ class PostController < ApplicationController
   layout 'master'
   
   def index
-    @category = Category.find_by_slug(params[:slug])
-    unless @category.nil?
-      @posts = @category.posts
-      @posts = @posts.all(:conditions => {:is_published => true}, :order => 'published_at DESC')
-      @posts = @posts.paginate(:page => params[:page], :per_page => 5) 
-    end
+    @category = Category.find_by_slug!(params[:slug])
+    
+    @posts = @category.posts
+    @posts = @posts.all(:conditions => {:is_published => true}, :order => 'published_at DESC')
+    @posts = @posts.paginate(:page => params[:page], :per_page => 5) 
+  
   end
   
   def rss  
