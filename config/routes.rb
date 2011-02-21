@@ -6,10 +6,12 @@ ActionController::Routing::Routes.draw do |map|
   map.albums 'albums/:action/:id', :controller => :albums
   map.display_album 'albums/display/:id', :controller => :albums, :action => :display
   
-  map.list_videos '/videos/list', :controller => 'videos', :action => 'list'
+  map.list_videos '/nos_videos', :controller => 'videos', :action => 'list'
   map.resources :videos
   map.connect '/contact', :controller => 'home', :action => 'contact'
-  map.resume '/resume', :controller => 'home', :action => 'resume'
+  map.resume '/qui_somme_nous', :controller => 'home', :action => 'resume'
+  
+  map.resume_old '/resume', :controller => 'home', :action => 'resume'
   
   map.connect 'xmlrpc/api', :controller => "xmlrpc", :action=> "api"
   map.wp_post ':year/:month/:day/:slug', :controller => 'post', :action=> 'show'

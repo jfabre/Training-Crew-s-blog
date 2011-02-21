@@ -1,4 +1,32 @@
 <% content_for :title do %>Qui nous sommes<% end %>
+<% content_for :head do %>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+  <script type="text/javascript">
+    function initialize() {
+      var latlng = new google.maps.LatLng(45.507481, -73.555782);
+      
+      var myOptions = {
+        zoom: 17,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+      
+      var marker = new google.maps.Marker({
+          position: latlng, 
+          map: map,
+          animation: google.maps.Animation.DROP, 
+          title: 'Training Crew'
+      });   
+    }
+    $(document).ready(function(){
+      initialize();  
+    });
+  
+  </script>
+
+<% end %>
 <div class="resume">
   <h2><u>Training Crew</u></h2>
   <p>Le Training Crew a été créé à la base pour offrir des entraînements axés sur la méthode naturelle pour le Parkour. Nous utilisons notre environnement ainsi que notre corps pour améliorer notre forme physique et nos compétences pour le Parkour. Nous nous entraînons de façon régulière à chaque semaine. Les entraînements sont offert à tout ceux et celles qui veulent s’entraîner sérieusement soit dans le but de développer une meilleure forme physique ou pour améliorer leurs capacités à se déplacer lors de la pratique du Parkour.</p>  
@@ -7,7 +35,9 @@
   <p>Le Parkour est une discipline sportive qui consiste à se déplacer d’un endroit à un autre en franchissant les obstacles qui se dressent devant nous et cela de la manière la plus efficace, rapide et sécuritaire possible. Notre corps étant notre outil de déplacement.</p>
   <br/>
   <h3>Où nous trouver ?</h3>
-  <p>Nous nous entraînons à cet endroit depuis que le monde est monde...(la flèche verte) ;) Prenez cependant le temps de vérifier le dernier post, car il arrive quelque fois que l'endroit change.</p>
-  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=45.507481,-73.555782&amp;aq=&amp;sll=45.507347,-73.555269&amp;sspn=0.003124,0.008256&amp;ie=UTF8&amp;ll=45.507777,-73.55662&amp;spn=0.003139,0.008256&amp;z=14&amp;output=embed"></iframe><br /><small><a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=45.507481,-73.555782&amp;aq=&amp;sll=45.507347,-73.555269&amp;sspn=0.003124,0.008256&amp;ie=UTF8&amp;ll=45.507777,-73.55662&amp;spn=0.003139,0.008256&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-  </div>
+  <p>Nous nous entraînons à cet endroit depuis que le monde est monde ;)...  Prenez cependant le temps de vérifier le dernier post, car il arrive quelque fois que l'endroit change.</p>
+  <a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=45.507481,-73.555782&amp;aq=&amp;sll=45.507347,-73.555269&amp;sspn=0.003124,0.008256&amp;ie=UTF8&amp;ll=45.507777,-73.55662&amp;spn=0.003139,0.008256&amp;z=14">Ouvrir google maps</a>
+  <div id="map_canvas" style="width:400px; height:280px"></div>
+  
+</div>
 
