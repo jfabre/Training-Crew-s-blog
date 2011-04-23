@@ -18,7 +18,6 @@ gem 'jfabre-actionwebservice', :require => 'actionwebservice'
 group :development do
   gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
   gem 'mongrel', '1.2.0.pre2'
-  
 end
 
 #group :test do
