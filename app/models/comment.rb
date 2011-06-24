@@ -23,7 +23,7 @@ class Comment < ActiveRecord::Base
       comment.gsub(/(<br \/>){3,20}/, '<br />')
   end
   def format_links comment
-    regex = /[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|ca|COM|ORG|NET|MIL|EDU|CA)[A-Za-z0-9\-\.\+\_\/\%\?\#\&\=]*/
+    regex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}[A-Za-z0-9\-\.\+\_\/\%\?\#\&\=]*/
     comment = comment.gsub(/http:\/\//, '')
     comment.gsub(regex, '<a target="blank" href="http://\0">\0</a>')
   end
