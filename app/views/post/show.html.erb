@@ -35,7 +35,7 @@
           <div class="reply">
             <%= link_to "Répondre", { :controller => 'comment', :action => 'reply', :id => c.id }, :toptions => toptions %>
           </div>
-          <div class="date"><%= c.since{ |x,y,z| friendly_display(x, y, z) }  %></div>
+          <div class="date"><%= friendly_display c.created_at %></div>
           <br class="clear" />
         </div>
         <div class="comment"><%= format_comment c.text %></div>
@@ -46,7 +46,7 @@
               <li>
                 <div class="header">
                   <div class="username"><%= r.user %></div>
-                  <div class="date"><%= r.since{ |x,y,z| friendly_display(x, y, z) }  %></div>
+                  <div class="date"><%= friendly_display r.created_at %></div>
                   <br class="clear" />
                 </div>
                 <div class="comment"><%= format_comment r.text %></div>

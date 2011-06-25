@@ -17,13 +17,13 @@ module ApplicationHelper
     comment.gsub(regex, '<a target="blank" href="http://\0">\0</a>')
   end
   
-  def friendly_display hours, minutes, seconds
-    if (24..(24 * 7)).include?(hours)
-      if (24..47).include?(hours)
-        return "Depuis une journée"
-      else  
-        return "Depuis #{hours / 24} jours"
-      end
+  def friendly_display date
+    hours,minutes,seconds = Date.day_fraction_to_time(DateTime.now - date.to_datetime)
+    
+    if hours > 7 * 24
+      return date.strftime("%Y-%m-%d")
+    elsif (24..(24 * 7)).include?(hours)
+        return "Depuis #{pluralize(hours / 24, 'jour')}"
     elsif (1..23).include?(hours)
       return "Depuis #{pluralize(hours, 'heure')}"
     elsif (1..59).include?(minutes)

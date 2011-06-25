@@ -7,13 +7,5 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  def help
-    Helper.instance
-  end
-  
-  class Helper
-    include Singleton
-    include ActionView::Helpers::TextHelper
-  end
 end
 
