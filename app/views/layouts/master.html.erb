@@ -6,7 +6,7 @@
 	  <meta name="description" content="Le Training Crew a été créé à la base pour offrir des entraînements axés sur la méthode naturelle pour le Parkour. Nous utilisons notre environnement ainsi que notre corps pour améliorer notre forme physique et nos compétences pour le Parkour. Nous nous entraînons de façon régulière à chaque semaine. Les entraînements sont offert à tout ceux et celles qui veulent s’entraîner sérieusement soit dans le but de développer une meilleure forme physique ou pour améliorer leurs capacités à se déplacer lors de la pratique du Parkour." />
 	  <meta name="keywords" content="parkour, montreal, training crew, entrainement" />
 	  <meta name="google-site-verification" content="mC6cD5XfVZa2kQa0bbr92ukzp3Y3MgDsgRJxSimm4ZQ" />
-	  <link rel="shortcut icon" href="/favicon.jpg" />
+	  <link rel="shortcut icon" href="/favicon.png" />
 	  <title>Training Crew - <%= yield :title %> </title>
     <%= stylesheet_link_tag "reset" %>
     <%= stylesheet_link_tag "style" %>
@@ -37,5 +37,25 @@
         </div>
       </div>
       <div class="footer"><span>Training Crew &copy; 2011</span></div>
+      <% if Rails.env == 'production' %>
+      <script type=text/javascript>
+      //<![CDATA[  
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount','UA-8257588-3']);
+        _gaq.push(['_trackPageview']);
+      
+        try
+        {
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        }
+        catch(err){}
+      //]]>
+    </script>
+    <% end %>
   </body>
 </html>
+
