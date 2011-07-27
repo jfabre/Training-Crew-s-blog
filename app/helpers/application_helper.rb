@@ -1,5 +1,9 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  @@link_rgx = /([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,3}[A-Za-z0-9\-\.\+\_\/\%\?\#\&\=]*/
+  @@http_rgx = /http:\/\//
+  @@https_rgx = /https:\/\//
+  
   def format_comment comment
     if comment
       comment = format_carriage_return comment
@@ -12,9 +16,15 @@ module ApplicationHelper
       comment.gsub(/(<br \/>){3,20}/, '<br />')
   end
   def format_links comment
-    regex = /[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}[A-Za-z0-9\-\.\+\_\/\%\?\#\&\=]*/
-    comment = comment.gsub(/http:\/\//, '')
-    comment.gsub(regex, '<a target="blank" href="http://\0">\0</a>')
+    if comment =~ @@http_rgx
+      comment = comment.gsub(@@http_rgx, '')
+      comment.gsub(@@link_rgx, '<a target="blank" href="http://\0">\0</a>')
+    elsif  comment =~ @@https_rgx
+      comment = comment.gsub(@@https_rgx, '')
+      comment.gsub(@@link_rgx, '<a target="blank" href="https://\0">\0</a>')
+    else
+      comment
+    end
   end
   
   def friendly_display date
