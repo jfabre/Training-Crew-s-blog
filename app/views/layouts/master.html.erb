@@ -14,7 +14,7 @@
 	  <%= yield :head %>
   </head>
   <body>
-      <img src="/images/fond.jpg" class="bg" />
+      <img src="/images/rsz_4.jpg" class="bg" />
       <h1 class="logo">
       <% link_to root_path, :title => 'Training Crew - Entrainements de parkour à Montréal' do %>
         <%= image_tag 'TRAING-CREW.png', :alt => 'Training Crew - Entrainements de parkour à Montréal'  %>
@@ -32,8 +32,9 @@
         </div>
       </div>
       <div class="wrapper">
+        <div id="apdiv"></div>
         <div class="content">
-          <%= yield %>
+            <%= yield %>
         </div>
       </div>
       <div class="footer"><span>Training Crew &copy; 2011</span></div>
