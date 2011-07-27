@@ -40,7 +40,7 @@ hr{
 
 a , input[type=submit], input[type="button"]{
   /*color:#DD6936; */
-  color: #C02400;
+  color: #9AB276;
   text-decoration: none;
   border: 0px solid black;
 }
@@ -72,6 +72,10 @@ h3{
   margin-top: 10px;
   margin-bottom:5px;
   font-size: 22px;
+}
+
+h1, h3, p, span{
+  opacity: 1;
 }
 .post{
   margin-bottom : 3em;
@@ -123,10 +127,11 @@ span.date {
   width   : 943px; 
   margin  : 0 auto;
   margin-top: 1em;
-  border: 3px solid white;
-  background-color : black;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+
 }
 .logo{
   margin-top: 1em;
@@ -232,10 +237,10 @@ input, textarea{
 
 .footer{
   width: 943px;
-  border : 3px solid white;
-  background-color : black;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
+  border : 1px solid transparent;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 1em;
