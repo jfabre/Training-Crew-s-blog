@@ -23,9 +23,6 @@
     <%= link_to "Répondre", new_comment_path({:slug => @post.slug }), :toptions => toptions %>
   </div>
 </div>
-<% if @post.comments.size > 0 %>
-<hr /> 
-<% end %>
 <div class="comments">
   <ul>
   <% for c in @post.comments.select{|c| c.is_root?} %>
@@ -33,7 +30,7 @@
         <div class="header">
           <div class="username"><%= c.user %></div>
           <div class="reply">
-            <%= link_to "Répondre", { :controller => 'comment', :action => 'reply', :id => c.id }, :toptions => toptions %>
+            <%= link_to "Répondre", reply_to_path(:id => c.id), :toptions => toptions %>
           </div>
           <div class="date"><%= friendly_display c.created_at %></div>
           <br class="clear" />

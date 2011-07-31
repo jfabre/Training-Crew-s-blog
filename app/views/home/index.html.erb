@@ -4,11 +4,14 @@
     <% if !@posts.blank? %>
       <% for post in @posts %>
         <div class="post">
-          <h2><%= post.title %></h2>
+          <h2><%= link_to post.title, post.url, :rel => 'bookmark', :class => 'title', :title => post.title %></h2>
           <div class="body"><%= post.body %></div>
           <span class="date"><%= post.published_at %></span>
-          <p class="comment"><a href="<%= post.url %>" rel="bookmark" title="<%= post.title %>" class="title"><%= post.comments.size  %> commentaire<%= post.comments.size > 1 ? 's' : '' %></a></p>
+          <p class="comment"><%= link_to pluralize(post.comments.size, 'commentaire') , post.url, :rel => 'bookmark', :class => 'title', :title => post.title %></p>
         </div>
+        <% unless post.id == @posts.last.id %>
+        <hr />
+        <% end %>
       <% end %>
     <% end %>
   </div>
