@@ -5,7 +5,7 @@ gem 'rails', '2.3.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'will_paginate'
+gem 'will_paginate', '2.3.16'
 gem 'aws-s3', :require => 'aws/s3'
 #gem 'rubyjedi-soap4r'
 #gem 'rubyjedi-actionwebservice', :require => 'actionwebservice'
