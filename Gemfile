@@ -20,13 +20,13 @@ group :development do
   gem 'mongrel', '1.2.0.pre2'
 end
 
-#group :test do
-#  gem 'rspec'
-#  gem 'cucumber-rails'
-#  gem 'database_cleaner'
-#  gem 'webrat'
-#  gem 'rspec-rails'
-#end
+group :test do
+  gem 'rspec'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'webrat'
+  gem 'rspec-rails'
+end
 group :production do
   gem 'pg' 
 end
