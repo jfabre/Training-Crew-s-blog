@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '2.3.8'
+gem 'rails', '2.3.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,6 +18,8 @@ gem 'jfabre-actionwebservice', :require => 'actionwebservice'
 group :development do
   gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
   gem 'mongrel', '1.2.0.pre2'
+  gem 'heroku'
+  gem 'taps'
 end
 
 group :test do
@@ -26,6 +28,7 @@ group :test do
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'
+  gem 'spork'
 end
 group :production do
   gem 'pg' 

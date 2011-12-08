@@ -9,7 +9,7 @@ class HomeController < ApplicationController
 
     @categories = Category.all
     @posts = Post.all(:conditions => {:is_published => true}, :order => 'published_at DESC').paginate(:page => params[:page], :per_page => 5)
-    @title = @posts.first.title
+    @title = (@posts.first || Post.new(:title => '')).title
   end
 
   def contact
