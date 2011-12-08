@@ -4,8 +4,12 @@
   toptions << ", ondisplay = transparentIframe();"
 %>
 <% content_for :head do %>
-  <%= javascript_include_tag 'top_up' %>
-  <%= javascript_tag do %>
+  <%= stylesheet_link_tag 'top_up/dashboard/style' %>
+  <%= javascript_include_tag 'top_up-min' %>
+  <% javascript_tag do %>
+    $(document).ready(function(){
+      TopUp.init();    
+    });
     function transparentIframe(){
       $('iframe').attr("allowtransparency","true");
     }
