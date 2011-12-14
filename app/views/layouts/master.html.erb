@@ -11,10 +11,11 @@
     <%= stylesheet_link_tag "reset" %>
     <%= stylesheet_link_tag "style" %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	  <%= javascript_include_tag "snow.js" %>
 	  <%= yield :head %>
   </head>
   <body>
-      <img src="/images/fond_ete_2011.jpg" class="bg" />
+      <img src="/images/fond-hiver-2011.jpg" class="bg" />
       <h1 class="logo">
       <% link_to root_path, :title => 'Training Crew - Entrainements de parkour à Montréal' do %>
         <%= image_tag 'TRAING-CREW.png', :alt => 'Training Crew - Entrainements de parkour à Montréal', :style => "opacity:0.8;" %>
