@@ -11,6 +11,6 @@ require 'tasks/rails'
 
 
 desc 'cleanup evil comments'
-task :cleanup_comments do
+task :cleanup_comments => :environment do
   Comment.cleanup
 end
