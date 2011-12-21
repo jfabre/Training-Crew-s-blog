@@ -12,70 +12,70 @@
 ActiveRecord::Schema.define(:version => 20101207194051) do
 
   create_table "albums", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "categories", :force => true do |t|
-    t.string   "title"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "title"
+    t.string    "slug"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "categorizations", :force => true do |t|
-    t.integer  "post_id"
-    t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "post_id"
+    t.integer   "category_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "comments", :force => true do |t|
-    t.string   "user"
-    t.string   "website"
-    t.text     "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "post_id"
-    t.integer  "reply_to"
+    t.string    "user"
+    t.string    "website"
+    t.text      "text"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "post_id"
+    t.integer   "reply_to"
   end
 
   create_table "images", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.string   "description"
-    t.integer  "album_id"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "title"
+    t.string    "description"
+    t.integer   "album_id"
   end
 
   create_table "posts", :force => true do |t|
-    t.string   "slug"
-    t.string   "title"
-    t.date     "published_at"
-    t.string   "excerpt"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "category_id"
-    t.boolean  "is_published", :default => false, :null => false
+    t.string    "slug"
+    t.string    "title"
+    t.date      "published_at"
+    t.string    "excerpt"
+    t.text      "body"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "category_id"
+    t.boolean   "is_published", :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "password"
-    t.string   "site_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "username"
+    t.string    "password"
+    t.string    "site_url"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "videos", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "embed"
+    t.string    "name"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.text      "embed"
   end
 
 end

@@ -13,6 +13,7 @@ gem 'aws-s3', :require => 'aws/s3'
 #gem 'panztel-actionwebservice', :require => 'actionwebservice'
 #gem 'test-unit', '1.2.3'
 
+gem 'negative-captcha', :git => 'git://github.com/stefants/negative-captcha.git'
 gem 'jfabre-actionwebservice', :require => 'actionwebservice'
 
 group :development do

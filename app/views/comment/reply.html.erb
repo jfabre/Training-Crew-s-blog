@@ -1,12 +1,21 @@
 <% content_for :title do %>Nouveau commentaire<% end %> 
 <% content_for :head do %>
-<%= javascript_include_tag 'comment' %>
+  <%= javascript_include_tag 'comment' %>
+  <% javascript_tag do %>
+    $(document).ready(function(){
+      var name = $('#<%= @captcha.fields[:name] %>'); 
+      var comment = $('#<%= @captcha.fields[:text] %>'); 
+      name.val('<%= @name %>');
+      setupForm(name, comment);
+    });
+  <% end %>
 <% end %>
 <div class="enter_comment">
     <p><b><%= @comment.user %> a dit:</b>&nbsp;<%= @comment.text %></p>
     <% form_tag :controller => 'comment', :action => 'add_reply', :id => @comment.id do %>
-    <input type="text" id="txtName" name="name" value="<%= @name %>" /><br /><br/>
-    <textarea name="comment" id="txtComment" cols="70" rows="8">Commentaire</textarea><br /><br />
-    <input type="submit" name="Add" id="Add" value="Soumettre" />
+      <%= raw negative_captcha(@captcha) %>
+      <%= negative_text_field_tag @captcha, :name %> <br/><br/>
+      <%= negative_text_area_tag @captcha, :text, :rows => 8, :cols => 70 %><br/><br/>
+      <%= submit_tag 'Soumettre' %><br/>
     <% end %>
 </div>

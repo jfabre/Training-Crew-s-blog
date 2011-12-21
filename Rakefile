@@ -8,3 +8,9 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+
+desc 'cleanup evil comments'
+task :cleanup_comments do
+  Comment.cleanup
+end
