@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  xss_terminate :except => [:body]
+
   has_many :categorizations
   has_many :categories, :through => :categorizations
   has_many :comments
