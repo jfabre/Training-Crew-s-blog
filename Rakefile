@@ -11,6 +11,26 @@ require 'tasks/rails'
 
 
 desc 'cleanup evil comments'
-task :cleanup_comments => :environment do
-  Comment.cleanup
+task :cleanup_evil => :environment do
+  Comment.cleanup Comment.all.select{|x| x.evil? }
 end
+
+task :cleanup_suspicious => :environment do
+  comments = Comment.all.select{ |x|  x.suspicious? }
+  response = 'n'
+  
+  evils = comments.select do |c|
+    unless response == 'p'
+      print "\n\n-------------------------------------------------"
+      print "\nId:#{c.id} user: #{c.user}" 
+      print "\nText: #{c.text}"
+      print "\n\nIs it evil? (y/n): "
+      response = STDIN.gets.chomp
+    end
+    response == 'y'
+  end
+  Comment.cleanup evils
+end
+
+
+

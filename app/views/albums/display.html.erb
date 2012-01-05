@@ -27,11 +27,6 @@
 <% paginated_section(@albums, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
   <% @albums.each do |album| %>
 <div class="carousel album">
-  <div>
-    <div style="float:left;"><input id="left-but" style="font-size:20px;font-weight:bold;" type="button" value="<<" /></div>
-    <div style="float:right;"><input id="right-but" style="font-size:20px;font-weight:bold;" type="button" value=">>" /></div>
-    <div class="clear"></div>
-  </div>
   <h2><%= album.name %></h2>
   <div style="text-align:left;">
     <h3 id="title-text"></h3>
@@ -46,7 +41,11 @@
     </li>
   <% end%>
   </ul>
-  
+</div>
+<div>
+  <div style="float:left;"><input id="left-but" style="font-size:20px;font-weight:bold;" type="button" value="<<" /></div>
+  <div style="float:right;"><input id="right-but" style="font-size:20px;font-weight:bold;" type="button" value=">>" /></div>
+  <div class="clear"></div>
 </div>
   <% end %>
 <% end %>

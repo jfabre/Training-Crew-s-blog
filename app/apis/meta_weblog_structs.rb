@@ -34,7 +34,7 @@ class Article < ActionWebService::Struct
   member :permaLink,          :string
   member :categories,         [:string]
   member :mt_text_more,       :string
-  member :mt_basename,       :string
+  member :mt_basename,        :string
   member :mt_excerpt,         :string
   member :mt_keywords,        :string
   member :mt_allow_comments,  :int
