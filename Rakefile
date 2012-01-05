@@ -26,12 +26,16 @@ end
 
 task :clean_specifics, [:ids] => :environment do |t, args|
   ids = args[:ids].split(';').map{|x| x.to_i }
-  puts ids
   comments = Comment.all(:conditions => {:id => ids })
   
   Comment.cleanup comments
 end
 
+task :clean_heroku do
+  ids = ENV['cleanup'].split(';').map{|x| x.to_i }
+
+  Comment.cleanup Comment.all(:conditions => {:id => ids })
+end
 def evil_from_suspicious
   comments = Comment.all.select{ |x|  x.suspicious? }
   response = 'n'
