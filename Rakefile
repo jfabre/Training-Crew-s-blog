@@ -16,10 +16,27 @@ task :cleanup_evil => :environment do
 end
 
 task :cleanup_suspicious => :environment do
+  Comment.cleanup evil_from_suspicious
+end
+
+task :show_suspicious => :environment do
+  evils = evil_from_suspicious
+  puts evils.map{ |c| c.id }.join(';')
+end
+
+task :clean_specifics, [:ids] => :environment do |t, args|
+  ids = args[:ids].split(';').map{|x| x.to_i }
+  puts ids
+  comments = Comment.all(:conditions => {:id => ids })
+  
+  Comment.cleanup comments
+end
+
+def evil_from_suspicious
   comments = Comment.all.select{ |x|  x.suspicious? }
   response = 'n'
   
-  evils = comments.select do |c|
+  comments.select do |c|
     unless response == 'p'
       print "\n\n-------------------------------------------------"
       print "\nId:#{c.id} user: #{c.user}" 
@@ -29,8 +46,4 @@ task :cleanup_suspicious => :environment do
     end
     response == 'y'
   end
-  Comment.cleanup evils
 end
-
-
-
