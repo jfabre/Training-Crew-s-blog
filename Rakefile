@@ -31,7 +31,7 @@ task :clean_specifics, [:ids] => :environment do |t, args|
   Comment.cleanup comments
 end
 
-task :clean_heroku do
+task :clean_heroku => :environment do
   ids = ENV['cleanup'].split(';').map{|x| x.to_i }
 
   Comment.cleanup Comment.all(:conditions => {:id => ids })
