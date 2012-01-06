@@ -5,7 +5,7 @@ Visit http://rainbow.arch.scriptmania.com/scripts/
 */
 
 // Set the number of snowflakes (more than 30 - 40 not recommended)
-var snowmax=15
+var snowmax=25
 
 // Set the colors for the snow. Add as many colors as you like
 var snowcolor=new Array("#aaaacc","#ddddff","#ccccdd","#f3f3f3","#f0ffff")
