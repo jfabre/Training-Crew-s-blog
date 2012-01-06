@@ -25,7 +25,7 @@ Rails::Initializer.run do |config|
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
-  config.frameworks -= [ :action_mailer ]
+  #config.frameworks -= [ :action_mailer ]
   
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
@@ -33,10 +33,11 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
-
+ 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
 require 'will_paginate'
-ExceptionNotification::Notifier.exception_recipients = ENV['email_notification']
+ExceptionNotification::Notifier.exception_recipients = [ENV['email_notification']]
+ExceptionNotification::Notifier.sender_address = %("Training Crew Error" <app.error@trainingcrew.ca>)
