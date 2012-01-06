@@ -7,7 +7,7 @@ class Comment < ActiveRecord::Base
   validates_format_of [:user, :text], :with => /[^ ]+/, :on => :create
   
   def validate
-    errors.add_to_base "is evil" if is_evil
+    errors.add_to_base "is evil" if evil?
     errors.add_to_base "is too old" if Date.today - post.created_at.to_date > 30
   end
   
