@@ -39,3 +39,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 require 'will_paginate'
+ExceptionNotification::Notifier.exception_recipients = ENV['email_notification']

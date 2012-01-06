@@ -13,6 +13,7 @@ class HomeController < ApplicationController
   end
 
   def contact
+    raise 'wassup'
   end
 
   def resume

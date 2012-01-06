@@ -15,6 +15,7 @@ gem 'aws-s3', :require => 'aws/s3'
 
 gem 'negative-captcha', :git => 'git://github.com/stefants/negative-captcha.git'
 gem 'jfabre-actionwebservice', :require => 'actionwebservice'
+gem 'exception_notification', '2.3.3'
 
 group :development do
   gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
