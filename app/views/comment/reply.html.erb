@@ -11,7 +11,6 @@
   <% end %>
 <% end %>
 <div class="enter_comment">
-    <p><b><%= @comment.user %> a dit:</b>&nbsp;<%= @comment.text %></p>
     <% form_tag :controller => 'comment', :action => 'add_reply', :id => @comment.id do %>
       <%= raw negative_captcha(@captcha) %>
       <%= negative_text_field_tag @captcha, :name %> <br/><br/>

@@ -18,7 +18,7 @@ class CommentController < ApplicationController
     post = Post.find(params[:id])
     comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text])
     post.comments << comment
-    post.save!
+    post.save
     
     cookies['poster'] = { :value => comment.user, :expires => 1.year.from_now }
     redirect_to :action => 'new', :slug => post.slug
@@ -28,7 +28,7 @@ class CommentController < ApplicationController
     
     root_comment = Comment.find(params[:id]);
     reply = root_comment.add_reply(@captcha.values[:name], @captcha.values[:text])
-    root_comment.post.save!
+    root_comment.post.save
     
     cookies['poster'] = { :value => reply.user, :expires => 1.year.from_now }
     redirect_to :action => 'new', :slug => root_comment.post.slug

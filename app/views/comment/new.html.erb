@@ -8,8 +8,9 @@
       name.val('<%= @name %>');
       setupForm(name, comment);
     });
-  <% end %>
+  <% end %>  
 <% end %>
+
 <div class="enter_comment">
     <% form_tag :controller => 'comment', :action => 'add_comment', :id => @post.id do %>
       <%= raw negative_captcha(@captcha) %>
