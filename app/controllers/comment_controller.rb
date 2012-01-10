@@ -14,24 +14,24 @@ class CommentController < ApplicationController
     @name = "Nom" if @name.nil?
   end
   def add_comment
-    raise 'Invalid comment' unless @captcha.valid?
     post = Post.find(params[:id])
-    comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text])
-    post.comments << comment
-    post.save
+    if @captcha.valid?
+      comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text])
+      post.comments << comment
+      post.save!
     
-    cookies['poster'] = { :value => comment.user, :expires => 1.year.from_now }
+      cookies['poster'] = { :value => comment.user, :expires => 1.year.from_now }
+    end
     redirect_to :action => 'new', :slug => post.slug
   end
-  def add_reply
-    raise 'Invalid comment' unless @captcha.valid?
-    
-    root_comment = Comment.find(params[:id]);
+  def add_reply 
+   root_comment = Comment.find(params[:id]);
+   if @captcha.valid?
     reply = root_comment.add_reply(@captcha.values[:name], @captcha.values[:text])
-    root_comment.post.save
-    
+    root_comment.post.save!
     cookies['poster'] = { :value => reply.user, :expires => 1.year.from_now }
-    redirect_to :action => 'new', :slug => root_comment.post.slug
+   end
+   redirect_to :action => 'new', :slug => root_comment.post.slug
   end  
   
   private

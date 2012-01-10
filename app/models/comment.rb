@@ -8,7 +8,7 @@ class Comment < ActiveRecord::Base
   
   def validate
     errors.add_to_base "is evil" if evil?
-    errors.add_to_base "is too old" if Date.today - post.created_at.to_date > 30
+    #errors.add_to_base "is too old" if Date.today - post.created_at.to_date > 30
   end
   
   def link_count
