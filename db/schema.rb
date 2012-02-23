@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101207194051) do
+ActiveRecord::Schema.define(:version => 20120223015229) do
 
   create_table "albums", :force => true do |t|
     t.string    "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20101207194051) do
     t.timestamp "updated_at"
     t.integer   "post_id"
     t.integer   "reply_to"
+    t.string    "ip_address"
   end
 
   create_table "images", :force => true do |t|

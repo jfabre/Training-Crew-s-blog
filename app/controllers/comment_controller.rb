@@ -16,7 +16,7 @@ class CommentController < ApplicationController
   def add_comment
     post = Post.find(params[:id])
     if @captcha.valid?
-      comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text])
+      comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text], :ip_address => request.remote_ip)
       post.comments << comment
       post.save!
     
@@ -27,7 +27,7 @@ class CommentController < ApplicationController
   def add_reply 
    root_comment = Comment.find(params[:id]);
    if @captcha.valid?
-    reply = root_comment.add_reply(@captcha.values[:name], @captcha.values[:text])
+    reply = root_comment.add_reply(@captcha.values[:name], @captcha.values[:text], request.remote_ip)
     root_comment.post.save!
     cookies['poster'] = { :value => reply.user, :expires => 1.year.from_now }
    end

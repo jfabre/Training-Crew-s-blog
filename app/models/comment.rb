@@ -11,10 +11,6 @@ class Comment < ActiveRecord::Base
     #errors.add_to_base "is too old" if Date.today - post.created_at.to_date > 30
   end
   
-  def link_count
-      
-  end
-  
   def replies
     Comment.all(:conditions => {:reply_to => id}, :order => 'created_at ASC')
   end
@@ -22,8 +18,8 @@ class Comment < ActiveRecord::Base
     !reply_to || reply_to == 0
   end
   
-  def add_reply(user, text)
-    reply = Comment.new(:user => user, :text => text, :reply_to => id)
+  def add_reply(user, text, ip_address)
+    reply = Comment.new(:user => user, :text => text, :reply_to => id, :ip_address => ip_address)
     post.comments << reply
     reply
   end
@@ -37,7 +33,6 @@ class Comment < ActiveRecord::Base
   end
   
   def self.cleanup(comments = nil)
-    comments ||= Comment.all
     comments.each do |c|
       c.replies.each do |r|
         r.destroy
@@ -47,6 +42,4 @@ class Comment < ActiveRecord::Base
       c.destroy
     end
   end
-  
-  
 end
