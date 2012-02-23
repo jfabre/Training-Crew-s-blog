@@ -31,7 +31,13 @@ class Comment < ActiveRecord::Base
   def suspicious?
     user !~ /(Jeremy|Justin|MeCarana|Tchad|Tit-gars)/ && text.include?('http')  
   end
-  
+  def self.trolls_today
+    Comment.all(:conditions => ["created_at > ?", Date.today]).select{|c| c.troll? }
+  end
+
+  def troll?
+    user.downcase == 'mecarana'
+  end
   def self.cleanup(comments = nil)
     comments.each do |c|
       c.replies.each do |r|

@@ -36,6 +36,19 @@ task :clean_heroku => :environment do
 
   Comment.cleanup Comment.all(:conditions => {:id => ids })
 end
+namespace :trolls do
+  task :show => :environment do
+    
+    Comment.trolls_today.each do |t|
+       puts "id:#{t.id},name: #{t.user}" 
+    end
+  end
+
+  task :clean => :environment do
+    Comment.cleanup Comment.trolls_today
+  end
+end  
+
 def evil_from_suspicious
   comments = Comment.all.select{ |x|  x.suspicious? }
   response = 'n'
