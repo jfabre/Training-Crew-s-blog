@@ -1,5 +1,5 @@
 <% content_for :title do %>Entrainements de parkour à Montréal selon la méthode naturelle<% end %> 
-<% paginated_section(@posts, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
+<%= will_paginate @posts, :next_label => '>>', :previous_label => '<<', :separator => ' | ' %>
   <div class="middle">
     <% if !@posts.blank? %>
       <% for post in @posts %>
@@ -36,6 +36,5 @@
     </div>
   </div>
   <div class="clear"></div>
-<% end %>
 
 

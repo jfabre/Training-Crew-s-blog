@@ -11,7 +11,6 @@
     <%= stylesheet_link_tag "reset" %>
     <%= stylesheet_link_tag "style" %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	  <%= javascript_include_tag "snow.js" %>
 	  <%= yield :head %>
   </head>
   <body>
@@ -37,7 +36,7 @@
             <%= yield %>
         </div>
       </div>
-      <div class="footer"><span>Training Crew &copy; 2011</span></div>
+      <div class="footer"><span>Training Crew &copy; 2011 - <%= Date.today.year %></span></div>
       <% if Rails.env == 'production' %>
       <script type="text/javascript">
       //<![CDATA[  
