@@ -23,7 +23,7 @@
   <div><%= @post.body %></div>
   <span class="date"><%= @post.published_at %></span>
   <div class="replymain">
-    <%= link_to "Répondre", new_comment_path({:slug => @post.slug }), :toptions => toptions %>
+    <%= link_to "Répondre", new_comment_path({:id => @post.id}), :toptions => toptions %>
   </div>
 </div>
 <div class="comments">

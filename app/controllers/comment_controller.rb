@@ -2,28 +2,27 @@ class CommentController < ApplicationController
   before_filter :setup_negative_captcha
   
   def new
-    @post = Post.find_by_slug(params[:slug])
-    @name = cookies['poster']
-    @name = "Nom" if @name.nil?
-    
-    render '404' unless @post
+    puts "GOT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    @post = Post.find(params[:id])
+
+    @name = cookies['poster'] || "Nom"
   end
   def reply
     @comment = Comment.find(params[:id])
-    @name = cookies['poster']
-    @name = "Nom" if @name.nil?
+    @name = cookies['poster'] || "Nom"
   end
+
   def add_comment
     post = Post.find(params[:id])
     if @captcha.valid?
       comment = Comment.new(:user => @captcha.values[:name], :text => @captcha.values[:text], :ip_address => request.remote_ip)
       post.comments << comment
       post.save!
-    
       cookies['poster'] = { :value => comment.user, :expires => 1.year.from_now }
     end
     redirect_to :action => 'new', :slug => post.slug
   end
+
   def add_reply 
    root_comment = Comment.find(params[:id]);
    if @captcha.valid?

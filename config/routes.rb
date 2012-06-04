@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  
   map.tchad '/crevette', :controller => :home, :action => :tchad
   map.publications '/publications', :controller => :post, :action => :publications
   
@@ -13,10 +12,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resume '/qui_somme_nous', :controller => 'home', :action => 'resume'
   map.resume_old '/resume', :controller => 'home', :action => 'resume'
   
+  map.new_comment 'posts/:id/comment/new', :controller => 'comment', :action => 'new'
+  map.reply_to 'comment/reply_to/:id', :controller => 'comment', :action => 'reply'
+
   map.connect 'xmlrpc/api', :controller => "xmlrpc", :action=> "api"
   map.wp_post ':year/:month/:day/:slug', :controller => 'post', :action=> 'show'
-  map.new_comment '/:slug/comment/new', :controller => 'comment', :action => 'new'
-  map.reply_to 'comment/reply_to/:id', :controller => 'comment', :action => 'reply'
+  
   
   map.category 'category/:slug', :controller => 'post', :action=> 'index'
   map.search 'search', :controller=> 'post', :action=>'search'
