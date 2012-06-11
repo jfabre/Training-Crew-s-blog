@@ -2,7 +2,6 @@ class CommentController < ApplicationController
   before_filter :setup_negative_captcha
   
   def new
-    puts "GOT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @post = Post.find(params[:id])
 
     @name = cookies['poster'] || "Nom"
