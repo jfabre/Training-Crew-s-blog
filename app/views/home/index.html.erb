@@ -18,8 +18,7 @@
   <div class="rightmenu">
     <% unless @latest_pic.nil? %>
     <div class="last-picture">
-        <h3>Dernière image</h3>
-        <img src="<%= @latest_pic.amazon_url %>" />
+        <img width="<%= @latest_pic.width %>" height="<%= @latest_pic.height %>" src="<%= @latest_pic.amazon_url %>" />
         <p><%= @latest_pic.title %></p>
     </div>
     <% end %>

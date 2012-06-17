@@ -9,7 +9,7 @@ module Amazon_image
     connect
     
     AWS::S3::Bucket.create(@@bucket) if AWS::S3::Service.buckets.empty?
-    AWS::S3::S3Object.store(File.basename(filename), file_stream, @@bucket, :access => :public_read)
+    AWS::S3::S3Object.store(File.basename(filename), file_stream, @@bucket, :access => :public_read, :content_type => 'image/jpeg')
   end
   def update_img(from, to, file_stream = nil)
     connect

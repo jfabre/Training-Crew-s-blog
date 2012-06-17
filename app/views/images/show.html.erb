@@ -4,6 +4,6 @@
   <%= link_to 'Edit', edit_image_path(@image) %> |
   <%= link_to 'Back', images_path %>
   <br /><br />
-  <img src="<%= @image.amazon_url %>" alt="image" />
+  <img src="<%= @image.amazon_url %>" width="<%= @image.width %>" height="<%= @image.height %>" alt="<%= @image.title %>" />
   
 </div>

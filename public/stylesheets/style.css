@@ -44,7 +44,7 @@ a , input[type=submit], input[type="button"]{
 }
 
 a:hover, input[type=submit]:hover, input[type=button]:hover, h2 > a:hover {
-  color: yellow;
+  color: orange;
   cursor: pointer;
 }
 
@@ -286,9 +286,9 @@ input, textarea{
 
 .enter_comment input[type=text], .enter_comment textarea, .enter_comment input[type=submit]{
   border: 1px solid white;
-  border-radius: : 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 .enter_comment input[type=text] {

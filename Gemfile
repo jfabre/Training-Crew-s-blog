@@ -7,11 +7,6 @@ gem 'rails', '2.3.11'
 
 gem 'will_paginate', '2.3.16'
 gem 'aws-s3', :require => 'aws/s3'
-#gem 'rubyjedi-soap4r'
-#gem 'rubyjedi-actionwebservice', :require => 'actionwebservice'
-
-#gem 'panztel-actionwebservice', :require => 'actionwebservice'
-#gem 'test-unit', '1.2.3'
 
 gem 'negative-captcha', :git => 'git://github.com/stefants/negative-captcha.git'
 gem 'jfabre-actionwebservice', :require => 'actionwebservice'
@@ -25,7 +20,10 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'cucumber-rails'
+  gem "capybara", "1.1.1"
+  gem "cucumber", "1.1.0"
+  gem "pickle"
+  gem "cucumber-rails", "0.3.2"
   gem 'database_cleaner'
   gem 'webrat'
   gem 'rspec-rails'

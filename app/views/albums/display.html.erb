@@ -2,7 +2,6 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "jquery.lightbox-0.5" %>
   <%= javascript_include_tag 'cloud-carousel.1.0.4.min' %>
-  <%= javascript_include_tag 'jquery.lightbox-0.5.min' %>
   
   <script type="text/javascript">
     $(document).ready(function(){    
@@ -14,38 +13,33 @@
           altBox: $("#alt-text"),
           titleBox: $("#title-text")
       });
-      $('.album a').lightBox({
-        imageLoading: '/images/lightbox-ico-loading.gif',
-        imageBtnClose: '/images/lightbox-btn-close.gif',
-        imageBtnPrev: '/images/lightbox-btn-prev.gif',
-        imageBtnNext: '/images/lightbox-btn-next.gif',
-        imageBlank: '/images/lightbox-blank.gif' 
-      });
     });
   </script>
 <% end %>
 <% paginated_section(@albums, :next_label => '>>', :previous_label => '<<', :separator => ' | ') do %>
   <% @albums.each do |album| %>
+
+<div style="margin-top:30px">
+  <div style="float:left;"><input id="left-but" style="font-size:30px;font-weight:bold;" type="button" value="<<" /></div>
+  <div style="float:right;"><input id="right-but" style="font-size:30px;font-weight:bold;" type="button" value=">>" /></div>
+  <div class="clear"></div>
+</div>
 <div class="carousel album">
   <h2><%= album.name %></h2>
-  <div style="text-align:left;">
-    <h3 id="title-text"></h3>
-    <p id="alt-text"></p>
-  </div>
   <ul>
     <% album.images.each do |img| %>
     <li>
       <a href="<%= img.amazon_url %>" title="<%= img.description %>">
-        <img class="cloudcarousel" width="200" height="200" alt="<%= img.description %>" title="<%= img.title %>" src="<%= img.amazon_url %>" />
+        <img class="cloudcarousel" width="<%= img.width %>" height="<% img.height %>" alt="<%= img.description %>" title="<%= img.title %>" src="<%= img.amazon_url %>" />
       </a>
     </li>
   <% end%>
   </ul>
 </div>
-<div>
-  <div style="float:left;"><input id="left-but" style="font-size:20px;font-weight:bold;" type="button" value="<<" /></div>
-  <div style="float:right;"><input id="right-but" style="font-size:20px;font-weight:bold;" type="button" value=">>" /></div>
-  <div class="clear"></div>
+<div style="text-align:left; min-height:300px;">
+  <h3 id="title-text"></h3>
+  <p id="alt-text"></p>
 </div>
+
   <% end %>
 <% end %>

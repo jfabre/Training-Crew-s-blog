@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604231144) do
+ActiveRecord::Schema.define(:version => 20120617181644) do
 
   create_table "albums", :force => true do |t|
     t.string    "name"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(:version => 20120604231144) do
     t.string    "title"
     t.string    "description"
     t.integer   "album_id"
+    t.integer   "height",      :default => 600, :null => false
+    t.integer   "width",       :default => 800, :null => false
   end
 
   create_table "posts", :force => true do |t|

@@ -2,13 +2,20 @@
 
 <% form_for(@image,:html =>{:multipart => true}) do |f| %>
   <%= f.error_messages %>
-
   <p>
-    <%= f.label :nom %><br />
+    <%= f.label :name, 'nom' %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :titre %><br />
+    <%= f.label :largeur %><br />
+    <%= f.text_field :width %>
+  </p>
+  <p>
+    <%= f.label :hauteur %><br />
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :title, 'titre' %><br />
     <%= f.text_field :title %>
   </p>
   <p>
@@ -16,8 +23,8 @@
     <%= f.text_area :description, :cols => 50, :rows => 10 %>
   </p>
   <p>
-    <%= f.label :fichier %><br />
-    <%= file_field 'upload', 'datafile' %>
+    <%= f.label :datafile, 'fichier' %><br />
+    <%= file_field 'upload', :datafile %>
   </p>
   <br />
   <p>

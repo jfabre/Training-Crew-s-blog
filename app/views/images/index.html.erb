@@ -1,5 +1,13 @@
 <h1>Liste d'images</h1>
 
+<h3>Trier par album</h3>
+<ul>
+  <% @albums.each do |a| %>
+  <li><%= link_to a.name, images_path(:album => a.id) %></li>
+  <% end %>
+</ul>
+<br />
+<br />
 <table>
   <tr>
     <th>Nom</th>
@@ -7,7 +15,7 @@
 <% @images.each do |image| %>
   <tr>
     <td><%=h image.name %></td>
-    <td><%= link_to 'Afficher', image %> &nbsp; <%= link_to 'Modifier', edit_image_path(image) %> &nbsp; <%= link_to 'Supprimer', image, :confirm => 'Êtes-vous sûr?', :method => :delete %></td>
+    <td>&nbsp;&nbsp;&nbsp;<%= link_to 'Modifier', edit_image_path(image) %> &nbsp; <%= link_to 'Supprimer', image, :confirm => 'Êtes-vous sûr?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

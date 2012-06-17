@@ -4,7 +4,12 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.xml
   def index
-    @images = Image.all
+    @albums = Album.all
+    if params[:album]
+      @images = Album.find(params[:album]).images
+    else
+      @images = Image.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,11 +50,9 @@ class ImagesController < ApplicationController
     @image = Image.new(params[:image])
 
     respond_to do |format|
-      if(@image.name.empty?)
-        @image.name = File.basename(params[:upload]['datafile'].original_filename)
-      end
-      logger.info params[:upload]['datafile'].inspect
+      @image.name = File.basename(params[:upload]['datafile'].original_filename) if @image.name.empty?
       @image.save_img(@image.name, params[:upload]['datafile'].read)
+      
       if @image.save
         format.html { redirect_to(@image, :notice => 'Image was successfully created.') }
         format.xml  { render :xml => @image, :status => :created, :location => @image }
@@ -69,10 +72,9 @@ class ImagesController < ApplicationController
       
       unless params[:upload].blank?
         datafile = params[:upload]['datafile']
-        unless datafile.respond_to?('read')
-          @image.update_img(@image.name, params[:image][:name], datafile.read)
-        end
+        @image.update_img(@image.name, params[:image][:name], datafile.read)
       end
+
       if @image.update_attributes(params[:image])
         format.html { redirect_to(@image, :notice => 'Image was successfully updated.') }
         format.xml  { head :ok }
