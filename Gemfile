@@ -10,7 +10,7 @@ gem 'aws-s3', :require => 'aws/s3'
 
 gem 'negative-captcha', :git => 'git://github.com/stefants/negative-captcha.git'
 gem 'jfabre-actionwebservice', :require => 'actionwebservice'
-
+gem 'trackman'
 group :development do
   gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
   gem 'mongrel', '1.2.0.pre2'
