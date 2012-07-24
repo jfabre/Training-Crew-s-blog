@@ -1,4 +1,5 @@
 class Video < ActiveRecord::Base
+  xss_terminate :except => [ :embed ]
   @@handlers = /^embed_[0-9]{2,4}$/
   def small_embed
     embed_at_size(189, 279)
