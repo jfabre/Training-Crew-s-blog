@@ -192,7 +192,6 @@ div.last-video{
   height: 210px;
 }
 div.last-picture {
-  #background : url('../images/polaroid.jpg') center top transparent;
   height: 300px;
   width: 280px;
 }
