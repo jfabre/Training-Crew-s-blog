@@ -116,7 +116,7 @@ GEM
       sequel (~> 3.20.0)
       sinatra (~> 1.0.0)
     term-ansicolor (1.0.7)
-    trackman (0.4.3)
+    trackman (0.4.4)
       heroku (>= 2.26.2)
       json
       nokogiri
