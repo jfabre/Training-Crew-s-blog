@@ -1,4 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.not_found '/not_found', :controller => 'errors', :action => :not_found
+  map.error '/error', :controller => 'errors', :action => :error
+  map.maintenance '/maintenance', :controller => 'errors', :action => :maintenance
+  map.maintenance_error '/maintenance-error', :controller => 'errors', :action => :maintenance_error
+
   map.tchad '/crevette', :controller => :home, :action => :tchad
   map.publications '/publications', :controller => :post, :action => :publications
   
