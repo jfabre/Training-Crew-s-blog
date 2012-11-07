@@ -82,7 +82,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album = Album.find(params[:id])
     @album.images.clear
-    @album.save
+    @album.save!
     @album.destroy
     Image.all(:conditions => {:album_id => params[:id]}).each do |x| 
       x.album_id = nil
