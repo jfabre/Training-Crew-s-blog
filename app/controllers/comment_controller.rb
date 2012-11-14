@@ -19,7 +19,7 @@ class CommentController < ApplicationController
       post.save!
       cookies['poster'] = { :value => comment.user, :expires => 1.year.from_now }
     end
-    redirect_to :action => 'new', :slug => post.slug
+    redirect_to :action => 'new', :id => post.id
   end
 
   def add_reply 
@@ -29,7 +29,7 @@ class CommentController < ApplicationController
     root_comment.post.save!
     cookies['poster'] = { :value => reply.user, :expires => 1.year.from_now }
    end
-   redirect_to :action => 'new', :slug => root_comment.post.slug
+   redirect_to :action => 'new', :id => root_comment.post.id
   end  
   
   private

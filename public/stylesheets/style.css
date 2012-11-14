@@ -361,3 +361,6 @@ div.album {
   text-align: center;
   padding : 20px 0 20px 0;
 }
+.comments img{
+  max-width: 570px;
+}
