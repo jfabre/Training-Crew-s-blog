@@ -15,8 +15,7 @@ class PostController < ApplicationController
   end
   
   def show
-    @post= Post.find_by_slug(params[:slug], :conditions => {:is_published => true}, :order => 'published_at DESC')
-    render '404' if @post.nil?
+    @post= Post.find_by_slug!(params[:slug], :conditions => {:is_published => true}, :order => 'published_at DESC')
   end
   
   def publications
