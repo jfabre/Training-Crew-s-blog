@@ -363,4 +363,5 @@ div.album {
 }
 .comments img{
   max-width: 570px;
+  max-height: 400px;
 }
