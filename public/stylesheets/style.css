@@ -25,7 +25,6 @@ img.bg {
 
 body {
   font-family: Comic Sans MS, Comic Sans MS5,  MarkerFelt-Thin;
-  color : #C8C8C8;
   color : white;
   font-size : 14px;
   height  :100%;
@@ -35,17 +34,20 @@ p{
 }
 
 h2 > a{
-  color: white;
+  color: #C5A436;
+}
+h2 > a:hover{
+  
 }
 a , input[type=submit], input[type="button"]{
-  color: yellow;
+  color: #EB3232;
   text-decoration: none;
   border: 0px solid black;
 }
 
 a:hover, input[type=submit]:hover, input[type=button]:hover, h2 > a:hover {
-  color: orange;
   cursor: pointer;
+  color: #3C8D0D;
 }
 
 .wrapper, .header .mainmenu, .footer{

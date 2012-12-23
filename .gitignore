@@ -5,3 +5,4 @@ test.sqlite3
 *.log
 .bundle
 .DS_Store
+*.swp
