@@ -14,7 +14,7 @@
 	  <%= yield :head %>
   </head>
   <body>
-      <img src="/images/fond3.jpg" class="bg" />
+      <img src="/images/fond.jpg" class="bg" />
       <h1 class="logo">
       <% link_to root_path, :title => 'Training Crew - Entrainements de parkour à Montréal' do %>
         <%= image_tag 'TRAING-CREW.png', :alt => 'Training Crew - Entrainements de parkour à Montréal' %>
@@ -37,12 +37,6 @@
         </div>
       </div>
       <div class="footer"><span>Training Crew &copy; 2011 - <%= Date.today.year %></span></div>
-      <%= javascript_include_tag 'snowstorm-min' %>
-      <script>
-        //snowStorm.snowColor = '#99ccff'; // blue-ish snow!?
-        snowStorm.flakesMaxActive = 25;  // show more snow on screen at once
-        snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
-      </script>
       <% if Rails.env == 'production' %>
       <script type="text/javascript">
       //<![CDATA[  

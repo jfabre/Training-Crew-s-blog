@@ -34,13 +34,13 @@ p{
 }
 
 h2 > a{
-  color: #C5A436;
+  color: white;
 }
 h2 > a:hover{
   
 }
 a , input[type=submit], input[type="button"]{
-  color: #EB3232;
+  color: #ff8000;
   text-decoration: none;
   border: 0px solid black;
 }
